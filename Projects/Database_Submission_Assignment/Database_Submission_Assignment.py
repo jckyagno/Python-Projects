@@ -51,7 +51,7 @@ def appendList():
 
 
 
-# Prints file name of ever entry in col_filename.
+# Prints file name of every entry in col_filename.
 def printList():
 
     with conn:
