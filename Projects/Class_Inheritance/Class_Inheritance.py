@@ -7,11 +7,11 @@ class vehicle:
     passengerNumber = 4
 
 class Tacoma(vehicle):
-    brand = Toyota
+    brand = "Toyota"
     year = 2023
     bedLength = 73.2
 
 class Bolt(vehicle):
-    brand = Chevrolet
+    brand = "Chevrolet"
     year = 2023
     engineType = "electric"
