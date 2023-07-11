@@ -16,7 +16,7 @@ class Pixel(Phone):                     # Created child class "Pixel"
         super().__init__(model)         # Gave all properties from parent class
 
     def power(self):                    # Defined to print out
-        print("Fully charged.")          # "Fully Charged" when called
+        print("Fully charged.")         # "Fully Charged" when called
 
 
 
