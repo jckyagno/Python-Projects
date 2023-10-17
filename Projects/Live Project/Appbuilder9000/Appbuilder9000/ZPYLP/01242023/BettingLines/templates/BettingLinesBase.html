@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+<html lang="en" class="BettingLines_img">
+	<head>
+		<meta charset="utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<link rel= "stylesheet" type="text/css" href="{% static '/css/BettingLines.css' %}">
+	</head>
+		<!-- Navbar -->
+		<div class="Navigation_bar">
+			<a href="{% url 'BettingLinesHome' %}">Home</a>
+			<a href="{% url 'BettingLines_Add' %}">Add a bet</a>
+			<a href="{% url 'BettingLines_View' %}">View your current bets</a>
+			<a href="">Remove a Bet</a>
+			<a href="https://github.com/Jwise777" class="menu-item" target="_blank"><img style="height:50%" src="/static/images/Git.png" alt="My gitHub portfolio"></a>
+		</div>
+		<!--End NavBar-->
+
+		<!-- Title -->
+		<div id="title">
+			<h1>Track your bets here!</h1>
+		</div>
+		<!-- End Title -->
+		<div id="h2">
+			<h2>Welcome to your sports book tracker! Here you can organize and keep a list of the bets you have made!</h2>
+		</div>
+{% block content %}{% endblock %}
+		<!-----Footer------>
+		<footer class="foot">
+			<p> Created by James Wise | 2022</p>
+		</footer>
+    	<!---End of footer---->
+	</body>
+</html>

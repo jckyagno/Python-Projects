@@ -1,0 +1,44 @@
+{% extends "dfort_base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1>Alter Beast</h1>
+
+<div class="form-container">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+</div>
+
+    <!-- Modal, hidden by default -->
+<div id="delete-modal" class="modal">
+    <div style="inline-block">
+        <div class="modal-content">
+            <span id="modal-close" class="close">&times;</span>
+            <p> Are you sure you want to delete {{ item.name }}?</p>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <button class="btn"><a href="../{{ form.pk }}delete/">DELETE</a></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <button id="button-modal" class="btn">DELETE</button>
+    <a href="{% url 'dfort_home' %}"><button class="btn">CANCEL</button></a>
+</div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "BookRatings/BookRatings_Base.html" %}
+
+{% load static %}
+
+{% block title %}Book Ratings: Add a Book{% endblock %}
+
+
+
+{% block content %}
+<h2>Add a Book</h2>
+<div class="container-add-book">
+    <form method="POST" class="form-add-book">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary" type="submit" name="Add Book">Submit</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "texmex_base.html" %}
+
+{% block title %}Tex-Mex{% endblock %}
+
+{% block header %}Current Recipes on Tasty:{% endblock %}
+
+{% block content %}
+		<center>
+			<div class="scrollable">
+				<table>
+					{% for x in recipe_list %}
+					<tr>
+						<td><a href="https://tasty.co/recipe/{{x.0}}" target="_blank">{{x.1}}</a></td>
+					</tr>
+					{% endfor %}
+				</table>
+        	</div>
+		</center>
+
+{% endblock %}

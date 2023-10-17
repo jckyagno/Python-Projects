@@ -1,0 +1,24 @@
+{% extends "sitcoms_base.html" %}
+
+{% block title %}World of Sitcoms{% endblock %}
+
+{% block header %}Save the date!{% endblock %}
+
+{% block content %}
+
+<div class="admin_panel">
+    <br>
+    <table class="center">
+        <tr>
+            <th>Temperature</a></th>
+            <th>Date</a></th>
+        </tr>
+        {% for m in moment %}
+        <tr>
+            <td>{{ m.temperature }}<span>&#176;</span>F</a></td>
+            <td>{{ m.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

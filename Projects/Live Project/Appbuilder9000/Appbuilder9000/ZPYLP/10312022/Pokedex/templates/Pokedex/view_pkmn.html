@@ -1,0 +1,30 @@
+{% extends 'Pokedex/Pokedex_base.html' %}
+	{% block title%}Welcome to your profile!{% endblock %}
+	{% block content %}
+	<h2>Here's what you've captured so far!:</h2> <!--Try to use -->
+			<div class="view_pkmn">
+				<table> <!-- Replace this with the Django Form -->
+					<tr>
+						<th>Pokemon Name</th>
+						<!--<th>Nickname</th>
+						<th>Level</th>
+						<th>Nature</th>
+						<th>Game</th>-->
+					</tr>
+					{% for pkmn in pokemon %}
+					<tr>
+						<td><a href="{% url 'Pokedex_details' pkmn.id %}">{{ pkmn.pokemon_name }}</td>
+						<!--<td>{{ pkmn.nickname }}</td>
+						<td>{{ pkmn.level }}</td>
+						<td>{{ pkmn.nature }}</td>
+						<td>{{ pkmn.game }}</td>-->
+
+					</tr>
+					{% endfor %}
+
+
+				</table>
+
+				<br>
+			</div>
+	{% endblock %}

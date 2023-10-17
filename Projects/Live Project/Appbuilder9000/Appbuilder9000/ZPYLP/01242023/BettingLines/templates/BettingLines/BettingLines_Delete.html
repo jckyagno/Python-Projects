@@ -1,0 +1,12 @@
+{% extends "BettingLinesBase.html" %}
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Permanently delete entry: "{{ info.HomeTeam }}"?</h3>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
+<button type="submit"><a href="{% url 'BettingLines_Edit' info.id %}">Return</a></button>
+{% endblock %}

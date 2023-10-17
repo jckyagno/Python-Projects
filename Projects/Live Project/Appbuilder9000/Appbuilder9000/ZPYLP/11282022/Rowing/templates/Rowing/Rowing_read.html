@@ -1,0 +1,24 @@
+{% extends "Rowing_base.html" %}
+
+{% block content %}
+
+<h1>Crew</h1>
+<table id="read_table">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Position</th>
+        <th>Age</th>
+    </tr>
+    {% for e in entry %}
+    <tr>
+        <td><a href="{% url 'rowing_details' e.id %}">{{ e.first_name }}</a></td>
+        <td>{{ e.last_name }}</td>
+        <td>{{ e.position }}</td>
+        <td>{{ e.age }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<button><a href="{% url 'rowing_create' %}">Add Rower</a></button>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+<!-- CREATE A RECORD IN WISHLIST DB-->
+<form method="POST" action="{% url 'WishList' %}" class="create_wishlist">
+    {% csrf_token %}    <!--Cross Site Request Forgery (csrf_token) Protection-->
+        <input type="text" name="Name" value="{{ i.title }}">
+        <input type="text" name="Thumb" value="{{ i.thumb }}">
+        <input type="number" name="Price" value="{{ i.salePrice }}">
+        <button class="create-wish" type="submit">❤</button>
+</form>

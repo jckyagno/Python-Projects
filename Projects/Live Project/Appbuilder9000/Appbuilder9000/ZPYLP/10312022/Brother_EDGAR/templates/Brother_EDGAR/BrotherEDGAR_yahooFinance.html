@@ -1,0 +1,33 @@
+{% extends "BrotherEDGAR_base.html" %}
+
+{% block title %}EDGAR Search Page{% endblock %}
+
+{% block bodyClass %}yahooFinance{% endblock %}
+
+{% block content %}
+
+<h1>Yahoo Finance Data Report</h1>
+<hr>
+
+<h3>Company Information:</h3>
+<p><strong>Company Name:</strong> {{company_name}}:</p>
+<p><strong>Business Summary:</strong> {{business_summary}}</p>
+<p><strong>Insider confidence:</strong> {{insider_confidence}}</p>
+<p><strong>Industry confidence:</strong> {{industry_confidence}}</p>
+<p><strong>full Time Employees:</strong> {{fullTimeEmployees}}</p>
+<hr>
+<p><strong>gross Margins:</strong> {{grossMargins}}</p>
+<p><strong>gross Profits:</strong> ${{grossProfits}}</p>
+<p><strong>debt To Equity:</strong> {{debtToEquity}}</p>
+<hr>
+<h3>Stock price information:</h3>
+<p><strong>Fifty-day Average:</strong> ${{fiftyDayAverage}}</p>
+<p><strong>Stock price Day High:</strong> ${{dayHigh}}</p>
+<p><strong>Stock price Day Low:</strong> ${{dayLow}}</p>
+<p>Reflecting the demand and liquidity of security:</p>
+
+<p><strong>ask:</strong> ${{ask}}</p>
+<p><strong>ask Size:</strong> {{askSize}} [x100 shares]</p>
+<hr>
+
+{% endblock %}

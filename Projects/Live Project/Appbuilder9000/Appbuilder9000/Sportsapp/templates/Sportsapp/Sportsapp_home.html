@@ -1,0 +1,16 @@
+{% extends "Sportsapp_base.html" %}
+{% block title %} Soccer Sports App{% endblock %}
+{% block content %}
+
+    <hr>
+    <div class="text-container">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.player}}
+            <h5>Add another player</h5>
+            <!--Add a template to the href so that the button works-->
+            <button type="button" class="new-player-button"><a href="{% url 'Sports_create' %}">Create Player</a></button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "magic_base.html" %}
+
+{% block content %}
+
+    <form method="POST" class="myForm">
+        <h1>Delete</h1>
+        {% csrf_token %}
+        <h3>Would you like to permanently delete this deck: "{{ deck.commander }}"?</h3>
+        <br>
+        <button type="submit" class="btnView">Delete</button>
+        <button type="submit" class="btnView"><a href="{% url 'magic_edit' deck.id %}">Go Back</a></button>
+    </form>
+
+{% endblock %}

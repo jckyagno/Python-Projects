@@ -1,0 +1,231 @@
+/* ---------    SITE-WIDE STYLING    --------- */
+body {
+    margin: 0; /* ensures content stretches to edge of viewport */
+}
+
+footer {
+    position: absolute; /* positioned relative to .page-container */
+    bottom: 0;
+    min-width: 100%; /* ensures footer stretches across page */
+    max-width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    color: seagreen;
+    border: 1px solid black;
+    background: black;
+}
+
+h1 {
+    margin: auto;
+    width: 50%;
+    color: seagreen;
+    text-align: center;
+}
+
+html  {
+  scroll-behavior: smooth;
+}
+
+#content-wrap {
+    position: absolute;
+    top: 1.5rem; /* nav height */
+    bottom: 2.5rem; /* footer height */
+    overflow: scroll;
+    width: 100%;
+}
+
+#page-container {
+    position: relative; /* allows child content to be set absolutely */
+    font-family: Heebo;
+    background-image: url('../img/background.jpg');
+    min-height: 100vh; /* ensures page fills device viewport */
+}
+
+/* main nav styling */
+nav {
+    display: flex;
+}
+
+nav > a {
+    display: inline-block;
+    border: 1px solid green;
+    width: 33.3333%;
+    text-align: center;
+    text-decoration: none;
+    color: seagreen;
+    height: 1.5rem;
+}
+
+nav > a:hover {
+    background: seagreen;
+    opacity: 75%;
+    color: white;
+}
+
+/* styling for all buttons across the site */
+.site-btn {
+    margin: 20px;
+    width: 100px;
+    display: block;
+    float: left;
+    background: seagreen;
+    opacity: .75;
+    color: white;
+}
+
+.site-btn:hover {
+    background: white;
+    opacity: .75;
+    color: seagreen;
+    cursor: pointer;
+}
+
+.site-btn> a:hover {
+    color: seagreen;
+}
+
+#add-album-btn {
+    position: absolute;
+    left: 50%;
+}
+
+.site-btn > a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+/* ---------    DETAILS PAGE STYLING    --------- */
+.details-wrap {
+    position: relative;
+    border: 1px solid black;
+    width: 33%;
+    left: 33%;
+}
+
+.details-image {
+    width: 100%;
+}
+
+.detail {
+    display: block;
+}
+
+/* ---------    COLLECTION PAGE STYLING    --------- */
+.collection-container {
+    position: absolute;
+    left: 7.5%;
+}
+
+.rls-container  {
+    position: relative;
+    display: block;
+    float: left;
+    width: 10%;
+    margin: 20px;
+    width: 10rem;
+    height: 10rem;
+    overflow-wrap: break-word;
+    transition: transform .5s; /* w/transform - creates smooth scaling animation */
+    transform: origin 50% 50%;
+    background-size: 10rem; /* sets background image to same size as container */
+}
+
+.rls-container:hover {
+    transform: scale(1.1);
+}
+
+.rls-text-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity .5s;
+    color: white;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.rls-text-overlay:hover {
+    background: black;
+    opacity: .6;
+}
+
+.rls-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------    SCORES PAGE STYLING     ---------*/
+.scores-wrap {
+    position: relative;
+    border: 1px solid black;
+    width: 50%;
+    left: 25%;
+    height: 60vh;
+    overflow: scroll;
+
+}
+.score-container {
+    display: block;
+}
+
+.score-image {
+    display: block;
+    height: 10vh;
+}
+
+
+/* ---------    RELEASE FORM STYLING     ---------*/
+#release-form-wrap {
+    position: relative;
+    border: 1px solid black;
+    width: 33%;
+    left: 33%;
+    top: 15%;
+    display: none;
+}
+
+#release-form-image {
+    display: block;
+    width: 100%;
+}
+
+#release-form-fields {
+    display: none;
+}
+
+.confirm-release-widget {
+    position: relative;
+    width: 33%;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#confirm-cover-image {
+    width: 25vw;
+}
+
+
+/* ---------    CATALOG NUMBER WIDGET STYLING     ---------*/
+#widget-wrap {
+    position: absolute;
+    padding: 15px;
+    color: seagreen;
+    border: 1px solid black;
+    left: 50%;
+    top: 6rem;
+    transform: translate(-50%, -50%);
+}
+
+

@@ -1,0 +1,18 @@
+{% extends "VideoGameReviews/VideoGameReviews_base.html" %}
+
+{% block title %}Video Game Reviews!{% endblock %}
+
+{% block content %}
+<h1>Review Details</h1>
+
+<p>Game Title: {{ review.game_title }}</p>
+<p>Game Score: {{ review.game_score }}</p>
+<p>Review Text: {{ review.review_text }}</p>
+<p>Reviewer Name: {{ review.reviewer_name }}</p>
+<p>Date Reviewed: {{ review.date_reviewed }}</p>
+
+<div id="edit-center">
+    <button><a href="{% url 'video_game_edit' review.id %}">Edit Review</a></button>
+</div>
+
+{% endblock %}

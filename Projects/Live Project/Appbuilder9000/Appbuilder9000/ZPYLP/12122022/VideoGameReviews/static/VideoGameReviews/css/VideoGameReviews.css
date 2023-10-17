@@ -1,0 +1,184 @@
+body {
+background-image: url('../images/background_image.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+font-family: Arial;
+color: white;
+font-size: 1.2em;
+}
+
+/* Disables links in table since they don't work */
+.no-link {
+pointer-events: none;
+}
+
+.no-link a {
+text-decoration: none;
+color: white;
+}
+
+.wiki-link {
+color:white;
+}
+
+.wikitable {
+margin-left: auto;
+margin-right: auto;
+}
+
+li {
+float: left;
+}
+
+h1 {
+text-align: center
+}
+
+p {
+text-align: center;
+}
+
+#delete-confirmation {
+color: black;
+}
+
+.navbar {
+list-style-type: none;
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+
+li a {
+display: block;
+padding: 8px;
+box-shadow: inset 0 0 0 0 white;
+color: white;
+text-decoration: none;
+transition: color .3s ease-in-out, box-shadow .33s ease-in-out;
+}
+
+li a:hover {
+box-shadow: inset 300px 0 0 0 white;
+color: black;
+}
+
+/* Keeps footer at bottom of page */
+footer {
+position: fixed;
+padding: 10px;
+bottom: 0;
+}
+
+/* This class is defined in forms.py in the widgets */
+.create-form-fields {
+width: 30%;
+padding: 8px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+font-family: Arial;
+}
+
+/* Gets rid of underline for hyperlinks */
+td a {
+color: white;
+}
+
+button a {
+text-decoration: none;
+color: black;
+}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+padding-top: 100px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgb(0, 0, 0);
+background-color: rgb(0, 0, 0, 0.4);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.my-link {
+text-decoration: none;
+background:
+    linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 1)
+    ),
+    linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 0, 1)
+    );
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms;
+}
+
+.my-link:hover {
+background-size: 0 2px, 100% 2px;
+}
+
+#edit-center {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+input {
+width: 200px;
+padding: 3px 18px;
+margin: 8px 0;
+border: 2px solid black;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+button {
+background-color: white;
+border: 2px solid black;
+color: black;
+padding: 3px 18px;
+text-align: center;
+display: inline-block;
+margin: 3px 12px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #c7c6c1;
+transition: 0.2s;
+}

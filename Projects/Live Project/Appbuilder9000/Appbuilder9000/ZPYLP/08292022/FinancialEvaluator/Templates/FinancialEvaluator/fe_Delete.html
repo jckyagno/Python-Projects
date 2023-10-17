@@ -1,0 +1,13 @@
+{% extends "fe_Base.html" %}
+
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Permanently delete entry: {{ entry.id }} - {{ entry.symbol }}?</h3>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
+<button type="submit"><a href="{% url 'fe_Update' entry.id %}">Return</a></button>
+{% endblock %}

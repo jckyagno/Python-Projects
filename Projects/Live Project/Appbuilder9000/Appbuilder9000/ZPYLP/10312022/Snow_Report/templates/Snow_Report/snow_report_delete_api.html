@@ -1,0 +1,12 @@
+{% extends "snow_report_base.html" %}
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Permanently delete moment: "{{ moment.temperature }}"?</h3>
+        <br>
+        <button type="submit">Delete</button>
+</form>
+
+{% endblock %}

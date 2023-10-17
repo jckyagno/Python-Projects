@@ -1,0 +1,35 @@
+{% extends "puppy_base.html" %}
+
+{% block content %}
+
+<h1>Past Potty Schedules</h1>
+
+<h1>Existing Lists</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Potty Day</th>
+                <th>Potty Time</th>
+                <th>Potty Type</th>
+                <th>Potty Color</th>
+                <th>Potty Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% for pup in pups %}
+                <td>{{ pup.potty_day }}</td>
+                <td>{{ pup.potty_time }}</td>
+                <td>{{ pup.potty_type }}</td>
+                <td>{{ pup.potty_color }}</td>
+                <td>{{ pup.potty_description }}</td>
+            <td><a href="{% url 'puppy_details' pup.id %}">{{pup.potty_day }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+
+

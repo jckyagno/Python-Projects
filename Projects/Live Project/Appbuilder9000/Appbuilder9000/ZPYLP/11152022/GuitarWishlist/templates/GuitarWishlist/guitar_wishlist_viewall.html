@@ -1,0 +1,35 @@
+{% extends 'GuitarWishlist/guitar_wishlist_base.html' %}
+{% load static %}
+
+{% block title %}
+<title>View Existing Lists</title>
+{% endblock %}
+
+{% block content %}
+
+<h1>View Existing Lists</h1>
+
+
+<table class="viewall_table">
+    <tr>
+        <th>LIST NAME:</a></th>
+        <th>BRAND:</a></th>
+    </tr>
+    {% for e in list_name %}
+    <tr>
+        <td><a href="{% url 'GuitarWishlist_details' e.id %}">{{ e.list_name }}</a></td>
+        <td>{{ e.brand }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+<!--button to go to create/edit pages-->
+<button class="create_button"><a href="{% url 'GuitarWishlist_create' %}">Create New List</a></button>
+
+
+
+
+
+{% endblock %}

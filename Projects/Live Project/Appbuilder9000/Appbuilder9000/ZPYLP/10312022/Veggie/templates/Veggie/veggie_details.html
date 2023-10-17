@@ -1,0 +1,25 @@
+{% extends "Veggie_base.html" %}
+
+{% block content %}
+
+<h1>Recipe</h1>
+{% csrf_token %}
+<form class="container" method="POST">
+    <h1><strong>{{ recipe.title_name }}</strong></h1>
+    <ul class="list-group">
+        <li class="list-group"><strong>Author: {{ recipe.author_name }}</strong></li>
+        <li class="list-group"><strong>Number of ingredients: {{ recipe.number_of_ingredients }}</strong></li>
+        <li class="list-group"><strong>Total time (mins): {{ recipe.making_time }}</strong></li>
+        <br>
+        <div class="text-center navbar-expand bg-light" style="margin-bottom:0">
+          <li class="list-group"> {{ recipe.description }}</li>
+        </div>
+        <br>
+        <li class="list-group"><button><a href="{% url 'veggie_edit' recipe.id %}">Edit Recipe</a></button></li>
+        <br>
+        <li class="list-group"><button><a href="{% url 'veggie_delete' recipe.id %}">Delete Recipe</a></button></li>
+    </ul>
+</form>
+
+{% endblock %}
+

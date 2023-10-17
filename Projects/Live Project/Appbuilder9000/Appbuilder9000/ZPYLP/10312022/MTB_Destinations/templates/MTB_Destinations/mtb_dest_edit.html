@@ -1,0 +1,22 @@
+{% extends "MTB_Destinations/mtb_dest_base.html" %}
+{% block title %}Edit {{ obj.trail_system | title }}{% endblock %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block content %}
+<div class="col-sm-6 mx-auto" style="margin-top:100px;">
+    <h1 class="display-5">Need to make changes to your trail info?</h1>
+    <p class="lead">Make your changes below.</p>
+    <form method="post"
+    style="margin-bottom:100px;">
+        {% csrf_token %}
+        <div>
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-warning">Update Item</button>
+            <a onclick="return confirm('Are you sure you want to delete this trail?')"
+               href="../delete/" class="btn btn-dark">Delete Item</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

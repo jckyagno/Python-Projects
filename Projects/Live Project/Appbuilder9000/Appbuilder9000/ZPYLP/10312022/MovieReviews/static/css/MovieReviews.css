@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif HK', serif;
+    /*background-color: #35353e;*/
+    background-color: #151518;
+}
+
+.navbar {
+    background-color: #363645;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 7.25rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #E2D81D;
+    text-decoration: none;
+    padding-left: 1rem;
+}
+
+li a:hover {
+    border-bottom: 1px solid #E2D81D;
+    border-top: 1px solid #E2D81D;
+}
+
+h1 {
+    color: #E2D81D;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    color: #E2D81D;
+    text-align: center;
+}
+
+h3 {
+    padding-top: 2rem;
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: #E2D81D;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.soup {
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+#id_title {
+    width: 15%;
+}
+
+#id_rating {
+    width: 5%
+}
+
+#movie-form {
+    text-align: center;
+    padding-top: 2rem;
+    color: #E2D81D;
+}
+
+#movie-form p {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+
+button {
+    background-color: #151518;
+    color: #E2D81D;
+    width: 10rem;
+    height: 5rem;
+    border: 2px solid #E2D81D;
+    border-radius: 3px;
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete-btn {
+    position: absolute;
+    left: 46%;
+}
+
+button p:hover {
+    color: #151518;
+}
+
+button:hover {
+    background-color: #E2D81D;
+    color: #151518;
+}
+.btn-container {
+    position: absolute;
+    right: 4rem;
+    bottom: 4rem;
+    width: fit-content;
+
+}
+
+.update-button a:hover {
+    color: #151518;
+}
+
+.delete-button a:hover {
+    color: #151518;
+}
+
+.save-button {
+    position: absolute;
+    left: 46%;
+}
+
+.movie-table {
+    table-layout: fixed;
+    width: 90%;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 2px solid #E2D81D;
+    align-content: center;
+}
+
+th {
+    color: #E2D81D;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #E2D81D;
+}
+
+.table-data {
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    border: 1px solid #E2D81D;
+}
+
+.table-data:hover {
+    background-color: #363645;
+}
+
+.movie-details-title {
+    margin-top: 3rem;
+}
+
+.movie-details-rating {
+    margin-top: 6rem;
+}
+
+.movie-details-review {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #363645;
+}
+
+footer p {
+    color: white;
+    margin-top: 0;
+}

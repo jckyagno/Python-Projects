@@ -1,0 +1,43 @@
+{% extends 'deadByDaylight_base.html' %}
+{% load static %}
+{% block title %}Survivors{% endblock %}
+
+{% block content %}
+<div class="large-container">
+{% for i in survivor %}
+
+{% for p in survivorPerk %}
+{% if i.id == p.id %}
+
+<div class="square-container" onclick="location.href='../{{ i.id }}/survdetails/'">
+    <img alt="Character image here" src="{{ i.portrait_of_Survivor }}" class="profile_image">
+    <div class="text-container">
+        {{ i.full_Name}}
+    </div>
+
+    <div class="perk-container">
+        <div class="perk">
+            <img alt="Character image here" src="{{ p.image_Of_Perk_One }}" class="perk_image">
+            <br>
+            {{ p.perk_One }}
+        </div>
+        <div class="perk">
+            <img alt="Character image here" src="{{ p.image_Of_Perk_Two }}" class="perk_image">
+            <br>
+            {{ p.perk_Two }}
+        </div>
+        <div class="perk">
+            <img alt="Character image here" src="{{ p.image_Of_Perk_Three }}" class="perk_image">
+            <br>
+            {{ p.perk_Three }}
+        </div>
+    </div>
+</div>
+
+
+    {% endif %}
+{% endfor %}
+
+    {%endfor %}
+        </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/wine_pairing.css' %}">
+    </head>
+
+        {% include "wine/wine_navbar.html" %}
+    <body id="body">
+        <div class="content-container-container">
+            <div class="content-container">
+                <header class ="header-title">
+                    <h1>{% block header %}Pair your wine{% endblock %}</h1>
+                </header>
+                        {% block content %}{% endblock %}
+            </div>
+            {% include "wine/wine_footer.html" %}
+        </div>
+    </body>
+</html>

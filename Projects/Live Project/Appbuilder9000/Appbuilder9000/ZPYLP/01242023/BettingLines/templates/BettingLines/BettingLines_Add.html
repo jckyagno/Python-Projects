@@ -1,0 +1,16 @@
+{% extends "BettingLinesBase.html" %}
+
+{% block title %}Add and Track your bets here!{% endblock %}
+
+{% block content %}
+<div id="BettingForm">
+    <form method="POST">
+        <!-- csrf_token required for django forms -->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- Button to submit-->
+        <button id="Add_a_bet" type="submit" name="Create_Bet">Log a Bet</button>
+        <button type="button" id="showHideElement" onclick="showHideElement()">Show List</button>
+    </form>
+</div>
+{% endblock %}

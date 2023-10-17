@@ -1,0 +1,24 @@
+{% extends 'Dogs/Dogs_base.html' %}
+
+{% block title %} Details {% endblock %}
+
+{% block content %}
+
+    <h1>Details</h1>
+        <div class="form-container">
+            <form class="form" method="POST" action="../details/">
+                <div>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                </div>
+                <div class="frmBtn_container">
+                    <ul>
+                        <li><input class="btn" type="submit" value="Update Dog" name="save_item" /></li>
+                        <li><button class="btn"><a href="../{{ form.pk }}delete/">DELETE</a></button></li>
+                        <li><button class="btn"><a href="{% url 'Dogs_home' %}">CANCEL</a></button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+{% endblock %}

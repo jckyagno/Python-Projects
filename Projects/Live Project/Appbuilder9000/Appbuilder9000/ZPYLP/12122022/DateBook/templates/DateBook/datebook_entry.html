@@ -1,0 +1,14 @@
+{% extends 'datebook_base.html' %}
+
+    {% block title %}Add New Entry{% endblock %}
+    {% block content %}
+        <div class="new_entry">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button id="new_entry_button" type="submit" name="submit_entry">Add Your Date</button>
+            </form>
+            <br>
+            <button><a href="{% url 'datebook_all' %}">View Date Book</a></button>
+        </div>
+    {% endblock %}

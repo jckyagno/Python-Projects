@@ -1,0 +1,12 @@
+{% extends "OnlineArtists/OnlineArtists_base.html" %}
+
+{% block content %}
+    <h2>Feature New Artist</h2>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Add</button>
+        </form>
+    </div>
+{% endblock %}

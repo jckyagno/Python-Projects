@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+}
+
+html {
+    background-color: white;
+}
+
+
+/* Start Navbar */
+
+.navbar{
+    width: 100%;
+    background-color: #CC5500;
+}
+
+.navbar ul {
+    text-align: center;
+    margin-right: 50px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 30px;
+    transition: all ease 1s;
+    position: relative;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.navbar ul li a:hover {
+    color: white;
+    background: rgba(139,69,19, 0.7);
+}
+
+/* End Navbar */
+
+/* Body */
+h1 {
+    color: black;
+    text-align: center;
+    padding: 50px;
+}
+
+p {
+    text-align: center;
+}
+/* End Body */
+
+/* Start Footer */
+
+footer {
+    background-color: SaddleBrown;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* End Footer */
+
+/* Table */
+    .content-table{
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px;
+    }
+
+    .content-table tbody {
+        background-color: white;
+    }
+    .content-table thead tr {
+        background-color: white;
+        color: #CC5500;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .content-table tb,
+    .content-table td {
+        padding: 12px 15px;
+    }
+
+    .content-table tbody tr {
+        border-bottom: 1px solid white;
+        color: #CC5500;
+    }
+
+/* End Table */
+
+/* Image */
+.bg_img {
+    background-color: #145369;
+    background: url('../images/CFB.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* End Image */

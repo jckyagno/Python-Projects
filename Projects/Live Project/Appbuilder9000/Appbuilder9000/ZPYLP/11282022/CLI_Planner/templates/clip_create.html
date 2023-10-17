@@ -1,0 +1,17 @@
+{% extends 'clip_base.html' %}
+{% block title %}Create New Event{% endblock %}
+{% block content %}
+	<div class='title center'>
+		<p>Create a new event here!</p>
+	</div>
+
+	<div class='create-event'>
+
+			<form method='POST'>
+				{% csrf_token %}
+				{{form.as_p}}
+				<button id="new-account-button" type="submit" name="save_event">Create Event</button>
+			</form>
+		
+	</div>
+{% endblock %}

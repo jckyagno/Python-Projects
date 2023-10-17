@@ -1,0 +1,17 @@
+{% extends "Cryptocurrency_base.html" %}
+
+{% block content %}
+<div class="details">
+    <h2>Cryptocurrency Review Details</h2>
+    <h3>Name:  {{ details.user | capfirst }}</h3>
+    <h3>Cryptocurrency:  {{ details.crypto | capfirst }}</h3>
+    <p>Ticker Symbol: {{ details.ticker }}</p>
+    <p>Price Paid($):  {{ details.price }}</p>
+    <p>Review: {{ details.body }}</p>
+    <p>Sentiment:  {{ details.rating }}</p>
+
+        <button id="button"><a href="{% url 'Cryptocurrency_Edit' details.id %}">Update Review</a></button>
+        <br>
+        <button id="button"><a href="{% url 'Cryptocurrency_Delete' details.id %}">Delete Review</a></button>
+</div>
+{% endblock %}

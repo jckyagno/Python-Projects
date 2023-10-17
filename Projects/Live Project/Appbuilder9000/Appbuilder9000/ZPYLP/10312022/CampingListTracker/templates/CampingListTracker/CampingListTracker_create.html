@@ -1,0 +1,13 @@
+{% extends "CampingListTracker_base.html" %}
+
+<!-- Creates a form the user can submit list -->
+{% block content %}
+<h1>CREATE CAMPING LIST</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="submit" type="submit">Submit</button>
+    </form>
+
+<button class="submit"><a class="link" href="{% url 'cl_list' %}">View List</a></button>
+{% endblock %}

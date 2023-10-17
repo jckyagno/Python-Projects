@@ -1,0 +1,29 @@
+{% extends "JobScraping_base.html" %}
+
+{% block title %}Job Input{% endblock %}
+
+{% block header %}What would you like to change?{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="content">
+        <h1 class="display-4">Adjust your job info here</h1>
+        <form name="editForm" method="POST" action="/JobScraping/{{ jobs.pk }}/saveEdit/">
+            <table class="center">
+              {% csrf_token %}
+              {{ form.non_field_errors }}
+              {{ form.as_table }}
+            </table>
+            <br>
+            <input class="btn btn-dark" type="submit" value="Save Changes">
+            <br>
+            <br>
+        </form>
+        <form name="startDelete" method="GET", action="/JobScraping/{{ jobs.pk }}/delete/">
+            {% csrf_token %}
+            <input class="btn btn-dark" type="submit" value="Delete">
+        </form>
+    </div>
+</div>
+{% include "JobScraping_footer.html" %}
+{% endblock %}

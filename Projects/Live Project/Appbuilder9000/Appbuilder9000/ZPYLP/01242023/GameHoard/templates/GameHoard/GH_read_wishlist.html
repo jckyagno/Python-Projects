@@ -1,0 +1,32 @@
+<!-- READ wishList-->
+<div class="wish flex" id="wishList">
+    {% for i in wishListContents %}
+        <!--Create a link to the Update Game page, pass in the primary key: reference i (the object of the loop) and Name which is the primary key defined in models.py-->
+        <!--When you click the element, it will trigger an url.py 'shortcut': UpdateGame, and pass in the object's primary key-->
+        <div class= "wish-container">
+            <a href="https://store.steampowered.com/search/?term={{ i.Name }}">        <!--Use an anchor tag to turn each element into a link via an url.py 'shortcut' and pass in each iteration's primary key (i.Name)-->
+                    <div class= "wish-img">
+                        <img src="{{ i.thumb }}">
+                        {{ i.thumb }}
+                    </div>
+                    <div class= "wish-title">
+                        <h3>✨ {{i.Name}}</h3>
+                    </div>
+                    <div class="wish-text salePrice">
+                        <p><b>$ {{i.Price}}</b></p>
+                    </div>
+            </a>
+
+            <!--CALL A VIEW METHOD TO DELETE RECORD-->
+            <form method="POST" action="{% url 'DeleteWish' %}">
+                {% csrf_token %}                <!-- MUST INCLUDE CSRF token -->
+                <div class="modal-buttons">
+                    <!--The submit button MUST be INSIDE the form tag to work-->
+                    <input type="text" name="Name" value="{{ i.Name }}">
+                    <button type="submit" class="deleteBtn">DELETE</button>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+</div>
+

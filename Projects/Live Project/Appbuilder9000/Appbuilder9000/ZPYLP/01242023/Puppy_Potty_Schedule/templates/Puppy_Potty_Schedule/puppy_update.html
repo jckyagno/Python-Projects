@@ -1,0 +1,23 @@
+{% extends "puppy_base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+
+{% block title %}Update Schedule{% endblock %}
+
+{% block content%}
+
+<h1> Update Schedule</h1>
+
+		<form method="POST" class="myForm">
+			<h1>Edit</h1>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit" class="btnSub">Save Changes</button>
+			<button type="submit" class="btnView"><a href="{% url 'puppy_delete' update_post.id %}">Delete</a></button>
+		</form>
+{% endblock %}
+
+

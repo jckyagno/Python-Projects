@@ -1,0 +1,12 @@
+{% extends "bucketlist_base.html" %}
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Permanently delete item: "{{ item.Activity }}"?</h3>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
+<button type="submit"><a href="{% url 'bucketlist_update' item.id %}">Return</a></button>
+{% endblock %}

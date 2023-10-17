@@ -1,0 +1,26 @@
+{% extends 'GuitarWishlist/guitar_wishlist_base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Edit A List</title>
+{% endblock %}
+
+{% block content %}
+<div class="edit_page_container">
+    <h1>Edit Current List:</h1>
+        <div class="edit_page_form">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="edit_buttons">
+                    <button type="submit" class="create_button">Save Changes</button>
+                    <button type="submit" class="create_button"><a href="{% url 'GuitarWishlist_delete' chosenList.id %}">Delete</a></button>
+                </div>
+            </form>
+        </div>
+</div>
+
+
+
+
+{% endblock %}

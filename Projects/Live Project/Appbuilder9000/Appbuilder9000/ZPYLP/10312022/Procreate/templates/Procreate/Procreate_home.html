@@ -1,0 +1,11 @@
+{% extends "Procreate/Procreate_base.html" %}
+
+{% block title %} Procreate Art {% endblock %}
+
+{% block header %}Check out these amazing artist! {% endblock %}
+
+{% block content %}
+<button type="submit"><a href="{% url 'procreate_create' %}">Create Here</a></button>
+<button type="submit"><a href="{% url 'procreate_seeartist' %}">See Artist Here</a></button>
+
+{% endblock %}

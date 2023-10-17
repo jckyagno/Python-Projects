@@ -1,0 +1,12 @@
+{% extends "CampingListTracker_base.html" %}
+
+{% block content %}
+<h1 class="delete">DELETE LIST</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Permanently delete list: "{{ entry.destination }}"?</h3>
+        <br>
+        <button class="submit" type="submit">Delete</button>
+    </form>
+<button class="submit" type="submit"><a class="link" href="{% url 'cl_update' entry.id %}">Return</a></button>
+{% endblock %}

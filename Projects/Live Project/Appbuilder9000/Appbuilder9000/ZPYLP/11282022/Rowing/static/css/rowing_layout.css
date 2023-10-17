@@ -1,0 +1,215 @@
+/*--------Navigation Bar---------------------*/
+.Navigation_bar {
+    background-color: DarkBlue;
+    overflow: hidden;
+    margin: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.Navigation_bar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.Navigation_bar a:hover {
+    color: DeepSkyBlue;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+
+}
+
+.Navigation_bar a:active{
+    background-color: #00001a;
+    color: white;
+}
+
+/*--------End of Navigation Bar-------------*/
+
+/*---------Background image--------------------------*/
+
+.bg_img {
+background-color: lightblue;
+background-image: url('/static/images/sunset_rowing.jpg');
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+position: relative;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+
+}
+
+
+/*-----------End of Background image------------*/
+
+/*----------Body---------------------*/
+
+body {
+margin: 0;
+overflow: hidden;
+scroll: smooth;
+z-index: 0;
+}
+
+
+/*----------container---------*/
+
+.content-container-container {
+position: relative;
+font-family: Helvetica, Arial, sans-serif;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 10px;
+margin-top: 5px;
+align-items: center;
+opacity: 4;
+padding: 60px 50px 75px 100px;
+border-style: rounded;
+border-width: 5px;
+border-color: lightblue;
+text-position: center;
+
+}
+
+.content-container {
+    text-align: center;
+    align-items: center;
+}
+
+/*---------end of container---------*/
+
+/*----------Header----------------*/
+
+.header
+  padding-top: 60px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+
+/*----------End of Header-----------*/
+
+/*----------Read section---------------*/
+
+#read_table {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    table-layout: auto;
+    float: center;
+    position: relative;
+    padding: 10px;
+    height: auto;
+    margin: auto;
+}
+
+table {
+margin: auto;
+}
+
+table tr th {
+    padding-left: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+
+table tr td {
+    padding-top: 6px;
+    padding-left: 40px;
+    text-align: left;
+    color: black;
+}
+
+tr:hover {
+background-color: LightSkyBlue;
+}
+
+/*------- End of read section-------------*/
+
+/*-----------footer-------------*/
+
+#footer {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 20px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  left: 0;
+}
+
+/*--------end of footer-------*/
+
+/*------------ Buttons---------*/
+
+input, button {
+font-family: 'Courier New', monospace;
+font-family: 'Georgia', serif;
+text-decoration: none;
+}
+
+button {
+margin:15px;
+font-size: 16px;
+cursor: pointer;
+text-decoration: none;
+}
+/*-------------------end of button section-------------*/
+
+/*----------- Extra pages-----------------------------*/
+
+#rowing_delete {
+  background-color: #808080;
+  width: 300px;
+  border-style: solid;
+  border: 15px ##2F4F4F;
+  padding: 50px;
+  margin: auto;
+  }
+
+  #rowing_bs {
+  width: 600px;
+  height: 300px;
+  border: 3px solid MidnightBlue;
+  margin: auto;
+  padding: 15px 10px;
+  background: SkyBlue;
+  }
+
+  #rowing_api {
+  width: 300px;
+  height: 250px;
+  border: 3px solid #ccc;
+  background-image: url('/static/images/Weather2.jpg');
+  margin: auto;
+  padding: 15px 10px;
+  text-color: white;
+  text-align: center;
+
+  }
+
+/*--------------End of Extra pages--------*/
+
+div.rower_animation::before {
+    content: url("../images/scull.png");
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    animation: move1 4s;
+    transform: translate(-420px, 53px);
+    animation-direction: reverse;
+}
+
+@keyframes move1 {
+    from {transform: translate(100vw, 53px)}
+    to {transform: translate(-420px, 53px)}
+}
+

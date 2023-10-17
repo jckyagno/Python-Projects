@@ -1,0 +1,20 @@
+{% extends 'VinylCollection/base.html' %}
+
+{% block title %}Your Vinyl{% endblock %}
+
+{% block header %}Your Vinyl Collection{% endblock %}
+
+{% block content %}
+
+<div class="collection-container">
+    {% for release in releases %}
+        <div class="rls-container" style="background-image: url({{ release.cover_image }});">
+            <div class="rls-text-overlay">
+                {{ release }}
+                <a href="../{{ release.pk }}/details/" class="rls-link"></a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

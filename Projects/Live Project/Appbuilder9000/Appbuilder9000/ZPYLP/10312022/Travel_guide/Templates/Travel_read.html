@@ -1,0 +1,25 @@
+{% extends "Travelguide_base.html" %}
+
+{% block title %}Travel_guide{% endblock %}
+
+{% block header %}Current Destination Listing{% endblock %}
+
+{% block content %}
+
+
+            <table>
+                 <tr>
+                    <th>Country</th>
+                    <th>Region</th>
+                    <th>Description</th>
+                </tr>
+                 {% for D in Destination %}
+                <tr>
+                    <td><a href="{% url 'Travel_details' D.id %}">{{ D.Country }}</a></td>
+                    <td>{{ D.Region }}</td>
+                    <td>{{ D.Description }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+<button><a href="{% url 'Travel_create' %}">Add Destination</a></button>
+{% endblock %}

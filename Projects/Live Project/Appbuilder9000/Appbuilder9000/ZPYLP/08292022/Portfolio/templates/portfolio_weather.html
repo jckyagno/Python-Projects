@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include "Portfolio_head.html" %}
+    <meta charset="UTF-8">
+    <title>Shiv Patel</title>
+</head>
+<body>
+    {% include "Portfolio/navbar.html" %}
+    <div class="container anim">
+      <div class="con2">
+          <div class="">
+              <h1 class="">Weather</h1>
+              <div>
+                  <h3>The time in {{ City }} is currently {{ Time }}.</h3>
+                  <p>It is {{ Temperature }}&#8457. You can expect it to be {{ Condition }}.</p>
+                  <p>If you'd like to save this information, please click below.</p>
+                  <button type="submit"><a href="{% url 'weatherdata'  %}">Save and view</a></button>
+              </div>
+
+          </div>
+      </div>
+    </div>
+
+</body>
+</html>

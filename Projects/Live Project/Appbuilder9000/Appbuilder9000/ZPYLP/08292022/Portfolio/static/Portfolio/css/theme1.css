@@ -1,0 +1,99 @@
+html {
+    font-family: Garamond, serif;
+}
+
+body {
+    background: gray;
+}
+
+.navbar {
+    background-color: rgba(0,0,0,.25);
+    box-shadow: -10px 0px 12px 4px rgba(170,23,50,.25);
+}
+
+.svg path {
+    stroke: rgba(170,23,50,1);
+    stroke-opacity: .7
+}
+
+.svg path:hover {
+    stroke: rgba(170,23,50,1);
+    stroke-opacity: 1;
+}
+
+.navbar a {
+    color: white;
+
+}
+
+.active, .navbar a:hover{
+    background-color: rgba(170,23,50,.75);
+}
+
+.con2 {
+    box-shadow: 0px 0px 12px 4px rgba(170,23,50,.25);
+    background-color: rgba(0,0,0,.25);
+}
+
+.formcontainer {
+    border: 4px solid rgba(170,23,50,1);
+}
+
+.contactform {
+    background-color: rgba(0,0,0,.875);
+}
+
+.btn {
+    font-family: "Trebuchet MS", Optima;
+    background-color: black;
+    color: white;
+    border-color: rgba(170,23,50,1);
+    border-radius: 10px;
+}
+
+.contactform label {
+    color: white;
+}
+
+.formpopup:hover, .btn:hover {
+    color: rgba(170,23,50,1)
+}
+
+.formpopup {
+    background-color: black;
+    color: white;
+    border: solid rgba(170,23,50,1);
+    border-radius: 5px;
+}
+
+.dbdisplay {
+    color: white;
+}
+
+.dbdisplaycontainer {
+    border: 4px solid rgba(170,23,50,1);
+    background: black;
+    border-radius: 10px;
+}
+
+.tablestyle {
+    border-top: 1px solid black;
+}
+
+.tableheader {
+    border-bottom: 1px solid black;
+}
+
+.tabledata {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.tabledata2 {
+    border-bottom: 1px solid black;
+}
+
+.tabledata, .tabledata2 {
+    background-color: rgba(0,0,0,.25);
+    color: white;
+}

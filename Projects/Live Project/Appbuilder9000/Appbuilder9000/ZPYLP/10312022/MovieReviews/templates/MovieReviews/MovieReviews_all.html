@@ -1,0 +1,18 @@
+{% extends "MovieReviews_base.html" %}
+{% block content %}
+<h1>Your Movies</h1>
+    <table class="movie-table">
+        <tr>
+            <th>Movie</th>
+            <th>Rating</th>
+            <th>Review</th>
+        </tr>
+        {% for movie in movies %}
+        <tr class="table-data">
+            <td><a href="{% url 'details' movie.id %}">{{ movie.title }}</a></td>
+            <td>{{ movie.rating }}</td>
+            <td>{{ movie.review }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

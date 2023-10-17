@@ -1,0 +1,32 @@
+{% extends "FFXIV_Item_Database/base.html" %}
+{% load static %}
+{% block title %}Create a Collection List{% endblock %}
+{% block content %}
+    {% load crispy_forms_tags %}
+
+            <div class="container mt-1">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase mb-5">Create a Collection List</h2>
+                    <h3 class="section-subheading text-white">Keep up with the things you care about</h3>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                          {{form.collection_name|as_crispy_field}}
+                        </div>
+                        <div class="row">
+                          {{form.collection_description|as_crispy_field}}
+                        </div>
+                        <div class="row">
+                          {{form.collection_created_author|as_crispy_field}}
+                        </div>
+                        <div class="row">
+                          {{form.collection_focus|as_crispy_field}}
+                        </div>
+                        <div class="row">
+
+                        </div>
+                          <button class="btn btn-primary mt-3" type="submit" name="Save_Collection">Submit</button>
+                    </form>
+                </div>
+            </div>
+{% endblock %}

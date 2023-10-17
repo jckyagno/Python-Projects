@@ -1,0 +1,31 @@
+{% extends 'directors_base.html' %}
+
+{% block title %}Directors List{% endblock %}
+
+{% block header %}Your List of Directors{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="table_container">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th># of Movies</th>
+            </tr>
+            {% for director in directors %}
+            <tr>
+                <td><a href="{% url 'directors_details' director.id %}">{{ director.name }}</a></td>
+                <td>{{ director.numberOfMovies }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+{% include 'MovieDirectors/directors_footer.html' %}
+{% endblock %}

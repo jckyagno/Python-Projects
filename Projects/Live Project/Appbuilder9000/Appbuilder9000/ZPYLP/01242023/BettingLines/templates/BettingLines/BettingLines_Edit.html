@@ -1,0 +1,12 @@
+{% extends "BettingLinesBase.html" %}
+
+{% block content %}
+<h1>Edit</h1>
+<form method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Save Changes</button>
+		</form>
+		<button type="submit"><a href="{% url 'BettingLines_Delete' info.id %}">Delete</a></button>
+<button type="submit"><a href="{% url 'BettingLines_Details' info.id %}">Return</a></button>
+{% endblock %}

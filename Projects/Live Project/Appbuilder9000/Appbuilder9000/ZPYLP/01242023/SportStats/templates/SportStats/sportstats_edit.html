@@ -1,0 +1,19 @@
+{% extends "sportstats_base.html" %}
+
+{% block title %}Edit Player{% endblock %}
+
+
+{% block content %}
+<h1>Edit Player</h1>
+	<div class="position-absolute top-50 start-50 translate-middle">
+		<div class="text-bg-danger p-3">
+			<form method="POST">
+				{% csrf_token %}
+				{{ form.as_p }}
+						<button type="submit">Save Changes</button>
+			</form>
+				<button type="submit"><a href="{% url 'sportstats_delete' entry.id %}">Delete Player</a></button>
+        		<button type="submit"><a href="{% url 'sportstats_details' entry.id %}">Return</a></button>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "CampingListTracker_base.html" %}
+
+{% block content %}
+<h1 class="list">CAMPING LISTS</h1>
+    <table class="list-tables">
+        <thead>
+            <tr>
+                <th>Destination</th>
+                <th>Terrain/Climate</th>
+                <th>Camping Style</th>
+
+            </tr>
+        </thead>
+        {% for e in entry %}
+        <tbody>
+            <tr>
+                <td><a href="{% url 'cl_details' e.id %}">{{ e.destination }}</a></td>
+                <td><a>{{ e.terrain_and_climate }}</a></td>
+                <td><a>{{ e.camping_style }}</a></td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+<button class="submit"><a class="link" href="{% url 'cl_create' %}">Add List</a></button>
+
+{% endblock %}

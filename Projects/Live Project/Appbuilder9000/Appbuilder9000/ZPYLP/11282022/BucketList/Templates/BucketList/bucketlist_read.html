@@ -1,0 +1,21 @@
+ {% extends "bucketlist_base.html" %}
+
+{% block content %}
+<h1>Read</h1>
+<table>
+    <tr>
+        <th>Activity</a></th>
+        <th>Location</a></th>
+        <th>Completion Status</th>
+    </tr>
+    {% for e in item %}
+    <tr>
+        <td><a href="../{{e.id}}/details/">{{ e.Activity }}</a></td>
+        <td><a href="{% url 'bucketlist_details' e.id %}">{{ e.Location }}</a></td>
+        <td>{{ e.Completed }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<button><a href="{% url 'bucketlist_create' %}">Add Item</a></button>
+
+{% endblock %}

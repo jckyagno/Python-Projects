@@ -1,0 +1,26 @@
+{% extends "HolidayPlanner_base.html" %}
+{% load static %}
+{% block title %}Holiday Planner Details{% endblock %}
+{% block header %}Entry Details{% endblock %}
+{% block content%}
+<table class="tb-details">
+    <tr class="tr-details">
+        <th>Destination</th>
+        <th>Date & Time</th>
+        <th>Activity Type</th>
+        <th>Activity Details</th>
+        <th>Budget/Cost ($)</th>
+    </tr>
+    <tr class="tr-details">
+        <td>{{ entry.destination }}</a></td>
+        <td>{{ entry.activity_date_and_time|date:'m/d/Y H:i' }}</a></td>
+        <td>{{ entry.activity }}</a></td>
+        <td>{{ entry.activity_details }}</a></td>
+        <td>{{ entry.budget }}</a></td>
+    </tr>
+</table>
+<div class="btn-details">
+    <a href="{% url 'HolidayPlanner_update' entry.id %}"><button class="btn">Update Entry</button></a>
+</div>
+<br>
+{% endblock %}

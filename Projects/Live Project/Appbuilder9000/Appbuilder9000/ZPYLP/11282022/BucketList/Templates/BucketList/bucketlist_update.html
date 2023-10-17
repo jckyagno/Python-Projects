@@ -1,0 +1,12 @@
+{% extends "bucketlist_base.html" %}
+
+{% block content %}
+<h1>Update</h1>
+<form method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Save Changes</button>
+		</form>
+		 <button type="submit"><a href="{% url 'bucketlist_delete' item.id %}">Delete</a></button>
+<button type="submit"><a href="{% url 'bucketlist_details' item.id %}">Return</a></button>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "dfort_base.html" %}
+
+{% block content %}
+
+
+<br>
+<br>
+<br>
+<br>
+
+<h1>Search for a Monster from <a href="https://open5e.com/">Open5e.com</a></h1>
+<form action="" method="POST" style="display: inline;">
+    {% csrf_token %}
+
+    <div class="form-container">
+        <input type="search" name="usr_query" placeholder="goblin, troll, etc...">
+        <button type="submit">Search for Name</button>
+    </div>
+</form>
+
+
+<!-- Gives feedback on user search displaying what was entered -->
+{% if displays.display1 %}
+    <p>You searched for:</p>
+    <h2>{{ name }}</h2>
+    <p>====================================</p>
+{% endif %}
+
+<!-- if blocks to hide empty results -->
+<div style="display: inline-block;">
+    {% if displays.display1 %}
+    <div class="api">
+        <p>
+            <span class="result-num">1.</span>
+                <!-- Cleans up json results from view and prints them neatly formatted here -->>
+                A <span class="api-name">{{ results.result1.slug|title }}</span> is a <span class="api-type">{{ results.result1.type|title }}</span> type creature.
+            They are {{ results.result1.size|title }} sized and have around <span class="health">{{ results.result1.HP|title }}</span> HP.
+        </p>
+    </div>
+    {% endif %}
+
+    {% if displays.display2 %}
+    <div class="api">
+        <p>
+            <span class="result-num">2.</span>
+                A <span class="api-name">{{ results.result2.slug|title }}</span> is a <span class="api-type">{{ results.result2.type|title }}</span> type creature.
+            They are {{ results.result2.size|title }} sized and have around <span class="health">{{ results.result2.HP|title }}</span> HP.
+        </p>
+    </div>
+    {% endif %}
+
+    {% if displays.display3 %}
+    <div class="api">
+        <p>
+            <span class="result-num">3.</span>
+                A <span class="api-name">{{ results.result3.slug|title }}</span> is a <span class="api-type">{{ results.result3.type|title }}</span> type creature.
+            They are {{ results.result3.size|title }} sized and have around <span class="health">{{ results.result3.HP|title }}</span> HP.
+        </p>
+    </div>
+    {% endif %}
+
+    {% if displays.display4 %}
+    <div class="api">
+        <p>
+            <span class="result-num">4.</span>
+                A <span class="api-name">{{ results.result4.slug|title }}</span> is a <span class="api-type">{{ results.result4.type|title }}</span> type creature.
+            They are {{ results.result4.size|title }} sized and have around <span class="health">{{ results.result4.HP|title }}</span> HP.
+        </p>
+    </div>
+    {% endif %}
+
+    {% if displays.display5 %}
+    <div class="api">
+        <p>
+            <span class="result-num">5.</span>
+                A <span class="api-name">{{ results.result5.slug|title }}</span> is a <span class="api-type">{{ results.result5.type|title }}</span> type creature.
+            They are {{ results.result5.size|title }} sized and have around <span class="health">{{ results.result5.HP|title }}</span> HP.
+        </p>
+    </div>
+    {% endif %}
+</div>
+
+{% if displays.display1 %}
+    <p>====================================</p>
+{% endif %}
+
+<br>
+<br>
+
+
+
+
+
+
+
+{% endblock %}

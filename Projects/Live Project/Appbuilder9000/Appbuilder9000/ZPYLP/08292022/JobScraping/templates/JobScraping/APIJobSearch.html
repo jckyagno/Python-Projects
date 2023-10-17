@@ -1,0 +1,66 @@
+{% extends "JobScraping_base.html" %}
+
+{% block title %}Job Search{% endblock %}
+
+{% block content %}
+
+    <div class="stretch">
+        <h1 class="display-4">Find a job here!</h1>
+        <p class="lead">Enter your search terms to see a list of job postings</p>
+        <!-- FORM -->
+        <div class="content">
+            <form action="/JobScraping/searchResults/" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="what" class="form-label">Search Terms (e.g. Software Developer)</label>
+                    <input class="form-control" id="what" name="what" value="{{ search.0 }}" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location (e.g. Portland, OR)</label>
+                    <input class="form-control" id="location" name="location" value="{{ search.1 }}">
+                </div>
+                <input type="submit" class="btn btn-dark button-input">
+            </form>
+        </div>
+        <!-- END FORM -->
+
+        <!-- DISPLAY TABLE -->
+        <table class="table table-dark table-striped sortable search-table">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Posting<br>Date</th>
+                    <th scope="col">Minimum<br>Salary</th>
+                    <th scope="col">Maximum<br>Salary</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for each in jobs %}
+                <tr>
+                    <form action="/JobScraping/saveSearch/" method="POST">
+                        {% csrf_token %}
+                        <td class="job-title"><input class="form-control" name="title" readonly value="{{ each.title }}"></td>
+                        <td class="job-company"><input class="form-control" name="company" readonly value="{{ each.company }}"></td>
+                        <td class="job-else"><input class="form-control" name="date_added" readonly value="{{ each.date_added }}"></td>
+                        <td class="job-else"><input class="form-control" name="minimum_pay" readonly value="{{ each.minimum_pay }}"></td>
+                        <td class="job-else"><input class="form-control" name="maximum_pay" readonly value="{{ each.maximum_pay }}"></td>
+                        <td class="job-else"><a href="{{ each.job_url }}"><button class="btn btn-dark btn-outline-light" type="button">See Full Post</button></a></td>
+                        <td class="job-else"><input class="form-control btn btn-dark btn-outline-light" type="submit" value="Save Job"></td>
+                        <td class="invisible"><input class="invisible" name="job_url" value="{{ each.job_url }}"></td>
+                    </form>
+                </tr>
+                {% endfor %}
+                <tr class="search-footer">
+                    <td colspan="7">
+                    <p>Ransom Cadorette - &copy; 2022</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

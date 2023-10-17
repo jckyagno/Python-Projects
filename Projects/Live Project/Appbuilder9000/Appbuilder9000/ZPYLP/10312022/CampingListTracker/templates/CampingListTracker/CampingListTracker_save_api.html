@@ -1,0 +1,18 @@
+{% extends "CampingListTracker_base.html" %}
+
+{% block content %}
+<h1 class="api">SAVED API WEATHER</h1>
+<table>
+    <tr>
+        <th><p>Temperature</p></th>
+        <th><p>Date</p></th>
+    </tr>
+    {% for m in moment %}
+    <tr>
+        <td><p>{{ m.temperature }}<span>&#176;</span>F</p></td>
+        <td><p>{{ m.date }}</p></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "BettingLinesBase.html" %}
+
+{% block title %}Sports book Tracker{% endblock %}
+
+{% block content %}
+
+
+<h2>Details</h2>
+<table class="bet_table">
+    <tr>
+        <!-- Headings -->
+        <th>Home Team</th>
+        <th>Away Team</th>
+        <th>Sport</th>
+        <th>Result</th>
+        <th>Wager</th>
+        <th>Line</th>
+    </tr>
+    <!-- Gets database entry for selected bet -->
+    <tr>
+        <td>{{ info.HomeTeam }}</td>
+        <td>{{ info.AwayTeam }}</td>
+        <td>{{ info.Sport }}</td>
+        <td>{{ info.Result }}</td>
+        <td>{{ info.Wager }}</td>
+        <td>{{ info.Line }}</td>
+        <td><a href="{% url 'BettingLines_Edit' info.id %}"><button>Edit</button></a></td>
+    </tr>
+
+</table>
+{% endblock %}

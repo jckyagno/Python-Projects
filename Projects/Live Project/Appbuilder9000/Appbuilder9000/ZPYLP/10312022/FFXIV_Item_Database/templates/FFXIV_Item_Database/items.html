@@ -1,0 +1,77 @@
+{% extends "FFXIV_Item_Database/base.html" %}
+{% load static %}
+{% block title %}Collections List{% endblock %}
+{% block content %}
+
+    <div class="container mt-1">
+        <div>
+            <h2 class="section-heading mb-5 text-center">Item Listing</h2>
+            <div class="row justify-content-center">
+                <div>
+                    {% if items_list.has_other_pages %}
+                    <ul class="pagination">
+                        {% if items_list.has_previous %}
+                        <li class="page-item"><a href="?page={{ items_list.previous_page_number }}">&laquo;</a></li>
+                        {% else %}
+                        <li class="disabled"><span>&laquo;</span></li>
+                        {% endif %}
+                        {% for i in items_list.paginator.page_range %}
+                            {% if items_list.number == i %}
+                                <li class="active page-item"><span>&nbsp;    <strong>{{ i }}</strong>&nbsp;   </span></li>
+                            {% else %}
+                                <li class="page-item"><a href="?page={{ i }}">&nbsp;    {{ i }}&nbsp;    </a></li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if items_list.has_next %}
+                            <li class="page-item"><a href="?page={{ items_list.next_page_number }}">&raquo;</a></li>
+                        {% else %}
+                            <li class="disabled"><span>&raquo;</span></li>
+                        {% endif %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <hr>
+            </div>
+            {% for item in items_list %}
+            <div class="row">
+              <div class="col-3">
+                <p>ID: {{ item.ID }}</p>
+              </div>
+              <div class="col-3">
+                <p>Icon: {{ item.Icon }}</p>
+              </div>
+              <div class="col-3">
+                <p>Name: {{ item.Name }}</p>
+              </div>
+              <div class="col-3">
+                <p>Detail Link:<a href="{% url 'item_detail' item.ID %}"> {{ item.Url }}</a></p>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+        <hr>
+        <div>
+            {% if items_list.has_other_pages %}
+            <ul class="pagination">
+                {% if items_list.has_previous %}
+                <li class="page-item"><a href="?page={{ items_list.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in items_list.paginator.page_range %}
+                    {% if items_list.number == i %}
+                        <li class="active page-item"><span>&nbsp;    <strong>{{ i }}</strong>&nbsp;   </span></li>
+                    {% else %}
+                        <li class="page-item"><a href="?page={{ i }}">&nbsp;    {{ i }}&nbsp;    </a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if items_list.has_next %}
+                    <li class="page-item"><a href="?page={{ items_list.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "dfort_base.html" %}
+{% load static %}
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <h1>Chronicle a New Beast</h1>
+    <div class="create-form-container" oninput="PreviewBeast()">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_p }}
+            <button type="submit">Memorialize BEAST</button>
+        </form>
+    </div>
+
+
+    <div class="beast-box">
+        <h2 id="newName">...</h2>
+        <h2 id="newTitle">Forgotten Beast</h2>
+
+        <div id="beast-visual" >
+            <p id="top1">#######</p><p id="top2">#######</p><p id="mid">#######</p><p id="bot1">#######</p><p id="bot2">#######</p>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+<script src="{% static 'JavaScript/dfort_create.js' %}"></script>
+{% endblock %}

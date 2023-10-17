@@ -1,0 +1,6 @@
+{% block content %}
+<h1>Details</h1>
+<h3>{{ entry.title }} - {{ entry.author }}</h3>
+<p>{{ entry.review }} - {{ entry.date }}</p>
+<button><a href="{% url 'BookList_Update' entry.id %}">Update Entry</a></button>
+{% endblock %}

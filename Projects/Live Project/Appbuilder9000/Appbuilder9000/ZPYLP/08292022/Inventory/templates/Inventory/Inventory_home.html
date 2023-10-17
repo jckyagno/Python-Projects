@@ -1,0 +1,11 @@
+{% extends "Inventory_base.html" %}
+
+
+{% block title %}Chemical Inventory{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Chemical Inventory Manager!</h1>
+<p>Here you can add new materials and access your complete chemical inventory.</p>
+<button type="submit"><a href="{% url 'inventory_create' %}">Add New</a></button>
+<button type="submit"><a href="{% url 'inventory_read' %}">Access Inventory</a></button>
+{% endblock %}

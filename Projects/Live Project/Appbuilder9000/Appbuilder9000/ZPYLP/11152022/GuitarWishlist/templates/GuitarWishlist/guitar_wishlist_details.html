@@ -1,0 +1,43 @@
+{% extends 'GuitarWishlist/guitar_wishlist_base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Details</title>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+<h1>List Details</h1>
+
+<div class="details_text">
+    <h3>LIST NAME: <span class="details_result_text">{{ chosenList.list_name }}</span></h3>
+    <h3>BRAND: <span class="details_result_text">{{ chosenList.brand }}</span></h3>
+    <h3>AMOUNT OF STRINGS: <span class="details_result_text">{{ chosenList.strings }}</span></h3>
+    <h3>ACOUSTIC OR ELECTRIC? <span class="details_result_text">{{ chosenList.acoustic }}</span></h3>
+    <h3>AMOUNT OF FRETS: <span class="details_result_text">{{ chosenList.frets }}</span></h3>
+    <h3>PRICE (USD): $<span class="details_result_text">{{ chosenList.price }}</span></h3>
+</div>
+
+
+
+
+
+<p>Click below for more options:</p>
+
+
+<!--put create/edit/delete buttons here-->
+<div class="details_buttons">
+    <button class="details_page_buttons"><a href="{% url 'GuitarWishlist_create' %}">Create New List</a></button>
+    <button class="details_page_buttons"><a href="{% url 'GuitarWishlist_edit' chosenList.id %}">Edit</a></button>
+    <button class="details_page_buttons"><a href="{% url 'GuitarWishlist_delete' chosenList.id %}">Delete</a></button>
+</div>
+
+
+
+
+{% endblock %}

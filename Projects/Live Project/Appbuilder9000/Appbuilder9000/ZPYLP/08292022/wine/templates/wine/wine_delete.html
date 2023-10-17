@@ -1,0 +1,12 @@
+{% extends "wine_base.html" %}
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Delete: "{{ entry.type }}, {{ entry.varietal }}, {{ entry.region }}"?</h3>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
+<button type="submit"><a href="{% url 'wine_update' entry.id %}">Return</a></button>
+{% endblock %}

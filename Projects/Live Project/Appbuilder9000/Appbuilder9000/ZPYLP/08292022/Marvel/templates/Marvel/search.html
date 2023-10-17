@@ -1,0 +1,22 @@
+{% extends "marvel_base.html" %}
+
+{% block title %}Search Results{% endblock %}
+
+
+
+{% block content %}
+    {% if searched %}
+    <h1>You Searched for {{ searched }}</h1>
+    <br>
+    {% for character in characters %}
+        <a href="{% url 'marvel_details' character.id %}">{{ character }}</a> <br>
+    {% endfor %}
+    {% for quote in quotes %}
+        <a href="{% url 'marvel_saved' 'title' %}">{{quote}}</a><br>
+    {% endfor %}
+
+    {% else %}
+        <h1>No Search Result</h1>
+    {% endif %}
+
+{% endblock %}

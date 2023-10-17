@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Using Include so that the viewport can be easily templated across each page -->
+    {% include "Camera_head.html" %}
+    <title>Cameras?  How do work?</title>
+</head>
+<body>
+    <div class="page_container">
+        <!-- Adding a universal Navbar for each page that needs one -->
+        {% include "Cinematography/navbar.html" %}
+        <header>
+            <h1 align="center">{% block title %}{% endblock %}</h1>
+        </header>
+        <!-- WebM format with VP9 codec to allow for smaller file size and easier load/playback -->
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="{% static 'videos/CamLoop.webm' %}" type="video/webm">
+                Your browser does not support videos.
+            </video>
+        </div>
+        <div class="form_container">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Add Camera</button>
+                <input type="button" onclick="location.href='Camera_database.html';" value="View Cameras" style="float: right;"/>
+            </form>
+        </div>
+        <div class="API_container">
+            <h2>Morning golden hour starts at {{ srtime }}</h2>
+            <h2>Evening golden hour starts at {{ sstime }}</h2>
+        </div>
+    </div>
+
+</body>
+</html>

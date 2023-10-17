@@ -1,0 +1,27 @@
+{% extends "ChristmasList_base.html" %}
+
+{% block header %}Saved API{% endblock %}
+{% block content %}
+    <div class="admin_panel">
+        <br>
+        <br>
+        <div>
+            <table class="table table-responsive" id ="myTable">
+                <tr>
+                    <th>Question</th>
+                    <th>Punchline</th>
+                    <th>Date Saved</th>
+                </tr>
+                {% for i in joke %}
+                <tr>
+                    <td>{{ i.question }}</td>
+                    <td>{{ i.answer }}</td>
+                    <td>{{ i.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <br>
+        <br>
+    </div>
+{% endblock %}

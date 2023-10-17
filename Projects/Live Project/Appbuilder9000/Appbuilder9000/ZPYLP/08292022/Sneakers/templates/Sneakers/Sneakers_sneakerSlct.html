@@ -1,0 +1,19 @@
+{% extends "Sneakers/Sneakers_base.html" %}
+{% block title %}Sneaker Detail{% endblock %}
+{% block content %}
+	<h3 class="select-header">Details for {{ selectedSnkr.name }}</h3>
+
+		<div class="cardForDetails">
+		  <img src="{{ selectedSnkr.image }}" alt=" image for {{ selectedSnkr.name }}" style="width:100%">
+		  <div class="containerforDetails">
+			<h4><b> {{ selectedSnkr.brand }} </b></h4>
+			<p>{{ selectedSnkr.name }} <br>
+				({{ selectedSnkr.year }}) <br>
+				{{ selectedSnkr.price }} <br>
+			</p>
+		  </div>
+		</div>
+
+
+
+{% endblock %}

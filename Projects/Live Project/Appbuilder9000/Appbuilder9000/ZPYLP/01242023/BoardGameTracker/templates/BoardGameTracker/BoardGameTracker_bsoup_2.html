@@ -1,0 +1,96 @@
+{% extends "BoardGameTracker/BoardGameTracker_base.html" %}
+
+
+{% block title %}Game Night Hero{% endblock %}
+{% block header %} Game Reviews {% endblock %}
+
+{% block content %}
+<h2>Brought to you by Board Game Quest</h2>
+<!-- Slideshow -->
+        <div id="Slideshow">
+
+            <div id="Slideshow_Background">
+                <br>
+                <div id="Slideshow_Container">
+
+                    <!--Slide 1-->
+                    <div class="mySlides">
+
+                        <img class="Slideshow_Images" src="{{ imageList.0 }}" alt="Slide 1">
+                        <div class="text"><a href="{{ i.href }}">{{ i.title }}</a></div>
+
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img class="Slideshow_Images" src="{{ imageList.1 }}" alt="Slide 1">
+                        <div class="text"><a href="{{ i.href }}">{{ i.title }}</a></div>
+
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img class="Slideshow_Images" src="{{ imageList.1 }}" alt="Slide 1">
+                        <div class="text"><a href="{{ i.href }}">{{ i.title }}</a></div>
+
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img class="Slideshow_Images" src="{{ imageList.1 }}" alt="Slide 1">
+                        <div class="text"><a href="{{ i.href }}">{{ i.title }}</a></div>
+
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img class="Slideshow_Images" src="{{ imageList.1 }}" alt="Slide 1">
+                        <div class="text"><a href="{{ i.href }}">{{ i.title }}</a></div>
+
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img class="Slideshow_Images" src="{{ imageList.1 }}" alt="Slide 1">
+                        <div class="text"><a href="{{ i.href }}">{{ i.title }}</a></div>
+
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img class="Slideshow_Images" src="{{ imageList.1 }}" alt="Slide 1">
+                        <div class="text"><a href="{{ i.href }}">{{ i.title }}</a></div>
+
+                    </div>
+
+
+
+                    <!-- prev and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br>
+
+                <!--slide show dots-->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+
+                </div>
+            </div>
+
+        </div>
+
+    <a href="https://www.boardgamequest.com/category/game-reviews/">Latest game reviews by Board Game Quest</a>
+    <p>Powered by BeautifulSoup</p>
+</div>
+
+
+
+
+{% endblock %}

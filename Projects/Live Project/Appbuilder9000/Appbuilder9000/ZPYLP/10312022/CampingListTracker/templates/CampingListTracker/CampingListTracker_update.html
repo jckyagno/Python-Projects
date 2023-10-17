@@ -1,0 +1,13 @@
+{% extends "CampingListTracker_base.html" %}
+
+{% block content %}
+<h1 class="update">UPDATE CAMPING LIST</h1>
+<form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+    <button class="submit" type="submit">Save Changes</button>
+        </form>
+
+        <button class="submit" type="submit"><a class="link" href="{% url 'cl_delete' entry.id %}">Delete</a></button>
+<button class="submit" type="submit"><a class="link" href="{% url 'cl_details' entry.id %}">Return</a></button>
+{% endblock %}

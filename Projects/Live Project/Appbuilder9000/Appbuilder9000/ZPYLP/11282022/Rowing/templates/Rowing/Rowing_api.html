@@ -1,0 +1,11 @@
+{% extends "Rowing_base.html" %}
+
+{% block content %}
+<h1>Weather</h1>
+<div id="rowing_api">
+<h2>Current Temperature on the water: </h2>
+<h1>{{ current_temperature }}</h1>
+    <button><a href="{% url 'rowing_save_api' temp_int %}">Save Current Weather</a></button>
+</div>
+
+{% endblock %}

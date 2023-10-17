@@ -1,0 +1,20 @@
+{% extends "sitcoms_base.html" %}
+
+{% block title %}World of Sitcoms{% endblock %}
+
+{% block header %}Trash this Trash!!{% endblock %}
+
+{% block content %}
+<div class="admin_panel">
+    <form method="POST">
+        <div class="frmObject">
+            {% csrf_token %}
+            <h3>Are you sure you want to delete: "{{ sitcom.title }}"?</h3>
+            {{ sitcom.as_p }}
+            <br>
+            <button type="submit">Delete</button>
+            <button type="submit"><a href="{% url 'sitcoms_update' sitcom.id %}">Nevermind</a></button>
+        </div>
+    </form>
+</div>
+{% endblock %}

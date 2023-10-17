@@ -1,0 +1,31 @@
+{% extends "Dogs/Dogs_base.html" %}
+
+{% block title %}Doggo HQ{% endblock %}
+
+{% block content %}
+
+    <h1>Dogs</h1>
+    <div class="container">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <th>Breed:</th>
+                    <th>Color:</th>
+                    <th>Coat:</th>
+                    <th>Size:</th>
+                </tr>
+                {% for Dog in all_Dogs %}
+                <tr>
+                    <td><a href="../{{ Dog.pk }}/details/">{{ Dog.name }}</a></td>
+                    <td>{{ Dog.breed }}</td>
+                    <td>{{ Dog.color }}</td>
+                    <td>{{ Dog.coat }}</td>
+                    <td>{{ Dog.size }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

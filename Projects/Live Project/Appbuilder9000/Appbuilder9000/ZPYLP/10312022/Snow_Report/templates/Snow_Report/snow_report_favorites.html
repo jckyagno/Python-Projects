@@ -1,0 +1,35 @@
+{% extends "snow_report_base.html" %}
+
+
+
+
+
+
+
+{% block title %} Favorites {% endblock %}
+
+{% block content %}
+
+<h1>Favorites</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Resort</th>
+                <th>Tickets</th>
+                <th>Location</th>
+            </tr>
+            </thead>
+            {% for e in entry %}
+            <tr>
+                <td><a href="{% url 'snow_report_details' e.id %}">{{ e.resort }}</a></td>
+                <td>{{ e.tickets }}</td>
+                <td>{{ e.location }}</td>
+            </tr>
+
+    {% endfor %}
+    </table>
+
+<button><a href="{% url 'snow_report_addResort' %}">Add Entry</a></button>
+{% endblock %}
+
+

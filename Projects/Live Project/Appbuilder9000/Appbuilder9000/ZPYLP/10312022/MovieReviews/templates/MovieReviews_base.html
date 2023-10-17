@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/MovieReviews.css' %}">
+    <!-- CSS only -->
+    <title>Movie Reviews</title>
+    <link rel="icon" type="image" href="/static/images/video-camera.png"
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="{% url 'MovieReviews_home' %}">Home</a></li>
+            <li><a href="{% url 'MovieReviews_add' %}">Add Movie</a></li>
+            <li><a href="{% url 'MovieReviews_all' %}">Your Movies</a></li>
+            <li><a href="{% url 'MovieReviews_api' %}">API</a></li>
+            <li><a href="{% url 'MovieReviews_bs' %}">Beautiful Soup</a></li>
+        </ul>
+    </div>
+    {% block content %}{% endblock %}
+    <footer class="footer">
+        <p>Created by &copy;JMT | 2022</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "snowmobiles_base.html" %}
+
+{% block title %}Snowmobiles Weather Saved{% endblock %}
+{% block content %}
+<h3 class="tcenter">Temperatures API Saved:</h3>
+<table class="saved-api">
+    <tr id="headerRow">
+        <th>Date</th>
+        <th>Temperature</th>
+    </tr>
+    {% for m in current %}
+    <tr>
+        <td class="center">{{ m.date }}</td>
+        <td class="center">{{ m.temp }}<span>&#176;</span>F</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

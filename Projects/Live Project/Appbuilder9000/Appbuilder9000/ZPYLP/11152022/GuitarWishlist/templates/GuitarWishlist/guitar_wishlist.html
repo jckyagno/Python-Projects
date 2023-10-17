@@ -1,0 +1,21 @@
+{% extends 'GuitarWishlist/guitar_wishlist_base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Time For A New Guitar?</h1>
+
+    <p>This way we can easily compare the following characteristics:</p>
+    <ul class="base_list">
+        <li>Brand</li>
+        <li>Amount Of Strings</li>
+        <li>Whether It's An Acoustic Or Electric Instrument</li>
+        <li>Amount Of Frets</li>
+        <li>Price</li>
+    </ul>
+
+
+
+<button class="create_button"><a href="{% url 'GuitarWishlist_create' %}">Create New List</a></button>
+
+
+{% endblock %}

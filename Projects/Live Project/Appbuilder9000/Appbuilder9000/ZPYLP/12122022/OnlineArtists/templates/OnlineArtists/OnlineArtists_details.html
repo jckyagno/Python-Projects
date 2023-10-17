@@ -1,0 +1,23 @@
+{% extends "OnlineArtists/OnlineArtists_base.html" %}
+{% block title %}
+Details
+ {% endblock %}
+
+{% block content %}
+<h2>Our Promoted Artists</h2>
+
+
+       <h3> Artists name: {{ onlineartist.artist_name }} </h3>
+       <h3> Artists Genre: {{ onlineartist.artist_genre }} </h3>
+       <h3> Artists Link: {{ onlineartist.artist_link }} </h3>
+
+<br>
+    <h2>Artists Generes</h2>
+    <h3>AB = Abstract</h3>
+    <h3>CL = Classical</h3>
+    <h3>CT = Cartoon</h3>
+    <h3>SM = Semi-Realistic</h3>
+
+ {% endblock %}
+
+

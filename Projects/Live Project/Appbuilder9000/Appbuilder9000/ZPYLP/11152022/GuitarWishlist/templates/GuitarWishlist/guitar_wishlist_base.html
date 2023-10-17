@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Guitar Wishlist</title>
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/guitar_wishlist_layout.css' %}">
+</head>
+<body>
+
+
+
+    <!--Navbar-->
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="{% url 'GuitarWishlist_home' %}" class="active">||Home||</a>
+            <a href="{% url 'GuitarWishlist_create' %}" class="active">||Create New Wishlist||</a>
+            <a href="{% url 'GuitarWishlist_viewall' %}" class="active">||View Lists||</a>
+            <a href="{% url 'GuitarWishlist_bs' %}" class="active">||Top Rated</a>
+        </div>
+    </div>
+{% block content %}
+<!--Between these block tags is where all code from other pages will be displayed-->
+
+{% endblock %}
+</body>
+
+
+<!-- put the <img> tags inside the <a href to have link linked to each image-->
+<footer>
+    <div class="footer_images_container">
+        <a href="https://www.gibson.com/en-US/" target="_blank">
+            <img src="{% static 'images/gibson_logo.jpg' %}" class="footer_images" alt="gibson_logo">
+        </a>
+
+        <a href="https://www.schecterguitars.com/" target="_blank">
+            <img src="{% static 'images/schecter.jpg' %}" class="footer_images" alt="schecter_logo">
+        </a>
+
+        <a href="https://www.fender.com/en-US/start" target="_blank">
+            <img src="{% static 'images/fender.jpg' %}" class="footer_images" alt="fender_logo">
+        </a>
+
+        <a href="https://www.espguitars.com/" target="_blank">
+            <img src="{% static 'images/esp.jpg' %}" class="footer_images" alt="esp.logo">
+        </a>
+    </div>
+</footer>
+</html>

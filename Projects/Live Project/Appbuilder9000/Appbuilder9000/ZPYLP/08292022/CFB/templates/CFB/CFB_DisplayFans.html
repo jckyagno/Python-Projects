@@ -1,0 +1,38 @@
+{% extends "CFB/CFB_Base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+
+{% block title %} Fans {% endblock %}
+
+{% block content %}
+
+<h1>Displays a lists of Fans</h1>
+
+    <table class="content-table center">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>More Information</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+            {% for item in fan_list %}
+                <td>{{ item.first_name }}</td>
+                <td>{{ item.last_name }}</td>
+                <td><a href="{% url 'Fan_Details' item.id %}"> More Info </a></td>
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+{% endblock %}

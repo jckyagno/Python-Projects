@@ -1,0 +1,89 @@
+/*=================================================================================================================================
+Headers - sets the headers styling on each page
+=================================================================================================================================*/
+
+h2 {
+    text-shadow: 3px 3px 6px white;
+    text-align: top;
+    color: blue;
+    font-size: 45px;
+}
+/*-- had to create a separate class for the other headers
+because they would not be centered like the "Create" page--*/
+h1 {
+    background: linear-gradient(to right, white, white, blue, white, white);
+    -webkit-background-clip: text; /* Mask the color to the text, and remove the rest  */
+    -webkit-text-fill-color: transparent; /* Make the text fill color value transparent so the masked background color comes through */
+}
+
+.list {
+    position: absolute;
+    top: 1px;
+    width: 70%;
+    text-align: center;
+    padding: 30px;
+}
+
+.home {
+    position: absolute;
+    top: 0px;
+    width: 85%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hacks {
+    position: absolute;
+    top: 0px;
+    width: 85%;
+    text-align: center;
+    padding: 30px;
+}
+
+.delete {
+    position: absolute;
+    top: 0px;
+    width: 50%;
+    text-align: center;
+    padding: 30px;
+}
+
+.api {
+    position: absolute;
+    top: 0px;
+    width: 65%;
+    text-align: center;
+    padding: 30px;
+}
+
+.details {
+    position: absolute;
+    top: 0px;
+    width: 85%;
+    text-align: center;
+    padding: 30px;
+}
+
+h3 {
+    text-shadow: 2px 2px 3px blue;
+    text-align: canter;
+    color: white;
+    margin: auto;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.h3hack {
+    text-shadow: 2px 2px 3px white;
+    color: blue;
+    font-size: 28px;
+}
+
+h5 {
+    color: #0000ff;
+    font-size: 28px;
+}
+
+h6 {
+    color: white;
+}

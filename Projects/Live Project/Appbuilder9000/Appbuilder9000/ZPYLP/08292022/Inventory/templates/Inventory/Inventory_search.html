@@ -1,0 +1,12 @@
+{% extends "Inventory_base.html" %}
+
+{% block content %}
+<h1>Search Results</h1>
+<ul>
+  {% for material in object_list %}
+    <li>
+      {{ material.material_name }}, {{ material.location }}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "deadByDaylight_base.html" %}
+{% load static %}
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<h1 class="header">DEAD BY DAYLIGHT</h1>
+
+    <div class="slideshow-container">
+
+            <div class="mySlides" onmouseleave="plusSlides(1)" onclick="location.href='./survivor/'">
+                <img src="{% static 'images/Survivor_Slideshow/Claudette_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+
+            <div class="mySlides" onmouseleave="plusSlides(1)" onclick="location.href='./survivor/'">
+                <img src="{% static 'images/Survivor_Slideshow/David_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+
+            <div class="mySlides" onmouseleave="plusSlides(1)" onclick="location.href='./survivor/'">
+                <img src="{% static 'images/Survivor_Slideshow/Dwight_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+             <div class="mySlides" onmouseleave="plusSlides(1)" onclick="location.href='./survivor/'">
+                <img src="{% static 'images/Survivor_Slideshow/Meg_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+            <div class="mySlides" onmouseleave="plusSlides(1)" onclick="location.href='./survivor/'">
+                <img src="{% static 'images/Survivor_Slideshow/Nea_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+        </div>
+    <div class="slideshow-container2">
+
+            <div class="mySlides2" onmouseleave="plusSlides2(1)" onclick="location.href='./killers/'">
+                <img src="{% static 'images/Killer_Slideshow/HillBilly_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+
+            <div class="mySlides2" onmouseleave="plusSlides2(1)" onclick="location.href='./killers/'">
+                <img src="{% static 'images/Killer_Slideshow/Huntress_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+
+            <div class="mySlides2" onmouseleave="plusSlides2(1)" onclick="location.href='./killers/'">
+                <img src="{% static 'images/Killer_Slideshow/Nurse_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+             <div class="mySlides2" onmouseleave="plusSlides2(1)" onclick="location.href='./killers/'">
+                <img src="{% static 'images/Killer_Slideshow/Trapper_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+            <div class="mySlides2" onmouseleave="plusSlides2(1)" onclick="location.href='./killers/'">
+                <img src="{% static 'images/Killer_Slideshow/Wraith_SlideShow.png' %}" style="width:100%" height="519px" width="519px">
+            </div>
+        </div>
+{% endblock %}
+

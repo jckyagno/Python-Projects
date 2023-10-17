@@ -1,0 +1,17 @@
+{% extends "Dogs/Dogs_base.html" %}
+
+
+{% block title %} Add Your Dog {% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Add Your Dog</h1>
+        <div class="form">
+            <form method="POST">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button type="submit">Submit</button>
+            </form>
+        </div>
+</div>
+{% endblock %}

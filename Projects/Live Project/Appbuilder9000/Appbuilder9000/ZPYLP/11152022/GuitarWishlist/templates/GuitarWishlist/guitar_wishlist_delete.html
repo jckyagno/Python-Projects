@@ -1,0 +1,22 @@
+{% extends 'GuitarWishlist/guitar_wishlist_base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Confirm Delete </title>
+{% endblock %}
+
+{% block content %}
+<h1>Confirm Delete</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <p>Are you sure you want to delete "{{ chosenList.list_name }}"?</p>
+    <div class="details_buttons">
+        <button class="details_page_buttons" type="submit">Delete</button>
+
+
+        <button class="details_page_buttons" type="submit"><a href="{% url 'GuitarWishlist_edit' chosenList.id %}">Cancel</a></button>
+    </div>
+</form>
+{% endblock %}

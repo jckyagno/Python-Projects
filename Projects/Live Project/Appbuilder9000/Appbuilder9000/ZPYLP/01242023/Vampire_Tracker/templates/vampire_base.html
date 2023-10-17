@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Vampire Tracker</title>
+            <link rel="stylesheet" type="text/css" href="{% static 'CSS/vampire_css.css' %}">
+
+        <body>
+        <!--navbar-->
+        <ul class="navbar">
+            <li class="navbar-li"><a href="{% url 'vampire_home' %}">Home</a></li>
+            <li class="navbar-li"><a href="{% url 'vampire_entry' %}">Report a Sighting</a></li>
+            <li class="navbar-li"><a href="{% url 'vampire_view' %}">View List</a></li>
+        </ul>
+
+        <div class="content-container-container">
+	        <div class="content-container">
+		        {% block content %}
+
+		        {% endblock %}
+	        </div>
+        </div>
+
+
+        </body>
+    </html>

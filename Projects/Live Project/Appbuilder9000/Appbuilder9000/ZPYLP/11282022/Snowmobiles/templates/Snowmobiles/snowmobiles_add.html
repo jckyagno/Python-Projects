@@ -1,0 +1,17 @@
+{% extends "snowmobiles_base.html" %}
+{% block title %}
+ADD NEW SNOWMOBILE
+{% endblock %}
+{% block content %}
+<h3 class="tcenter">ADD NEW SNOWMOBILE</h3>
+<div id="snowmobile-form" class="tcenter">
+    <form method="POST" class="sform">
+        <!--Display Account Form-->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="Save_Snowmobile">Add Snowmobile</button>
+
+    </form>
+    <br>
+</div>
+{% endblock %}

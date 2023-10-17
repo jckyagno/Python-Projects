@@ -1,0 +1,29 @@
+{% extends 'directors_base.html' %}
+
+{% block title %}Add a Director{% endblock %}
+
+{% block header %}Add a director to your list.{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <form method="POST" action="{% url 'directors_add' %}">
+        <div class="form_object_container">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_p }}
+        </div>
+        <div class="form_btn_container">
+            <input type="submit" class="btn" value="Add New Director">
+            <a href="{% url 'directors_home' %}"><button type="button" class="btn" value="Cancel">Cancel</button></a>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+{% include 'MovieDirectors/directors_footer.html' %}
+{% endblock %}

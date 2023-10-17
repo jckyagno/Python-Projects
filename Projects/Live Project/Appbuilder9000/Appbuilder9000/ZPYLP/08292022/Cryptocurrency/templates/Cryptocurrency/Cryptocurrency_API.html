@@ -1,0 +1,14 @@
+{% extends "Cryptocurrency_base.html" %}
+
+{% block content %}
+
+    <h1>Bitcoin (BTC) Current Price:</h1>
+    <h1> ${{ price }} </h1>
+
+<div class="details">
+    <button type="submit"><a href="{% url 'Cryptocurrency_API' %}">Update LIVE Price</a></button>
+
+    <button type="submit"><a href="{% url 'Cryptocurrency_home' %}">Go Home</a></button>
+</div>
+
+{% endblock %}

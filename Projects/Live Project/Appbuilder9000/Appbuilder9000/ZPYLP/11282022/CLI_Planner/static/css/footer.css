@@ -1,0 +1,17 @@
+/* creates a footer class at the bottom of the page */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* styles span tags in the footer */
+.footer span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}

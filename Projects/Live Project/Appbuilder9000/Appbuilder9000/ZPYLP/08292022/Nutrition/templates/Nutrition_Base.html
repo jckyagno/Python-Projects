@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang = "en" class = "bj_img">
+    <head>
+        <meta charset = "UTF-8">
+        <title> {%  block title %} {%  endblock %} </title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link href = "https://fonts.googleapis.com/css?family=Roboto" rel = "stylesheet">
+        <link href = "//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel = "stylesheet" type = "text/css">
+        <link href = "{% static  'css/Nutrition.css'%}" rel = "stylesheet">
+        <script src = "{% static 'JavaScript/Nutrition.js' %}" defer></script>
+    </head>
+    <body>
+        <div class="page_container"></div>
+            <ul class="topnav">
+                <li><a href = "{% url 'Nutrition_Home' %}">Home</a></li>
+                <li><a href = "{% url 'Nutrition_create' %}">Create Account</a></li>
+                <li><a href = "{% url 'Nutrition_display' %}">View Your Nutrition Information</a></li>
+                <li><a href = "{% url 'Nutrition_api' %}">View Recipes Here</a></li>
+                <li><a href = "{% url 'Nutrition_beautifulSoup' %}">View More Recipes</a></li>
+            </ul>
+            <header class = "header-title">
+                <h1>{% block header %}{% endblock %}</h1>
+            </header>
+            {% block content %}{% endblock %}
+         <div id = "cf2" class = "shadow" onclick = "swole()">
+            <img id = "bottom" src = "{% static 'images/strong.png' %}" />
+            <img id = "top" src = "{% static 'images/weak.png' %}" />
+        </div>
+            <p id = "cf_onclick">Click to get swole.</p>
+    </body>
+</html>

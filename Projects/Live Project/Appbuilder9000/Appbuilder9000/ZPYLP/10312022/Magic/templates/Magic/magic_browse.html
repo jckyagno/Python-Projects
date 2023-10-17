@@ -1,0 +1,25 @@
+{% extends "magic_base.html" %}
+
+{% block title %}Magic: The Gathering Deck Lists{% endblock %}
+
+{% block header %}View Deck Lists{% endblock %}
+
+{% block content %}
+
+        {% for deck in deck %}
+    <table class="deckTable">
+        <tr>
+            <th colspan="2"><a href="{% url 'magic_details' deck.id %}">{{ deck.commander }}</a><div class="title">{{ deck.title }}</div></th>
+        </tr>
+        <tr>
+            <td rowspan="2"><a href="{% url 'magic_details' deck.id %}"><img src="{{deck.image}}" alt="Commander Image"></a></td>
+            <td class="description">DESCRIPTION<br>{{ deck.description|truncatewords:25 }}<a href="{% url 'magic_details' deck.id %}">MORE...</a></td>
+        </tr>
+        <tr>
+            <td>KEY PIECES<br>{{ deck.key_pieces|escape|linebreaks  }}</td>
+        </tr>
+    </table>
+        {% endfor %}
+
+
+{% endblock %}

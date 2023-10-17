@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+<!--		Link to CSS file-->
+		<link rel="stylesheet" href="{% static '/css/JA3Mercs_layout.css' %}">
+<!--		Link to JSON file-->
+		<script type = "text/javascript" src="{% static '/js/functions.js' %}"></script>
+<!--		Link to google fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:ital,wght@0,100;1,100&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Mono&family=Roboto:ital,wght@0,100;1,100&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Condensed:wght@300&family=Roboto+Mono&family=Roboto:ital,wght@0,100;1,100&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<!--		Django block for webpage title-->
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+
+<!--	Django block for navbar-->
+	{% include "JA3Mercs/ja3_topnav.html" %}
+
+	<body id="body">
+
+
+		<div class="content-container-container fade-in-image">
+			<div class="content-container">
+<!--				Django block for headers-->
+			<h1 class="white-fade center fade-in-image">{% block header %}{% endblock %}</h1>
+<!--				Django block for webpage content-->
+			{% block content %}{% endblock %}
+			</div>
+		</div>
+	</body>
+
+<!--	Django block for footer content-->
+	{% include 'JA3Mercs/ja3_footer.html' %}
+
+</html>

@@ -1,0 +1,28 @@
+{% extends 'texmex_base.html' %}
+
+{% block title %}Tex-Mex{% endblock %}
+
+{% block header %}Current Recipe Listing{% endblock %}
+
+{% block content %}
+<center>
+	<div class="scrollable">
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Servings</th>
+					<th>Submitted On</th>
+				</tr>
+				{%  for food in foods %}
+				<tr>
+					<td><a href="./{{ food.pk}}/details/">{{ food.name }}</a></td>
+                    <td>{{ food.type }}</td>
+					<td>{{ food.servings }}</td>
+					<td>{{ food.dateSubmitted }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+        </div>
+</center>
+{% endblock %}

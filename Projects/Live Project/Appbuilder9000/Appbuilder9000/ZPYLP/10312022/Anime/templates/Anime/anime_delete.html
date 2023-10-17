@@ -1,0 +1,21 @@
+{% extends "anime_base.html" %}
+
+{% block title %}Anime-maniac's{% endblock %}
+
+{% block header %}Delete Confirmation:{% endblock %}
+
+{% block content %}
+<div class="admin_panel">
+    <form method="POST">
+        <div class="frmObject">
+            {% csrf_token %}
+            <p> Are you sure you would like to delete "{{ anime.title }}" from the archive?</p>
+            {{ anime.as_p }}
+        </div>
+        <div class="frmBtn_container">
+            <input type="submit" value="Yes, delete it!" class="btn">
+            <button class="btn"><a href="{% url 'anime_details' anime.id %}">Cancel</a></button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'VideoGameReviews/css/VideoGameReviews.css' %}">
+    <script src="{% static 'VideoGameReviews/js/VideoGameReviews.js' %}" defer></script>
+</head>
+<body>
+
+    <!-- Navbar for site -->
+    <div class="container">
+        <ul class="navbar">
+            <li><a href="{% url 'video_game_home' %}">Home</a></li>
+            <li><a href="{% url 'video_game_create' %}">Create New Review</a></li>
+            <li><a href="{% url 'video_game_display' %}">All Reviews</a></li>
+            <li><a href="{% url 'video_game_api' %}">API</a></li>
+            <li><a href="{% url 'video_game_beautiful_soup' %}">Beautiful Soup</a></li>
+        </ul>
+    </div>
+    <!-- End navbar -->
+
+    <!-- Block tags for page-specific content -->
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Footer for site -->
+    <footer>
+        <p>Created by Daniel Castillo | 2022</p>
+    </footer>
+    <!-- End footer -->
+
+</body>
+</html>

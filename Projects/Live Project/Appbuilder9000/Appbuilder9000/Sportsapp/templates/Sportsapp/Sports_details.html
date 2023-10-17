@@ -1,0 +1,7 @@
+{% extends "Sportsapp_base.html" %}
+
+{% block content %}
+<h3>{{ scores.first_name }} - {{ scores.last_name }}</h3>
+<p>{{ scores.goals_scored }}</p>
+{% endblock %}
+{% comment %}<button><a href="{% url 'Sports_update' %}">Update Scores</a></button>{% endcomment %}

@@ -1,0 +1,244 @@
+/* NAV MENU */
+.top {
+    top: 0;
+}
+
+.header-footer {
+    background-color: rgb(25,25,25);
+    text-align: center;
+    position: fixed;
+    overflow: hidden;
+    margin: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    opacity: .5;
+    transition: .3s;
+    font-family: 'Bungee Spice', cursive;
+}
+
+.header-footer:hover {
+    opacity: 1;
+    transition: .3s;
+}
+
+.header-footer a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.header-footer a:hover {
+    background-color: rgb(100,100,100);
+    opacity: 1;
+    transition: .3s;
+}
+/* END NAV MENU */
+
+/* HEADER */
+.header {
+}
+/* END HEADER */
+
+/* BODY */
+body {
+    background: #000000 url("/static/images/bg_screen.png") no-repeat fixed center;
+    background-size: auto 100%;
+    margin: 0;
+    color: rgb(191,187,169);
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0.7;
+}
+/* END BODY */
+
+/* FOOTER */
+footer {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    bottom: 0px;
+    z-index: 100;
+    opacity: .7;
+    transition: .3s;
+}
+
+footer:hover {
+    opacity: 1;
+    transition: .3s;
+}
+/* END FOOTER */
+
+input, button{
+}
+
+textarea {
+    height: 220px;
+    width: 465px;
+}
+
+.center {
+    text-align: center;
+}
+
+.fade-in-image {
+    animation: fadeIn 1s;
+}
+
+.content-container-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+	position: relative;
+	width: 100vh;
+	height: 50vh;
+	border-radius: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15vh;
+	margin-bottom: 10em;
+	padding: 3em 3em 3em 3em !important;
+}
+
+.content-container {
+    text-align: center;
+    align-items: center;
+    }
+
+h1 {
+    text-align: center;
+    color: rgb(200,200,200);
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.white-fade {
+    font-weight: 100;
+    background: -webkit-linear-gradient(#FFFFFF, #7C7C7C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+table textarea {
+    height: 10em;
+}
+
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+th {
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.description {
+    font-size: 12px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+td:hover {
+    background-color: #4a4a4a;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #292929;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: ##2e2e2e;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #000000;
+}
+
+table tbody tr.active-row {
+    font-weight: bold;
+    color: #805500;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+form {
+    margin: 10px;
+}
+
+.frmObject_container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.frmObject_container input {
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+}
+
+.frmObject_container textarea {
+    width: inherit;
+    height: 6em;
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+}
+
+.frmObject_container input {
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+}
+
+.frmObject_container select {
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+}
+
+label[for="id_fname"] {
+}
+
+label[for="id_fname"]:after {
+}
+
+label[for="id_lname"] {
+}
+
+label[for="id_lname"]:after {
+}
+
+.btn {
+    margin: 10px;
+    font-size: 16px;
+    background-image: linear-gradient(to bottom right, rgba(191,187,169,1), rgba(150,145,134,1));
+    padding: 5px 10px;
+    color: #58544d;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

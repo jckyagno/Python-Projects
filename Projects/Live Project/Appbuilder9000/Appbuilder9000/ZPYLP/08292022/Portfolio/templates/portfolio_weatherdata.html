@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include "Portfolio_head.html" %}
+    <meta charset="UTF-8">
+    <title>Shiv Patel</title>
+</head>
+<body>
+    {% include "Portfolio/navbar.html" %}
+    <div class="container anim">
+        <div class="con3 aboutmecontent">
+            <table class="tablestyle">
+                <thead >
+                    <tr class="tablerow">
+                        <th class="tableheader">Date:</th>
+                        <th class="tableheader">City:</th>
+                        <th class="tableheader">Temperature:</th>
+                        <th class="tableheader">Condition:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for d in Data %}
+                    <tr class="tablerow">
+                        <td class="tabledata">{{ d.Time }}</td>
+                        <td class="tabledata">{{ d.City }}</td>
+                        <td class="tabledata">{{ d.Temperature }}</td>
+                        <td class="tabledata2">{{ d.Condition }}</td>
+                    </tr>
+                    {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

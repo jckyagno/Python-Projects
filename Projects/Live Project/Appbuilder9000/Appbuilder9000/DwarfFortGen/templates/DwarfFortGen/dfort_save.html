@@ -1,0 +1,16 @@
+
+{% extends "dfort_base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+
+<h1>!SAVED!</h1>
+    <div class="form-container">
+        <p>{{ monster.slug }} was saved</p>
+        <button class="btn"><a href="{% url 'dfort_home' %}">Home</a></button>
+    </div>
+{% endblock %}

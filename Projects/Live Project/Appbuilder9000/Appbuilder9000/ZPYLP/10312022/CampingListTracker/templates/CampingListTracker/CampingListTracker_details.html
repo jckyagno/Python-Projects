@@ -1,0 +1,25 @@
+{% extends "CampingListTracker_base.html" %}
+
+{% block content %}
+<h1 class="details">LIST DETAILS</h1>
+    <table class="list-tables">
+        <thead>
+            <tr>
+                <th>{{ entry.destination }}</th>
+                <th>{{ entry.terrain_and_climate }}</th>
+                <th>{{ entry.camping_style }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ entry.category }}</td>
+                <td>{{ entry.item_or_task }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+<button class="submit"><a class="link" href="{% url 'cl_update' entry.id %}">Update List</a></button>
+{% endblock %}
+
+
+

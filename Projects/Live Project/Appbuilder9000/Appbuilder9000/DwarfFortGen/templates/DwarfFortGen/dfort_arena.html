@@ -1,0 +1,30 @@
+{% extends "dfort_base.html" %}
+{% load static %}
+{% block content %}
+
+<div>
+        <form action="{% url 'dfort_results' %}" method="POST">
+            {% csrf_token %}
+            <!-- Fighter 1 Selection -->
+            <h1>Fighter 1</h1>
+            <select name="fighter1">
+                <!--<option value="">Choose a Fighter</option>-->
+                {% for f in fighters %}
+                    <option value="{{ f.pk }}">{{ f.name }}, Win {{f.win}} / Lose {{f.lose}} </option>
+                {% endfor %}
+            </select>
+
+            <!-- Fighter 2 Selection -->
+            <h1>Fighter 2</h1>
+            <select name="fighter2">
+                {% for f in fighters %}
+                    <option value="{{ f.pk }}">{{ f.name }}, Win {{f.win}} / Lose {{f.lose}} </option>
+                {% endfor %}
+            </select>
+
+            <br>
+            <button type="submit">Fight</button>
+        </form>
+    </div>
+
+{% endblock %}

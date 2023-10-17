@@ -1,0 +1,20 @@
+{% extends "CFB/CFB_Base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block title %}Fan Account Creation{% endblock %}
+
+
+{% block content %}
+<h1 class="fancy">Create an account!</h1>
+<div class="content-table">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        <button class="btn btn-success" type="submit" name="Save_Review">Create</button>
+    </form>
+{% endblock %}
+</div>

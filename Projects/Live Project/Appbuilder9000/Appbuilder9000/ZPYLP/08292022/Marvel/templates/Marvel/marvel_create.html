@@ -1,0 +1,14 @@
+{% extends "marvel_base.html" %}
+
+{% block title %}Add to the Character Roster{% endblock %}
+
+{% block content %}
+<h1>Add to The Roster!</h1>
+    <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+        <button type="submit"><a>Submit</a></button>
+        <button type="submit"><a href="{% url 'marvel_roster' %}">View Roster</a></button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "BucketList_Base.html" %}
+
+
+{% block content %}
+<h1>Bucket List 2022: </h1>
+<p>Lets make this the best year ever!</p>
+
+{% for instance in item_list %}
+<ul>
+    <li><a href="{% url 'BucketList_details' instance.id %}">{{instance.activity}}</a></li>
+</ul>
+{% endfor %}
+
+{% endblock %}

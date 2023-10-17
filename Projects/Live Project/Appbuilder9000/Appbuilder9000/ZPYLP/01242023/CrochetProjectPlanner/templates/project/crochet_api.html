@@ -1,0 +1,18 @@
+{% extends 'crochet_base.html' %}
+
+{% block title %}Crochet Project Planner{% endblock %}
+
+{% block header %}Atlanta, GA{% endblock %}
+
+{% block content %}
+
+<div class="api_container">
+
+    <h5>Sunrise &#9728;<br>{{sunrise_time}}</h5>
+
+    <h5>Sunset &#9788;<br>{{sunset_time}}</h5>
+
+    <h4>Powered by <a href="https://sunrise-sunset.org/">https://sunrise-sunset.org/</a></h4>
+</div>
+
+{% endblock %}

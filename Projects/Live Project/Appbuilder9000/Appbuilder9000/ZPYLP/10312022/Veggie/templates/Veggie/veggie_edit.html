@@ -1,0 +1,30 @@
+{% extends "Veggie_base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block title %}Edit recipe page{% endblock %}
+
+{% block header %}Edit recipe:{% endblock %}
+
+{% block content %}
+
+<form class="container" method="POST">
+    <div class="mb-3">
+        <table  class="form-label row">
+        {% csrf_token %}
+        {{ form|crispy }}
+        </table>
+        <button type="submit">Save Changes</button>
+        <button ><a href="{% url 'veggie_details' recipe.id %}">Cancel</a></button>
+    </div>
+</form>
+
+
+{% endblock %}
+
+
+
+
+

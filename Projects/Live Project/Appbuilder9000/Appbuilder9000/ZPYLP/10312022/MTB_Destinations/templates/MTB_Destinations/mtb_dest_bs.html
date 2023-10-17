@@ -1,0 +1,39 @@
+{% extends "MTB_Destinations/mtb_dest_base.html" %}
+{% block title %}Web Scrape with Beautiful Soup{% endblock %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'MTB_Destinations/css/mtb_style.css' %}">
+
+<!--  These two lines highlight and screen read the active page in the navbar -->
+{% block bsactive %}active{% endblock %}
+{% block currentbs %}<span class="sr-only">(current)</span>{% endblock %}
+
+{% block content %}
+<div class="w-75 p-3 mx-auto">
+    <h1 class="display-4" style="margin-top:100px;">Beautiful Soup</h1>
+    <p class="lead">Data is rental homes in the Rockies scraped from Airbnb</p>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Leads</th>
+                <th scope="col">Titles</th>
+                <th scope="col">Pricing</th>
+                <th scope="col">Ratings</th>
+            </tr>
+        </thead>
+        <!-- iterates over called items in zipped(multiple) lists. This is 5 lists zipped together into 'mylist' -->
+        {% for item1, item2, item3, item4, item5 in mylist %}
+        <tbody>
+            <tr>
+                <th scope="row"><a href="https://www.airbnb.com{{ item5 }}">{{ item1 }}</a></th>
+                <th scope="row">{{ item2 }}</th>
+                <th scope="row">{{ item3 }}</th>
+                <th scope="row">{{ item4 }}</th>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

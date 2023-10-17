@@ -1,0 +1,19 @@
+{% extends "Pokedex/Pokedex_base.html" %}
+
+{% load static %}
+
+{% block title %} Pokedex Home{% endblock %}
+
+{% block content %}
+
+<h1>Pokedex Pokemon Tracker</h1>
+
+<p>This tracker manages Pokemon that you've caught!</p>
+
+<div>
+    <li><a href="{% url 'create_user' %}"><button type="submit" class="new-account-btn">I'm new here and want to make an account!</button></a></li>
+    <li><a href="{% url 'add_pkmn' %}"><button type="submit" class="add-pkmn-btn">I want to add another Pokemon to my dex!</button></a></li>
+    <!-- <li><a href="{% url 'view_profile' %}">Your Pokedex</a></li> -->
+
+</div>
+{% endblock %}

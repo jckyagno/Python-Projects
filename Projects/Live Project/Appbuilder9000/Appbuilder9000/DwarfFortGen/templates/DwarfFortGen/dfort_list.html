@@ -1,0 +1,29 @@
+{% extends "dfort_base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+
+<h1>Forgotten Beasts</h1>
+<table class="list-container" id="displayTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Size</th>
+        <th>HP</th>
+    </tr>
+
+    {% for b in beast %}
+    <tr class="listitem-container">
+        <td class="name"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+{% endblock %}

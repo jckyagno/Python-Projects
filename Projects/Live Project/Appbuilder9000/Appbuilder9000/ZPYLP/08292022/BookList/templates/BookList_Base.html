@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookList</title>
+    <link rel= "stylesheet" href="{% static '/css/BookList_Layout.css' %}">
+</head>
+ <body>
+        <div class="topnav">
+            <a href="{% url 'BookList_Home' %}">Home</a>
+            <a href="{% url 'BookList_Create' %}" >Create</a>
+            <a href="{% url 'BookList_Display' %}">BookList</a>
+            <a href="{% url 'BookList_api' %}">API</a>
+            <header class="header_title">
+                Book List
+            </header>
+        </div>
+
+        {% block content %}
+
+        {% endblock %}
+
+        <section id="block-footer">
+            <p id="footer-right"><a href="#">Terms</a>|<a href="#">Privacy</a></p>
+            <p id="footer-left">&copy;2022 - BookList</p>
+        </section>
+    </body>
+</html>
+

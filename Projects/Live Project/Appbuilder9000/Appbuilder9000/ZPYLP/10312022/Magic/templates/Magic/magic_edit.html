@@ -1,0 +1,16 @@
+{% extends "magic_base.html" %}
+
+{% block content %}
+
+		<form method="POST" class="myForm">
+			<h1>Edit</h1>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit" class="btnSub">Save Changes</button>
+			<button type="submit" class="btnView"><a href="{% url 'magic_details' deck.id %}">Go Back</a></button>
+			<button type="submit" class="btnView"><a href="{% url 'magic_delete' deck.id %}">Delete</a></button>
+		</form>
+
+
+{% endblock %}
+

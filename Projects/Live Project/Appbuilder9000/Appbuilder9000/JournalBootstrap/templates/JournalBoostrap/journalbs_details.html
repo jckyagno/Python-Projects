@@ -1,0 +1,16 @@
+{% extends "journalbs_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Details</h1>
+<div class="container">
+    <div class="card mb-3 text-center">
+        <div class="card-body">
+            <h5 class="card-title">{{ entry.title }}</h5>
+            <p class="card-text">{{ entry.date }}</p>
+            <p class="card-text">{{ entry.content }}</p>
+        </div>
+    </div>
+</div>
+<button class="btn btn-primary"><a href="{% url 'journalbs_update' entry.id %}">Update</a></button>
+{% endblock %}

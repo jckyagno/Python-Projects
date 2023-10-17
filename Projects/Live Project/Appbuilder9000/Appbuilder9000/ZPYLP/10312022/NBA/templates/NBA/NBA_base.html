@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '/layout.css' %}">
+    {% include "NBA/NBA_navbar.html" %}
+</head>
+    <body>
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+
+    {% include "NBA/NBA_footer.html" %}
+
+    </body>
+
+</html>

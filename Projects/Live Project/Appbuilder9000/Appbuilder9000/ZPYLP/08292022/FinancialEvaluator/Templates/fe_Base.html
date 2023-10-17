@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{% static '/FinancialEvaluator/css/fe_layout.css' %}">
+        <title>Financial Evaluations</title>
+    </head>
+
+    <div class="nav">
+        <a href="{% url 'fe_Home' %}">HOME</a> |
+        <a href="fe_Account">SIGN IN</a> |
+        <a href="fe_Account">CONTACT</a> |
+        <a href="{% url 'fe_Home' %}">CHART</a>
+    </div>
+
+    <body id="body">
+        <div class="content-container-container">
+            <div class="content-container">
+            {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
+
+
+

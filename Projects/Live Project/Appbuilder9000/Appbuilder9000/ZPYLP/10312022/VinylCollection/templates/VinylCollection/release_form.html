@@ -1,0 +1,16 @@
+{% extends 'VinylCollection/base.html' %}
+
+{% block title %}Edit{% endblock %}
+
+{% block header %}Edit: {{ release }}{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" class="site-btn">
+    <button class="site-btn"><a href="{% url 'collection' %}">Cancel</a></button>
+</form>
+
+{% endblock %}

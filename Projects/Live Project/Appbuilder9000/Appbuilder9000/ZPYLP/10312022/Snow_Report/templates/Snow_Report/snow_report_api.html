@@ -1,0 +1,12 @@
+{% extends "snow_report_base.html" %}
+
+{% block content %}
+<h1>API</h1>
+<h2>Current Temperature in Portland: </h2>
+<h1>{{ current_temperature }}</h1>
+
+<button><a href="{% url 'snow_report_save_api' temp_int %}">Save Current Weather</a></button>
+
+
+
+{% endblock %}

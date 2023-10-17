@@ -1,0 +1,30 @@
+{% extends "ChristmasList_base.html" %}
+
+{% block header %}Wish List{% endblock %}
+
+{% block content %}
+
+    <div class="admin_panel">
+        <br>
+        <h2 class="home">Here is your wish list!</h2>
+        <table class="table table-responsive" id ="myTable">
+            <tr id="headerRow">
+                <th>Brand</th>
+                <th>Name</th>
+                <th>Color</th>
+            </tr>
+            {% for e in entry %}
+            <tr>
+                <td>{{ e.brand }}</td>
+                <td>{{ e.name }}</td>
+                <td>{{ e.color }}</td>
+                <td><a href="{% url 'gift_details' e.id %}">Details</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="object_container">
+            <a href="{% url 'gift_create' %}"><button class="btn">Add Entry</button></a>
+        </div>
+    </div>
+
+{% endblock %}

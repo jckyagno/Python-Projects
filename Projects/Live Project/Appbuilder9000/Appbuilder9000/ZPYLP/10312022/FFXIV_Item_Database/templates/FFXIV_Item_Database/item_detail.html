@@ -1,0 +1,17 @@
+{% extends "FFXIV_Item_Database/base.html" %}
+{% load static %}
+{% block title %}Details for {{ item_details.Name }}{% endblock %}
+{% block content %}
+<div class="container mt-3">
+    <div>
+        <img src="{{ item_details.GamePatch.Banner }}" alt="{{ item_details.GamePatch.Banner }}" class="row justify-content-center"/>
+        <h2 class="row"> Details for : {{ item_details.Name }} </h2>
+        <p>Item ID: {{ item_details.ID }}</p>
+        <p>Item Type: {{ item_details.ItemKind.Name }}</p>
+
+        <p>Description: {{ item_details.Description }}</p>
+        <p>Icon: {{ item_details.Icon }}</p>
+    </div>
+</div>
+
+{% endblock %}

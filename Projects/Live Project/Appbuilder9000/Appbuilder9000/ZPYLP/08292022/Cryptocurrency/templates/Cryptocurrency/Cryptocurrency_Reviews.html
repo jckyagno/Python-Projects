@@ -1,0 +1,34 @@
+{% extends "Cryptocurrency_base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+
+{% block title %} Cryptocurrecny Reviews {% endblock %}
+
+{% block content %}
+
+<h1 class="fancy">Cryptocurrency Reviews</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>User Name</th>
+                <th>Cryptocurrency</th>
+                <th>Review</th>
+                <th>Sentiment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% for item in cryptocurrency_reviews %}
+                <td><a href="{% url 'Cryptocurrency_Details' item.id %}"><i class="fa-solid fa-angles-right">{{ item.user | capfirst }}</i></a></td>
+                <td>{{ item.crypto | capfirst }}</td>
+                <td>{{ item.body}}</td>
+                <td>{{ item.rating}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

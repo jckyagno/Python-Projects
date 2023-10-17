@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="everything">
+	<head>
+	    <meta charset="UTF-8">
+		<title>{% block title%}{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//fonts.googleapis.com/css?family=DynaPuff" rel="stylesheet" type="text/css">
+		<link href="//fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../static/css/Procreate_css.css">
+	</head>
+    <body>
+        <div class="page_container">
+            {% include "Procreate/Procreate_navbar.html" %}
+            <header class="header-title">
+                <h1>{% block header %}{% endblock %}</h1>
+		    </header>
+            {% block content %}{% endblock %}
+        </div>
+
+        {% include "Procreate/Procreate_footer.html" %}
+    </body>
+</html>
+

@@ -1,0 +1,13 @@
+{% extends "Cryptocurrency_base.html" %}
+
+{% block content %}
+<div class="add-crypto-container">
+    <h3>Edit Review</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"><a>Update</a></button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "Travelguide_base.html" %}
+
+{% block content %}
+<h1>Details</h1>
+<h3>
+    {{ entry.Country }} {{ entry.Region }}<br><br>
+    Description: {{ entry.Description }}<br><br>
+</h3>
+<button><a href="{% url 'Travel_edit' entry.id %}">Update Entry</a></button>
+
+{% endblock %}

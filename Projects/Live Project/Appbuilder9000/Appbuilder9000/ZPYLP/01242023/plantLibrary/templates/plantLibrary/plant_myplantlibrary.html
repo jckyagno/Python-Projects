@@ -1,0 +1,25 @@
+{% extends "plant_base.html" %}
+
+{% block title %}Plant Care Library & Tracker{% endblock %}
+
+{% block header %}<h2>My Plant Library</h2>{% endblock %}
+
+{% block content %}
+
+{% for item in all_plants %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.plant_name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">For more information about this plant, click details:</h6>
+            <a href="{% url 'plant_details' item.id %}">Details</a>
+        </div>
+    </div>
+    <br>
+{% endfor %}
+
+{% endblock %}
+
+<!--<h5>{{ item.plant_name }} <br>
+            <a href="{% url 'plant_details' item.id %}">Details</a><br>
+        </h5>
+-->

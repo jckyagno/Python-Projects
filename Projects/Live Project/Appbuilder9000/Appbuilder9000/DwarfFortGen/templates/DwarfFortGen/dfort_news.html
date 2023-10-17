@@ -1,0 +1,37 @@
+{% extends "dfort_base.html" %}
+
+{% block content %}
+
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div>
+        <div  id="latest-news">
+            <h1>Latest News</h1>
+            <h2>{{ all_dates.date1 }}</h2>
+            <p class="news-container">{{ all_news.news1 }}</p>
+            <button id="news-btn1">NEXT</button>
+        </div>
+
+        <div  id="mid-news">
+            <h1>Older Posts</h1>
+            <h2>{{ all_dates.date2 }}</h2>
+            <p class="news-container">{{ all_news.news2 }}</p>
+            <button id="news-btn2">PREV</button>
+            <button id="news-btn3">NEXT</button>
+        </div>
+
+        <div  id="last-news">
+            <h1>Older Posts</h1>
+            <h2>{{ all_dates.date3 }}</h2>
+            <p class="news-container">{{ all_news.news3 }}</p>
+            <br>
+            <button id="news-btn4">PREV</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

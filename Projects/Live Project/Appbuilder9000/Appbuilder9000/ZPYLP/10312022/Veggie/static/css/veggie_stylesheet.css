@@ -1,0 +1,17 @@
+/* General Styling */
+
+html, body {
+	height: cover;
+	width: cover;
+}
+
+body {
+	font-family: Lucida Sans Unicode;
+	text-align: center;
+	background-image: url('../../static/images/veggie_background-light.jpg');
+    background-size: cover;
+	overflow: scroll;
+	background-repeat: no-repeat;
+}
+
+

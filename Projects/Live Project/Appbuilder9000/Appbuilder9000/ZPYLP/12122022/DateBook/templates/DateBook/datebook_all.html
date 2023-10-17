@@ -1,0 +1,20 @@
+{% extends "datebook_base.html" %}
+
+{% block content %}
+<h1>Your Dates</h1>
+<table>
+    <tr>
+        <th>Name</a></th>
+        <th>Date</a></th>
+    </tr>
+    {% for e in entry %}
+    <tr>
+        <td><a href="{% url 'datebook_details' e.id %}">{{ e.fname }} {{ e.lname }}</a></td>
+        <td>{{ e.date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<button><a href="{% url 'datebook_entry' %}">Add a Date</a></button>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "HolidayPlanner_base.html" %}
+{% load static %}
+{% block title %}Holiday Planner Edit{% endblock %}
+{% block header %}Edit Entries{% endblock %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="create-form">
+        {{ form.as_p }}
+    </div>
+    <div class="btn-details">
+        <button type="submit" class="btn">Update Entry</button>
+    </div>
+</form>
+<div class="btn-details">
+    <a href="{% url 'HolidayPlanner_delete' entry.id %}"><button type="submit" class="btn">Delete Entry</button></a>
+    <a href="{% url 'HolidayPlanner_details' entry.id %}"><button type="submit" class="btn">Cancel</button></a>
+    <br>
+</div>
+{% endblock %}

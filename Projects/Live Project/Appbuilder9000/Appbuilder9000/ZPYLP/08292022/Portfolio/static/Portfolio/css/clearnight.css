@@ -1,0 +1,87 @@
+html {
+    font-family: Garamond, serif;
+}
+
+body {
+
+}
+
+.navbar {
+    background-color: rgba(0,0,0,.25);
+    box-shadow: -10px 0px 12px 4px rgba(170,23,50,.25);
+}
+
+.svg path {
+    stroke: rgba(170,23,50,1);
+    stroke-opacity: .7
+}
+
+.svg path:hover {
+    stroke: rgba(170,23,50,1);
+    stroke-opacity: 1;
+}
+
+.navbar a {
+    color: white;
+
+}
+
+.active, .navbar a:hover{
+    background-color: rgba(170,23,50,.75);
+}
+
+.con2 {
+    background-color: rgba(0,0,0,.25);
+}
+
+.formcontainer {
+
+}
+
+.contactform {
+
+}
+
+.btn {
+
+}
+
+.contactform label {
+
+}
+
+.formpopup:hover, .btn:hover {
+
+}
+
+.formpopup {
+
+}
+
+.dbdisplay {
+
+}
+
+.dbdisplaycontainer {
+
+}
+
+.tablestyle {
+
+}
+
+.tableheader {
+
+}
+
+.tabledata {
+
+}
+
+.tabledata2 {
+
+}
+
+.tabledata, .tabledata2 {
+
+}

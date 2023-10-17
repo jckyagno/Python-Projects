@@ -1,0 +1,20 @@
+{% extends 'clip_base.html' %}
+
+{% block title %}CLI Planner{% endblock %}
+
+{% block content %}
+
+<div class='title center'>
+    <p>This is a simple day planner controlled through a command line interface</p>
+    <p>Run the command 'help' to get started</p>
+</div>
+
+<div class='terminal'>
+
+    <div class='shell-display'>
+        <pre id='shell' class='term'></pre>
+    </div>
+    
+</div>
+
+{% endblock %}

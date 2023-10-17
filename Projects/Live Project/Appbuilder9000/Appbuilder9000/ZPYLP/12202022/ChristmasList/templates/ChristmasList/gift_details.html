@@ -1,0 +1,25 @@
+{% extends "ChristmasList_base.html" %}
+
+{% block header %}Gift Details{% endblock %}
+
+{% block content %}
+
+    <div class="admin_panel">
+        <br>
+        <div class="details_header">
+            <h3 class="poem">{{ entry.name }} - {{ entry.brand }} - {{ entry.color }}</h3>
+        </div>
+        <br>
+        <div class="description_box">
+            <h4 style="text-align: center">Description</h4>
+            <br>
+            <p style="text-align: center">{{ entry.description }}</p>
+            <br>
+        </div>
+        <div class="object_container">
+            <a href="{% url 'gift_edit' entry.id %}"><button class="btn">Update Entry</button></a>
+            <a href="{% url 'gift_list' %}"><button class="btn">Return</button></a>
+        </div>
+    </div>
+
+{% endblock %}

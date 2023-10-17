@@ -1,0 +1,28 @@
+{% extends 'VinylCollection/base.html' %}
+
+{% block title %}Vinyl Collection{% endblock %}
+
+{% block header %}Add Your Vinyl Records{% endblock %}
+
+{% block content %}
+
+    {% include './catalog_widget.html' %}
+
+    <div id="release-form-wrap">
+        <img src="" id="release-form-image">
+        <form method="POST" action="{% url 'VinylCollection_home' %}" id="release-form">
+            <div id="release-form-fields">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.as_p }}
+            </div>
+            <div>
+                <input type="submit" value="Add Release" name="save_item" class="site-btn">
+                <button type="button" value="cancel" class="site-btn">
+                    <a href="{% url 'VinylCollection_home' %}">Cancel</a>
+                </button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

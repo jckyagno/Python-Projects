@@ -1,0 +1,14 @@
+{% extends "BucketList_Base.html" %}
+
+{% block content %}
+
+<h1>Details</h1>
+<h3>{{item.month}}</h3>
+<ul>
+    <li>Activity : {{item.activity}}</li>
+    <li>Where : {{item.location}}</li>
+    <li>Whats needed : {{item.required_items}}</li>
+</ul>
+<br>
+<button><a href="{% url 'BucketList_update' item.id %}">Update</a></button>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "Camera_head.html" %}
+    <title>Camera Database</title>
+</head>
+<body>
+    <div class="page_container">
+        <!-- Adding a universal Navbar for each page that needs one -->
+        {% include "Cinematography/navbar.html" %}
+        <header>
+            <h1 align="center">{% block title %}{% endblock %}</h1>
+        </header>
+    </div>
+    <div class="list_container">
+        <ul>
+            {% for cam in pullCam %}
+                <li><a href="./{{ cam.pk }}/Camera_details/">{{ cam.manufacturer }}</a></li>
+            {% empty %}
+                <li>Whoops!  No cameras have been added yet.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>

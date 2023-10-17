@@ -1,0 +1,51 @@
+{% extends 'deadByDaylight_base.html' %}
+{% load static %}
+{% block title %}Add A New Killer{% endblock %}
+{% block content %}
+<div class="fix">
+	<h3>ADD A NEW KILLER</h3>
+	<div id="killer-form" oninput="PreviewCard2()">
+		<form method="POST" onkeydown="return event.key != 'Enter';"> <!-- Replace this with the Django Form -->
+			{% csrf_token %}
+			<div class="center_form">
+				<div class="Column_One">
+					{{form.as_p}}
+				</div>
+				<div class="Column_Two">
+					{{perkform.as_p}}
+				<button id="add-killer-button" type="submit" name="Add_Killer">Add Killer</button>
+				</div>
+				<div class="Column_Three">
+					<div class="square-container">
+    					<img src="" class="profile_image" id="profile">
+    					<div class="text-container">
+							<p id="Full_Name_Test"></p>
+    					</div>
+    					<div class="perk-container">
+       						<div class="perk">
+            					<img src="" class="perk_image" id="Perk1">
+            					<br>
+            					<p id="Perk_One_Test"></p>
+        					</div>
+        					<div class="perk">
+           						<img src="" class="perk_image" id="Perk2">
+            					<br>
+            					<p id="Perk_Two_Test"></p>
+        					</div>
+        					<div class="perk">
+            					<img src="" class="perk_image" id="Perk3">
+            					<br>
+            					<p id="Perk_Three_Test"></p>
+        					</div>
+    					</div>
+					</div>
+					<div class="full_body">
+						<img src="" id="Body_Image">
+					</div>
+				</div>
+			</div>
+		</form>
+		<br>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+
+body{
+background-color:lightblue;
+font-family: 'Silkscreen';
+text-align:center;
+}
+
+.a{
+    color:blue;
+    font-size:60px;
+
+}
+
+.b{
+    color:darkblue;
+    text-decoration:underline;
+    letter-spacing:4px;
+    font-size:30px;
+
+}
+
+.b:hover {
+    color:white;
+}

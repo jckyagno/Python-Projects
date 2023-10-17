@@ -1,0 +1,19 @@
+{% extends "MTB_Destinations/mtb_dest_base.html" %}
+{% block title %}Loam Away From Home{% endblock %}
+
+
+{% block content %}
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="jumbotext">
+        <div class="container">
+            <h1 class="display-4">Loam away from Home</h1>
+            <p class="lead">Keep track of your favorite singletrack and only your favorite singletrack.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-warning btn-lg" href="{% url 'mtb_dest_add' %}" role="button">Start Tracking</a>
+        </div>
+    </div>
+</div>
+      <!-- /Jumbotron -->
+{% endblock %}

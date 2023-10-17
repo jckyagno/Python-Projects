@@ -1,0 +1,78 @@
+{% extends "dfort_base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+
+<div class="search-container">
+    <div class="inner-search">
+        {% csrf_token %}
+        <select id="select_menu" onChange="top.location.href=this.options[this.selectedIndex].value;">
+            <option value="">Choose a Beast</option>
+            {% for b in beast %}
+                <option value="../../{{ b.pk }}/details/">{{ b.name }}, the {{b.title}}</option>
+            {% endfor %}
+        </select>
+
+        <form action="{% url 'dfort_search' %}" method="POST" style="display: inline;">
+            {% csrf_token %}
+            <input type="search" name="usr_query" placeholder="Search by Name">
+            <input type="submit" value="Search">
+        </form>
+
+    </div>
+</div>
+
+<h1 class="beware">!BEWARE!</h1>
+
+<h3 class="divider">=================================================</h3>
+
+<!-- Visual printed out from beast_body dictionary. Changes based on species type selected-->
+<div>
+    <h6 id="skin">{{ material }}</h6>
+    <p id="beast-visual" class="b-body">{{ beast_body.top1 }}<br>{{ beast_body.top2 }}<br>{{ beast_body.mid }}<br>{{ beast_body.bot1 }}<br>{{ beast_body.bot2 }}
+</div>
+
+<h1>{{ item.name }},</h1>
+<h2>The {{ item.title }} approaches...</h2>
+
+<div class="b-description">
+    <p>The {{ item.species|title }} beast with <span id="skin-display">{{ item.skin|title }}</span> flesh.</p>
+    <p>Now you know why you fear the night.</p>
+    <p class="b-intense">Fear it's {{ item.power|title }}!</p>
+</div>
+
+<h3 class="divider">=================================================</h3>
+
+<!--
+
+<table class="list-container" id="displayTable">
+    <tr>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Species</th>
+        <th>Skin</th>
+    </tr>
+
+    <tr class="listitem-container">
+        <td>>{{ item.name|title }}</td>
+        <td>{{ item.title|title }}</td>
+        <td>{{ item.species|upper }}</td>
+        <td>{{ item.skin|upper }}</td>
+    </tr>
+</table>
+
+-->
+
+<button><a href="../{{ form.pk }}edit/" class="hover-text">Alter this beast?</a></button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

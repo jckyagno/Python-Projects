@@ -1,0 +1,26 @@
+{% extends "Veggie_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block header %}Delete Confirmation:{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <form method="POST">
+        <div class="">
+            {% csrf_token %}
+            <p> Would you like to delete this entry? "{{ recipe.title_name }}"</p>
+        </div>
+        <div class="">
+            <input type="submit" value="Yes" class="btn">
+            <button class=""><a href="{% url 'veggie_details' recipe.id %}">Cancel</a></button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+
+
+

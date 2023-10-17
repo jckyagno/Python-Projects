@@ -1,0 +1,346 @@
+html {
+    height: 100%;
+    font-family: Garamond, serif;
+}
+
+*,body {
+    margin: none;
+    padding: none;
+
+}
+
+
+
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex; /*figure out why this needs to be flex to center content horizontally*/
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+.menu {
+    position: fixed;
+    z-index: 101;
+    cursor: pointer;
+    margin-top: -100px;
+
+}
+
+.svg path {
+
+}
+
+.svg path:hover {
+
+}
+
+.navbar li {
+    height: 100%;
+    list-style: none;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.active, .navbar a:hover{
+    
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 25px);
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.dividericon>#layer1>#path2987-5-6 {
+    margin-top: 500px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    z-index: 3;
+}
+
+.pagecontent {
+    width: 60%;
+    z-index 4;
+    margin: auto;
+
+}
+
+.portfoliowrapper {
+    width: 70%;
+    z-index 4;
+    margin: auto;
+
+}
+
+.porthead {
+    text-align: center;
+    margin-top: 75px;
+}
+
+.displaywrapper {
+    margin-top: 60px;
+    margin-bottom: 500px;
+}
+.cardrow1, .cardrow2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.cardrow1 {
+
+}
+
+.cardrow2 {
+
+}
+
+
+.card1, .card2, .card3, .card4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 35%;
+    border-radius: 7px;
+}
+
+
+
+.card1, .card3 {
+    margin-right: 30px;
+}
+
+
+
+
+.controller {
+    display: flex;
+    align-content: middle;
+    justify-content: center;
+    padding: 6vh;
+    height: 100%;
+    overflow: hidden;
+}
+
+.anim {
+    animation-name: slidein;
+    animation-duration: 1s linear;
+    -webkit-animation-name: slidein;
+    animation-duration: 1s;
+}
+
+@keyframes slidein {
+    from {
+        transform: translatex(-100%);
+        opacity: .25;
+    }
+
+    to {
+        transform: translatex(0%);
+        opacity: 1;
+    }
+}
+
+
+
+.homecontent {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+}
+
+.con2 {
+    padding: 6vh;
+    width: 100%;
+    height: calc(100vh - 250px);
+}
+
+.formcontainer {
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+    z-index: 21;
+    transform: translatey(100vh);
+
+}
+
+.contactform {
+    max-width: 25vw;
+    padding: 1vw;
+    margin: 0;
+}
+
+.inputbox {
+    display: inline-flex;
+    justify-content: center;
+    width: 95%;
+    height: 1.5vh;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    font-size: .75vw;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+
+}
+
+
+.btn {
+    font-size: .75vw;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+    height: 1.5vw;
+    margin-bottom: 1.5vh;
+    margin-left: 25%;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.btn1 {
+    margin-top: 20px;
+}
+
+.contactform label {
+}
+
+.formpopup:hover, .btn:hover {
+
+}
+
+.formpopup {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 5vw;
+    cursor: pointer;
+    height: 3vw;
+}
+
+/* database object view styling */
+.dbdisplay {
+    display: block;
+    padding: 10px;
+}
+
+.dbdisplaycontainer {
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+    z-index: 21;
+    transform: translatey(100vh);
+}
+
+/* end database object view */
+
+/* Database list table styling */
+
+.con3 {
+    padding: 6vh;
+    width: 100%;
+    height: calc(100vh - 250px);
+}
+.tablestyle {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    overflow:auto;
+}
+
+.tableheader {
+
+}
+
+.tabledata {
+
+}
+
+.tabledata2 {
+}
+
+.tabledata, .tabledata2 {
+    text-decoration: none;
+    font-size: 2vh;
+    padding: 12px;
+}
+
+.footer {
+    height: 12.5vh;
+}
+
+
+@media screen and (min-width: 1920px) {
+    body {
+
+        background-size: 100% auto !important
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    html {
+        transform: translateX(.25px);
+        overflow: hidden;
+    }
+    body {
+        background-size: stretch;
+        color: black;
+        z-index: -1
+    }
+    #homesection {
+        margin: 20%;
+        
+    }
+    
+    .navbar {
+        display: block;
+        height: 100%;
+        right: 0;
+        position: absolute;
+        width: 101%;
+        margin-top: 60px;
+        
+    }
+    .navbar li {
+        height: 20%;
+    }
+    .navbar a { 
+        display: flex;
+        justify-content: center;
+        align-items: middle;
+        width: 90%;
+        height: 100%;
+        background-color: rgba(0,0,0,.85);
+        font-size: 25px;
+        transform: translateX(100%)
+        
+    }

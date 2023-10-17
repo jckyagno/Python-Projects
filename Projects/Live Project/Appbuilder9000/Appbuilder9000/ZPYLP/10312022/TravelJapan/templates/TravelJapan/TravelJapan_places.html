@@ -1,0 +1,16 @@
+{% extends "TravelJapan_base.html" %}
+
+{% block content %}
+
+<h1>AWESOME PLACES</h1>
+{% for p in addEntry.all|dictsort:'island' %}
+<div class="placesTable">
+    <a href="{% url 'traveljapan_details' p.id %}"><h3 class="placesTableName">{{ p.name_of_Place }} || {{ p.city }}, {{ p.island }}</h3></a>
+        <br>
+        <li class="value">Added on {{ p.addDate }}</li>
+    </ul>
+</div>
+
+{% endfor %}
+<a href="{% url 'traveljapan_create' %}"><button>ADD PLACE</button></a>
+{% endblock %}

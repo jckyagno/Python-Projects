@@ -1,0 +1,14 @@
+
+<div id="contact">
+    <button type="button" class="formpopup formopen">Contact Me!</button>
+    <div class="formcontainer" id="formcontainer">
+        <form method="POST" class="contactform">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form }}
+            <button type="submit" class="btn btn1">Submit</button>
+            <button type="button" class="btn formopen" >Close</button>
+            <button type="button" class="btn" onclick="location.href='Portfolio_data.html';">View Previous Inquiries</button>
+        </form>
+    </div>
+</div>

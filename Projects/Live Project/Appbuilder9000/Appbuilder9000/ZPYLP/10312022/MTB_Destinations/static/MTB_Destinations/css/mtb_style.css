@@ -1,0 +1,12 @@
+.jumbotron {
+    background-image: url("../../../static/MTB_Destinations/images/catalina-island-1588654_1920.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.jumbotext {
+    background-color: rgb(255, 255, 255, .7);
+    padding: 2em 0em 2.5em 0em;
+}
+
+

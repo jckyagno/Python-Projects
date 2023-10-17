@@ -1,0 +1,15 @@
+{% extends "sportstats_base.html" %}
+
+{% block title %}Player Detils{% endblock %}
+
+
+
+{% block content %}
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="text-bg-danger p-3"
+    <h3>{{ entry.first_name }}  {{ entry.last_name }}</h3>
+    <p>{{ entry.player_points }} points {{ entry.player_assists }} assists</p>
+    <button><a href="{% url 'sportstats_edit' entry.id %}">Update Player</a></button>
+    <button type="submit"><a href="{% url 'sportstats_displayall' %}">Return to View Players</a></button>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "datebook_base.html" %}
+
+{% block content %}
+<button type="submit"><a href="{% url 'datebook_entry' %}">Add a Date</a></button>
+
+<h2><center>Never Forget About a Date!</center></h2>
+<h3><center>This app logs all your dates!<br>
+    Never forget your date's name, the date you went out on,<br>
+    the details of what you did, and how it went!</center></h3>
+
+{% endblock %}

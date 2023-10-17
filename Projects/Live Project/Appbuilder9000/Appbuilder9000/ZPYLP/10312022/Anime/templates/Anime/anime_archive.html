@@ -1,0 +1,34 @@
+{% extends "anime_base.html" %}
+
+{% block title %}Anime-maniac's{% endblock %}
+
+{% block header %}Anime Archive{% endblock %}
+
+{% block content %}
+
+<div class="admin_panel">
+        <div class="frmObject">
+            <p>Select a title:</p>
+            <table id="aniDB">
+                <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Genre</th>
+                    <th>Rating</th>
+                </tr>
+                {% for a in anime %}
+                <tr>
+                    <td><a href="{% url 'anime_details' a.id %}">{{ a.title }}</a></td>
+                    <td>"{{ a.type }}</td>
+                    <td>{{ a.genre }}</td>
+                    <td>{{ a.rating }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="frmBtn_container">
+            <button type="button" class="btn"><a href="{% url 'create_anime' %}">Add an Anime</a></button>
+        </div>
+</div>
+
+{% endblock %}

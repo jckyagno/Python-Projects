@@ -1,0 +1,24 @@
+{% extends "ja3_base.html" %}
+
+{% block title %}
+    Mercenary Delete Confirmation
+{% endblock %}
+
+{% block header %}
+    Delete Confirmation
+{% endblock %}
+
+{% block content %}
+<p class="fade-in-image" xmlns="http://www.w3.org/1999/html">Confirm Delete</p>
+
+<form method="POST" action=".">
+    {% csrf_token %}
+    <p class="fade-in-image">Are you sure you would like to delete "{{ item.callsign }}" from the database?</p>
+
+    {{ item.as_p }}
+
+    <input type="submit" value="Yes, delete it!" class="btn">
+    <a href="{% url 'ja3_roster' %}"><button class="btn" type="button">Cancel</button></a>
+</form>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "ChristmasList_base.html" %}
+
+{% block header %}Delete Entry{% endblock %}
+
+{% block content %}
+    <div class="admin_panel">
+        <br>
+        <br>
+        <form class="frmObject_container" method="POST">
+            {% csrf_token %}
+            <h3 style="text-align: center">Permanently delete entry: "{{ entry.name }}"?</h3>
+            <br>
+            <div class="frmBtn_container">
+                <button class="btn" type="submit">Delete</button>
+                <a href="{% url 'gift_edit' entry.id %}"><button class="btn" type="submit">Return</button></a>
+            </div>
+        </form>
+        <br>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "snow_report_base.html" %}
+
+{% block content %}
+<h1>Details</h1>
+<h3>{{ entry.resort }} - {{ entry.location }}</h3>
+<p>Ticket Prices: {{ entry.tickets }}</p>
+<p>Conditions: {{ entry.conditions }}</p>
+<button><a href="{% url 'snow_report_update' entry.id %}">Update Entry</a></button>
+
+<button><a href="{% url 'snow_report_delete' entry.id %}">Delete Entry</a></button>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "wine_base.html" %}
+
+
+{% block title %} Wine Pairings {% endblock %}
+
+{% block header %} Let's pair your wine with some food! {% endblock %}
+
+{% block content %}
+<button type="submit"><a href="{% url 'wine_create' %}">Select Wines</a></button>
+{% endblock %}

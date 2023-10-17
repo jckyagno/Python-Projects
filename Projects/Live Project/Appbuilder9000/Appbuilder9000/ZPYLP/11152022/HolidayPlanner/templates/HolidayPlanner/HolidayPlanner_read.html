@@ -1,0 +1,29 @@
+{% extends "HolidayPlanner_base.html" %}
+{% load static %}
+{% block title %}Holiday Planner Entries List{% endblock %}
+{% block header %}Entries List{% endblock %}
+{% block content%}
+<table class="tb-read">
+    <tr class="tr-read">
+        <th>Destination</th>
+        <th>Date & Time</th>
+        <th>Activity Type</th>
+    </tr>
+    {% for i in entry %}
+    <tr class="tr-read">
+        <td><a class="a-read" href="{% url 'HolidayPlanner_details' i.id %}">{{ i.destination }}</a></td>
+        <td><a class="a-read" href="{% url 'HolidayPlanner_details' i.id %}">{{ i.activity_date_and_time|date:'m/d/Y H:i' }}</a></td>
+        <td><a class="a-read" href="{% url 'HolidayPlanner_details' i.id %}">{{ i.activity }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<div class="btn-details">
+    <a href="{% url 'HolidayPlanner_create' %}"><button class="btn">Add Entry</button></a>
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    {% for msg in messages %}
+        swal('{{ msg }}');
+    {% endfor %}
+</script>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "Travelguide_base.html" %}
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Are you sure you want to delete: "{{ entry.Country }}"?</h3>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
+<button type="submit"><a href="{% url 'Travel_read' %}">Return</a></button>
+{% endblock %}

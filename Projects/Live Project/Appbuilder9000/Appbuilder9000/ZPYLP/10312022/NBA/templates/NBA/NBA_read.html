@@ -1,0 +1,22 @@
+{% extends 'NBA/NBA_base.html' %}
+
+{% block content %}
+<h1 style="text-align:center;">NBA Tracker</h1>
+<table>
+
+    <tr>
+        <th style="text-align:center;"><h2>Tracked Players</h2></th>
+    </tr>
+    {% for p in player %}
+    <tr>
+        <td><h3><a href="{% url 'nbaDetails' p.id %}">{{p.name}}</a></h3><hr>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<button><a href="{% url 'NBA_create' %}">Add Entry</a></button>
+
+
+{% endblock %}

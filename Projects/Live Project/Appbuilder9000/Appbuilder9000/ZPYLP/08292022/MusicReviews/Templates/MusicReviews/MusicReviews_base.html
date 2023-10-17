@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'MusicReviews/css/mr_layout.css' %}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="img">
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="{% url 'MusicReviews_home' %}">Home</a></li>
+                <li><a href="{% url 'MusicReviews_Add_Music' %}">AddMusic</a></li>
+                <li><a href="{% url 'MusicReviews_reviews' %}">MusicReviews</a></li>
+
+            </ul>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- content loaded from other pages -->
+        {% block content %}
+        {% endblock %}
+        <!-- end content -->
+
+        <!-- Footer -->
+        <footer class="block_footer">
+            <p id="footer-right">Terms|Privacy &nbsp;&nbsp;&copy;2022 - MusicReviews&reg;</p>
+        </footer>
+    </div>
+</body>
+</html>

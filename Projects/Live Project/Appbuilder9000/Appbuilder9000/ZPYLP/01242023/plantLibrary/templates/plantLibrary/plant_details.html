@@ -1,0 +1,23 @@
+{% extends "plant_base.html" %}
+
+{% load static %}
+
+{% block title %}Plant Care Library & Tracker{% endblock %}
+
+{% block header %}
+    <h2> Browse The Library!</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ info.plant_name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ info.sunlight_needs }} sunlight needs</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{ info.water_needs }} water needs</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{ info.water_needs }} water needs</h6>
+    <a href="{% url 'plant_myplantlibrary' %}">Return</a>
+  </div>
+</div>
+
+{% endblock %}
+

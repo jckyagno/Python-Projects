@@ -1,0 +1,48 @@
+{% extends "Cryptocurrency_base.html" %}
+
+{% block title %}Cryptocurrency{% endblock %}
+
+{% block header %}Cryptocurrency Reviews!{% endblock %}
+
+{% block content %}
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu rhoncus ligula, nec ornare quam.
+Praesent aliquam elementum nibh tincidunt dignissim. Integer ligula ligula, iaculis eget fringilla vitae,
+consectetur a tellus. Integer facilisis felis non lacus ultricies tincidunt.
+Sed nec fermentum neque. Aenean sollicitudin ac magna non dictum.
+Aliquam vitae est at odio pellentesque sodales ut sed leo.
+
+<div class="container">
+      <div class="p-5 my-4">
+
+        <div class="row g-3">
+          <div class="col-md-5 align-self-center text-center">
+            <h4><span id="Your Review"></span>Your Review</h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in.<br>
+            <a href="/Cryptocurrency/AddReview/">Add Your Review</a>
+          </div>
+          <img src="/static/images/crypto.jpg" alt="Cryptocurrency Banner"class="col-md-7" >
+          <div class="col-md-5 align-self-center text-center"><h4><span id="All Review"></span>All Review</h4> Ut placerat orci nulla pellentesque. Id consectetur purus ut faucibus pulvinar elementum integer.
+            In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Urna cursus eget nunc scelerisque viverra
+            mauris in. Varius vel pharetra vel turpis nunc. Pellentesque elit ullamcorper dignissim cras tincidunt.<br>
+            <a href="/Cryptocurrency/Reviews/">See reviews now</a>
+          </div>
+          <img src="/static/images/coins.jpeg" alt="Image of Various Crypto Coins" class="col-md-7">
+          <div class="col-md-5 align-self-center text-center">
+            <h4><span id="Top Crypto"></span>Top Crypto</h4>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Varius vel pharetra vel turpis nunc. Pellentesque elit ullamcorper dignissim cras tincidunt.
+            Duis aute irure dolor in reprehenderit,br>
+            <a href="/Cryptocurrency/Top/">See Top Crypto Now</a>
+          </div>
+          <img src="/static/images/king.jpeg" alt="King Boicoin" class="col-md-7">
+        </div>
+      </div>
+<script src="/static/js/cryptocurrency.js"></script>
+{% endblock %}

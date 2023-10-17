@@ -1,0 +1,18 @@
+{% extends "snowmobiles_base.html" %}
+{% block content %}
+<div class="tcenter">
+  <h3>Search for Snowmobiles or Dealers by Make/Brand or Model:</h3>
+  <form action="{% url 'search-results' %}" method="get">
+    <label for="items">Choice:</label>
+    <select name="items" id="items">
+      <option value="both">Search Snowmobiles and Dealers:</option>
+      <option value="snowmobile">Search Snowmobiles:</option>
+      <option value="dealer">Search Dealers:</option>
+    </select>
+    <input name="q" type="text" placeholder="Search...">
+    <br>
+    <br>
+  </form>
+</div>
+{% endblock %}
+

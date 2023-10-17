@@ -1,0 +1,69 @@
+{% extends "BoardGameTracker/BoardGameTracker_base.html" %}
+
+
+{% block title %}Game Night Hero{% endblock %}
+{% block header %} Game Details {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="game_list_container">
+        <table class="view_table">
+            <tr>
+                <th>Game Name</th>
+                <th>Minimum Players</th>
+                <th>Maximum Players</th>
+                <th>Game Type</th>
+                <th>Estimated Play Time</th>
+                <th>Played:</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>{{ boardgame.Game_Name }}</td>
+                <td>{{ boardgame.Minimum_Players }}</td>
+                <td>{{ boardgame.Maximum_Players }}</td>
+                <td>{{ boardgame.Game_Type }}</td>
+                <td>{{ boardgame.Estimated_Play_Time }}</td>
+                <td>{{ boardgame.Have_We_Played }}</td>
+                <td><a href="{% url 'bgt_edit' boardgame.id %}">Edit Details</a></td>
+                <td><button id="modalBtn">Delete Game</button></td>
+            </tr>
+        </table>
+        <div class="btn-container">
+            <a href="{% url 'bgt_create' %}"><button type="button" class="btn" value="Add">Add Another Game</button></a>
+        </div>
+
+        <!-- Modal -->
+        <div id="bgtModal" class="modal">
+
+              <!-- Modal content -->
+            <div class="modal-content">
+                <span class="modalClose">&times;</span>
+                <p><strong>Permanently delete this game from your tracker?</strong>
+                <br><small>Deleted records cannot be undone!</small></p>
+                <div class="modal-form">
+                    <form method="POST" action ="">
+                        {% csrf_token %}
+                        <div class="clearfix">
+
+                            <a href="{% url 'bgt_delete' boardgame.id %}"><button type="button" class="deletebtn"><strong>Delete</strong></button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

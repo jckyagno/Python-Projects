@@ -1,0 +1,22 @@
+{% extends 'VinylCollection/base.html' %}
+
+{% block title %}{{ release }}{% endblock %}
+
+{% block header %}Details For: {{ release }}{% endblock %}
+
+{% block content %}
+<div class="details-wrap">
+    <img class="details-image" src="{{ release.cover_image }}">
+    <ul class="details-container">
+        <li class="detail">Release Year: {{ release.release_date | date:"Y" }}</li>
+        <li class="detail">Genre: {{ release.genre }}</li>
+        <li class="detail">Style: {{ release.style }}</li>
+        <li class="detail">Country: {{ release.country }}</li>
+        <li class="detail">Label: {{ release.label }}</li>
+        <li class="detail">Format: {{ release.format }}</li>
+        <li class="detail">Pitchfork Score: {{ release.pf_rating }}</li>
+    </ul>
+    <button class="site-btn"><a href="../update/">Edit</a></button>
+    <button class="site-btn"><a href="../delete/">Delete</a></button>
+</div>
+{% endblock %}

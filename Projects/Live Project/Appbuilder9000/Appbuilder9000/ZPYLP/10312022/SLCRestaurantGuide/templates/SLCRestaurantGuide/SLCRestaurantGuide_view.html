@@ -1,0 +1,31 @@
+<!-- This page displays the DB items that were created -->
+{% extends "SLCRestaurantGuide_base.html" %}
+
+{% block content %}
+<h1>Restaurants</h1>
+<table>
+    <tr>
+        <!-- Table headers -->
+        <th>Restaurant</th>
+        <th>Address</th>
+        <th>Rating</th>
+        <th>Dish</th>
+        <th>Beverage</th>
+    </tr>
+    {% for e in entry %}
+    <tr>
+        <!-- e is for 'e in entry', id is for the primary key -->
+        <!-- Data pulled from form, entered into DB -->
+        <td><a href="{% url 'SLCRestaurantGuide_details' e.id %}">{{ e.restaurant_name }}</a></td>
+        <td>{{ e.address }}</td>
+        <td>{{ e.restaurant_rating }}</td>
+        <td>{{ e.dish_of_choice }}</td>
+        <td>{{ e.price_of_dish }}</td>
+        <td>{{ e.beverages }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p>Click a restaurant name for more details!</p>
+<button><a href="{% url 'SLCRestaurantGuide_create' %}">Add Restaurant</a></button>
+
+{% endblock %}

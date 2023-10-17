@@ -1,0 +1,11 @@
+{% extends "MovieReviews_base.html" %}
+
+{% block content %}
+<h1>Delete Entry</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Permanently Delete {{ details.title }}?</h2>
+        <br>
+        <button type="submit" class="delete-btn">Yes, Delete</button>
+    </form>
+{% endblock %}

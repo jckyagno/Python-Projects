@@ -1,0 +1,12 @@
+{% extends "BookList_Base.html" %}
+
+{% block content %}
+<h1>API</h1>
+<h2>Best Sellers: </h2>
+{% for b in booklist %}
+<h1>{{ b.0 }}</h1>
+<h1>{{ b.1 }}</h1>
+<h1>{{ b.2 }}</h1>
+<h1>{{ b.3 }}</h1>
+{% endfor %}
+{% endblock %}

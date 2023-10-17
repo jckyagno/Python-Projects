@@ -1,0 +1,16 @@
+{% extends "sportstats_base.html" %}
+
+{% block title %}Delete Player{% endblock %}
+
+
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST">
+        {% csrf_token %}
+        <h3>Permanantly Delete Player: "{{ entry.last_name }}"?</h3>
+        <br>
+        <button type="submit">Delete Player</button>
+    </form>
+	<button type="submit"><a href="{% url 'sportstats_edit' entry.id %}">Return</a></button>
+{% endblock %}

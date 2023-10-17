@@ -1,0 +1,13 @@
+{% extends "marvel_base.html" %}
+
+{% block title %}Marvel Characters{% endblock %}
+
+
+
+{% block content %}
+<h3>Click a button to view or add to the Character Roster!</h3>
+
+<button type="submit"><a href="{% url 'marvel_create' %}">Add</a> </button>
+<button type="submit"><a href="{% url 'marvel_roster' %}">Character Roster</a></button>
+
+{% endblock %}

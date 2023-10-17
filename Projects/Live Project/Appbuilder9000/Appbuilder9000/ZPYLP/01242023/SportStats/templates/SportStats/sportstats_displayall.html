@@ -1,0 +1,31 @@
+{% extends 'sportstats_base.html' %}
+
+{% block title %}Players{% endblock %}
+
+{% block content %}
+<table class="table table-dark table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Points</th>
+      <th scope="col">Assists</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for e in entry %}
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="{% url 'sportstats_details' e.id %}">{{ e.last_name }}</a></td>
+      <td><a>{{ e.player_points }}</a></td>
+      <td><a>{{ e.player_assists }}</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+
+</table>
+<button><a href="{% url 'sportstats_create' %}">Add Entry</a></button>
+
+{% endblock %}
+
+{% block foot %}{% endblock %}

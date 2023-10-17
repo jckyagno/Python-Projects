@@ -1,0 +1,29 @@
+{% extends "MTB_Destinations/mtb_dest_base.html" %}
+{% block title %}{{ obj.trail_system | title }}{% endblock %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'MTB_Destinations/css/mtb_style.css' %}">
+
+{% block content %}
+<div class="w-75 p-3 mx-auto">
+    <h1 class="display-4" style="margin-top:100px;">{{ obj.trail_system | title }}</h1>
+    <p class="lead">{{ obj.city | title }}, {{ obj.state | upper }}
+        <br>
+        {{ obj.country | upper }}
+        <br>
+        <br>
+    </p>
+    {# Date filter used to format day Month date Year #}
+    <p>Date added: {{ obj.date | date:"M j Y" }}.
+        <br>
+        {{ obj.notes }}
+    </p>
+    {% if obj.ridden == True %}
+        <p>I have ridden this trail system.</p>
+    {% else %}
+        <p>I still need to ride this trail system.</p>
+    {% endif %}
+    <a href="{% url 'mtb_dest_edit' obj.id %}" class="btn btn-warning">Edit Entry</a>
+</div>
+
+{% endblock %}

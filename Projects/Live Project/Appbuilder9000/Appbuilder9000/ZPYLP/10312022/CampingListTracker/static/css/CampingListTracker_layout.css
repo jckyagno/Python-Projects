@@ -1,0 +1,181 @@
+/*=====================================================
+Body - sets background pic and paragraph and headers text visible and centered
+=====================================================*/
+body {
+/*--- Fits entire background pic---*/
+    background-image: url('/static/images/background_camping.jpg');
+    background-repeat: no-repeat;
+    min-height: 100%;
+    background-size: cover;
+    background-position: left;
+    margin: auto;
+    font-family: 'sans-serif';
+    position: relative;
+}
+
+p {
+    text-shadow: 2px 2px 3px blue;
+    text-align: canter;
+    color: white;
+    margin: auto;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+li {
+    text-decoration-line: underline;
+    font-size: 25px;
+}
+
+
+/*=====================================================================
+Navigation Top
+======================================================================*/
+.nav {
+    background-image: linear-gradient(to left, blue, white, blue);
+    text-decoration: none;
+    transition: all ease 3s;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.nav a { /*--color of text when no cursor is hovering over*/
+    color: #f2f2f2;
+}
+.nav a:active {
+    background-color: blue;
+    color: blue;
+}
+
+.nav a:hover {
+    color: white;
+    background-color: blue;
+}
+
+
+/*========================================================================================
+content container, User input, buttons, and form
+==========================================================================================*/
+input{
+
+    padding: 0px 45px;
+    font-family: 'sans-serif';
+    border-style: solid;
+    border-width: 3px;
+    border-color: blue;
+    border-radius: 20px;
+}
+
+select {
+    padding: 0px 15px;
+    font-family: 'sans-serif';
+    border-style: solid;
+    border-width: 3px;
+    border-color: blue;
+    border-radius: 20px;
+}
+
+.link {
+    color: white;
+}
+
+
+button.submit {
+    color: white;
+    padding: .5em 1em .5em 1em;
+    background-color: hsla(240, 150%, 50%, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: blue;
+    border-radius: 20px;
+}
+
+button.submit hover {
+    background-color: white;
+    color: white;
+}
+/*This is the container that the field inputs and text are located*/
+
+.content-container-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 5;
+    position: relative;
+    width: 60vh;
+    height: 70vh;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    padding: 3em 2em 3em 2em !important;
+    background-color: hsla(240, 100%, 50%, .2);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(100, 100, 255, .5);
+}
+
+
+
+.content-container {
+    text-align: center;
+    align-items: center;
+}
+
+/*=======================================================================================
+Table
+=======================================================================================*/
+.list-tables {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    min-width: 400px;
+    box-shadow: 0 0 10px rgba(100, 100, 255, 2.15);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.list-tables thead tr {
+    background-color: rgba(200,200,255,0.3);
+    color: white;
+    text-align: left;
+}
+
+.list-tables th,
+.list-tables td {
+    padding: 12px 15px;
+}
+
+.list-tables td:hover {
+    background-color: #e6e6ff;
+}
+
+.list-tables tbody tr {
+    border-bottom: 1px solid white;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.list-tables tbody tr:nth-of-type(odd) {
+    border-bottom: 2px solid white;
+    background-color: rgba(230, 230, 255, .5);
+    color: black;
+    font-weight: bold;
+}
+
+.list-tables tbody tr:last-of-type {
+    border-bottom: 2px solid #000099;
+}
+
+.list-tables tbody tr.active-row {
+    font-weight: bold;
+    color: white;
+}
+
+
+/*-----------------------------------------------------------------------------------------------
+Form
+--------------------------------------------------------------------------------------------------*/

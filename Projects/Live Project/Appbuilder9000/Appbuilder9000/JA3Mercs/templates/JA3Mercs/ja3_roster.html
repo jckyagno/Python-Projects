@@ -1,0 +1,52 @@
+{% extends "ja3_base.html" %}
+
+{% block title %}
+    Mercenary Roster
+{% endblock %}
+
+{% block header %}
+    Mercenary Roster
+{% endblock %}
+
+{% block content %}
+    <p class="fade-in-image">Please select EDIT to modify a previously-enrolled mercenary,<br>or click "New Mercenary" to enroll a new contact.</p>
+
+
+
+<div>
+    <form name="mercForm" method="POST" action="">
+        <div class="formObject">
+            {% csrf_token %}
+                <table>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Callsign</th>
+                        <th>Last Name</th>
+                        <th>Training</th>
+                        <th>$/wk</th>
+                        <th>Description</th>
+                    </tr>
+                    {% for item in mercs %}
+                        <tr>
+                            <td>{{ item.fname }}</td>
+                            <td>"{{ item.callsign }}"</td>
+                            <td>{{ item.lname }}</td>
+                            <td>{{ item.training }}</td>
+                            <td>${{ item.salary }}/wk</td>
+                            <td class="description">{{ item.description }}</td>
+                            <td><a href="../{{ item.pk }}/details/">EDIT</a></td>
+                            <td><a href="../{{ item.pk }}/delete/">DELETE</a></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            <div class="fromBtn_container">
+                <a href="{% url 'ja3_createRecord' %}"><button type="button" class="btn">New Mercenary</button></a>
+                <a href="{% url 'ja3_home' %}"><button type="button" class="btn">Home</button></a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock %}

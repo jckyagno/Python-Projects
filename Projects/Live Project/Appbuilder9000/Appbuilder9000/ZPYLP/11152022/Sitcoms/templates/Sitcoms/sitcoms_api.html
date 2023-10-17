@@ -1,0 +1,24 @@
+{% extends "sitcoms_base.html" %}
+
+{% block title %}World of Sitcoms{% endblock %}
+
+{% block header %}Plan Your Binge!{% endblock %}
+
+{% block content %}
+<div class="admin_panel">
+    <div class="center">
+        <br>
+        <h3>How's the weather? Is today a binge day?</h3>
+        <br>
+        <h4>Current Temperature in Longview:</h4>
+        <br>
+        <br>
+        <h2>{{ current_temperature }}</h2>
+        <br>
+        <div class="frmBtn_container">
+            <button type="button"  class="btn" ><a href="{% url 'sitcoms_save_api' temp_int %}">Save this binge date!</a></button>
+        </div>
+        <br>
+    </div>
+</div>
+{% endblock %}

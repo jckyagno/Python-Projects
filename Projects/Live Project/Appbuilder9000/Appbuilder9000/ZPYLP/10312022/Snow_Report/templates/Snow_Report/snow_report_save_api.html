@@ -1,0 +1,27 @@
+{% extends "snow_report_base.html" %}
+
+{% block content %}
+<h1>Saved Local Weather</h1>
+<table>
+
+    <thead>
+    <tr>
+        <th>Temperature</a></th>
+        <th>Date</a></th>
+    </tr>
+    </thead>
+
+    {% for m in moment %}
+    <tr>
+        <td><a href="{% url 'snow_report_details_api' m.id %}">{{ m.temperature }}<span>&#176;</span>F</a></td>
+        <td>{{ m.date }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+
+
+
+{% endblock %}

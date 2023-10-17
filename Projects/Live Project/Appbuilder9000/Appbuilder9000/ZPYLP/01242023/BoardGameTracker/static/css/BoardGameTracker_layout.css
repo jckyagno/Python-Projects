@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+}
+
+html {
+    background-color: orange;
+}
+
+body {
+	position: relative;
+	overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+	padding: 0;
+}
+
+p {
+	padding: 2px 16px;
+	font-size: 18px;
+	font-family: 'Lato', Georgia, sans-serif;
+	color: #155928;
+	font-weight: bold;
+}
+
+h1 {
+    color: red;
+    font-family: 'Lobster';
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+    margin:0 auto;
+}
+
+h2 {
+    color: #0404B4;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h2 span {
+    font-variant: small-caps;
+    padding: 2px 16px;
+}
+
+.container {
+    padding: 2px 16px;
+
+
+}
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.box>* {
+	flex: 1 1 160px;
+}
+
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #155928;
+}
+
+.topnav a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.topnav a:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	transition: opacity 0.3s ease-in-out;
+    background-color: #d9822b;
+}
+
+.bgt-header-title {
+	padding: 2px 16px;
+	text-align: center;
+}
+
+#bgt-footer {
+    clear: both;
+    display: flex;
+    width: 100%;
+	-moz-box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #155928;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+}
+
+#bgt-footer p {
+    flex: 1;
+    color: white;
+    padding: 15px 15px;
+	font-size: 14px;
+    line-height: 10px;
+	font-family:'PT Sans', Arial, Helvetica, sans-serif;
+}
+
+.bgt-bg_img {
+
+    background-image: url('/static/images/gamePieces_05.jpg');
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.view_table {
+	background-color:white;
+	width: 90%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+	border: 2px solid gray;
+	border-collapse: collapse;
+	border-radius: 8px;
+	table-layout: auto;
+	float: center;
+	position: relative;
+	text-align: center;
+}
+
+.api_view_table {
+    background-color:white;
+	width: 90%;
+	height: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+	border: 2px solid gray;
+	border-collapse: collapse;
+	border-radius: 8px;
+	table-layout: auto;
+	float: center;
+	position: relative;
+	text-align: center;
+
+}
+
+.api_container {
+    height: 70vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.bsoup-container {
+    height: 70vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+td {
+    text-align: center;
+    padding: 6px;
+    font-size: 20px;
+    font-family: 'Lato', Georgia, sans-serif;
+	color: #155928;
+}
+
+th {
+    font-size: 24px;
+    padding: 6px;
+    text-decoration: underline;
+    font-family: 'Lato', Georgia, sans-serif;
+	color: #155928;
+}
+
+.btn-container {
+    padding: 8px;
+    text-align: center;
+
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content p{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* The Close Button */
+.modalClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modalClose:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.deletebtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+
+    opacity: 0.9;
+    font-size: 20px;
+    text-align: center;
+}
+
+.clearfix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frmObject_container {
+    max-width: 90vw;
+    padding: 10px;
+    background-color: white;
+    text-align: left;
+}
+
+.frmObject_container input[type=text], .frmObject_container input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.frmObject_container input[type=text]:focus, .frmObject_container input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.frmObject_container .btn {
+    background-color: darkkhaki;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.frmObject_container .cancel {
+    background-color: plum;
+
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+
+}
+
+input[type=submit] {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw;
+    margin: 1vh;
+    cursor: pointer;
+
+    height: auto;
+}
+
+button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-size: 1vw;
+
+
+    cursor: pointer;
+    margin: 1vh;
+    height: auto;
+}
+

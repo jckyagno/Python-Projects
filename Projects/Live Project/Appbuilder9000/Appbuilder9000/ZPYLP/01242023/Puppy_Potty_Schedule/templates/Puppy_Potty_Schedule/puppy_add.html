@@ -1,0 +1,15 @@
+{% extends "puppy_base.html" %}
+
+{% block content %}
+
+<!--displays form to add new schedule-->
+<h1>ADD NEW SCHEDULE</h1>
+<div class="addScheduleForm">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">SUBMIT</button>
+    </form>
+</div>
+
+{% endblock %}

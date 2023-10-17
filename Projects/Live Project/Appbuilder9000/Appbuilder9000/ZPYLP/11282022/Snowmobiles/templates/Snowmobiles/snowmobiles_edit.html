@@ -1,0 +1,23 @@
+{% extends "snowmobiles_base.html" %}
+
+{% block title %}Snowmobiles Edit{% endblock %}
+{% block content %}
+<h1 style="text-align:center">Edit</h1>
+<div id="snowmobile-form">
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div class="frmBtn_container">
+            <button type="submit" name="Save_Snowmobile">Update Snowmobile</button>
+
+            <button class="btn"><a href="../delete/">Delete</a></button>
+            <button class="btn"><a href="{% url 'snowmobiles_all' %}">CANCEL</a></button>
+        </div>
+
+    </form>
+    <br>
+</div>
+
+{% endblock %}

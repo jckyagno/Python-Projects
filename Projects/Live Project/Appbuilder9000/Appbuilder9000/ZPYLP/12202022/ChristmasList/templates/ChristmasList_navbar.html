@@ -1,0 +1,10 @@
+{% load static from staticfiles %}
+
+<ul class="topnav">
+    <li><a href="{% url 'ChristmasList_home' %}">Home</a></li>
+    <li><a href="{% url 'gift_create' %}">Add Gift</a></li>
+    <li><a href="{% url 'gift_list' %}">View List</a></li>
+    <li><a href="{% url 'api' %}">Christmas Joke API</a></li>
+    <li><a href="{% url 'bs' %}">Beautiful Soup Poem</a></li>
+    <li><a href="{% url 'saved_api' 'p1' 'p2' %}">Saved Jokes</a></li>
+</ul>

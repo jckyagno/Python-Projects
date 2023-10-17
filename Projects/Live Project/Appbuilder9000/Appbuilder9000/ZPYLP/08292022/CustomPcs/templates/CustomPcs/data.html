@@ -1,0 +1,35 @@
+{% extends "CustomPcs/CustomPcs_base.html" %}
+
+{% block title %}Build Entries {% endblock %}
+
+{{ all_entries }}
+
+{% block content %}
+<style>
+    th,td{
+    border: 1px black solid;
+    }
+</style>
+<h3>All Build Entries</h3>
+
+<div id="User-Entries">
+    <table class="table table-responsive" id="memory-table">
+        <tr id="headerRow">
+            <th>First Name:</th>
+            <th>Last Name:</th>
+            <th>Case Size:</th>
+            <th>Specifications:</th>
+        </tr>
+        {% for i in all_entries %}
+        <tr>
+            <td><a href="{% url 'Details' i.id %}">{{i.first_name}}</a></td>
+            <td class="center">{{ i.last_name }}</td>
+            <td class="center">{{ i.case_size }}</td>
+            <td class="center">{{ i.Specifications }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+{% endblock %}
+
+

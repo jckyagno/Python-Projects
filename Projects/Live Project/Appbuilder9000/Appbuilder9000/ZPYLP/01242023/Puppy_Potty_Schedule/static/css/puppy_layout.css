@@ -1,0 +1,140 @@
+
+
+/* Makes background image fit the whole page */
+body {
+    background: url("../images/puppyb.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Add a transparent background to the top navigation */
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: gold;
+  color: black;
+}
+
+
+h1 {
+text-align: center;
+color: gold;
+margin: 2% auto;
+text-shadow: 2px 2px 5px black;
+font-size: 2em;
+}
+
+h2 {
+text-align: center;
+color: gold;
+font-size: 1.5em;
+}
+
+
+.footer {
+    position: fixed;
+    text-transform: uppercase;
+    left: 0;
+    bottom: 0;
+    width: 1950px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    padding-bottom: 10px;
+    text-decoration: none;
+    text-size: 4em;
+    font-weight: bold;
+    background-image: linear-gradient(to left, white, gold);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+form { /*styling the form layout */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width: 20%;
+    background-color: gold;
+    border: solid black 9px;
+    text-align: left;
+}
+
+table {  /*styling the table layout */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width: 40%;
+    background-color: gold;
+    border: solid black 9px;
+    text-align: left;
+    border: 1px solid black;
+
+}
+
+table thead tr { /*label field*/
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+table td { /*data field*/
+    padding: 12px 15px;
+    border: 1px solid black;
+}
+
+.create-container {
+	opacity: 0.80;
+	position: relative;
+	width: auto;
+	height: auto;
+	border-radius: 8px;
+	border: 2px solid gold;
+	box-shadow: 4px 3px gold;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	background-color: black;
+	text-align: center;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+

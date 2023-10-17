@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="bg_img">
+<head>
+    <link rel="stylesheet" href="{% static 'css/CFB.css' %}">
+    <title>{% block title %} Texas Longhorns Stats {% endblock %}</title>
+</head>
+<body>
+    <div class="img">
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="{% url 'CFB_Home' %}">Home</a></li>
+                <li><a href="{% url 'CFB_Home' %}">Stats</a></li>
+                <li><a href="{% url 'CFB_Add_Fan' %}">Fan Club</a></li>
+                <li><a href="{% url 'CFB_Fan_List' %}">Fan List</a></li>
+            </ul>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- content loaded from other pages -->
+        {% block content %}
+        {% endblock %}
+        <!-- end content -->
+
+        <!-- Begin Body -->
+        <!-- End body -->
+
+        <!-- Footer -->
+        <footer class="block_footer">
+            <p id="footer">Terms|Privacy &nbsp;&nbsp;&copy;2022 - CFB_Project&reg;</p>
+        </footer>
+        <!-- Footer -->
+    </div>
+</body>
+</html>

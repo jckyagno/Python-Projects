@@ -1,0 +1,17 @@
+{% extends "TravelJapan_base.html" %}
+
+{% block content %}
+<div class="BS">
+    <h1><b>Top Attractions in Japan</b></h1>
+    <h4>This list was scrapped from <a href="https://www.planetware.com/tourist-attractions/japan-jpn.htm">21 Top-Rated Attractions in Japan</a></h4>
+    <ul>
+
+    {% for place in placelist %}
+        <b><li id="BSlist">{{ place }}</li></b>
+    {% endfor %}
+
+    </ul>
+</div>
+
+<br><br>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "CustomPcs/CustomPcs_base.html" %}
+
+{% block content %}
+
+<div>
+    <h1>Build Details</h1>
+</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col" data-field="First_name" data-sortable="True">First Name:</th>
+                <th scope="col" data-field="Last_name" data-sortable="True">Last Name:</th>
+                <th scope="col" data-field="Case_size" data-sortable="True">Case Size:</th>
+                <th scope="col" data-field="Specifications" data-sortable="True">Specifications:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ items.first_name }}</td>
+                <td>{{ items.last_name }}</td>
+                <td>{{ items.case_size }}</td>
+                <td>{{ items.Specifications }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

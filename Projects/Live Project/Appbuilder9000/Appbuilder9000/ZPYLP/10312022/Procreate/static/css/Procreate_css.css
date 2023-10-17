@@ -1,0 +1,16 @@
+
+body{
+    font-family: 'Dyna Puff', 'Permanent Marker' ;
+}
+.everything{
+    text-align: center;
+    background-image: url(../images/Clouds.jpg) ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+ul {
+  list-style: none;
+}
+

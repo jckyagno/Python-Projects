@@ -1,0 +1,36 @@
+{% extends "MusicReviews/MusicReviews_base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+
+{% block title %} Music Reviews{% endblock %}
+
+{% block content %}
+
+<h1 class="fancy">Music Reviews</h1>
+
+    <table class="music-tables">
+        <thead>
+            <tr>
+                <th>Composer</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Ratings</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% for item in music_entries %}
+                <td>{{ item.music_Composer }}</td>
+                <td>{{ item.music_title }}</td>
+                <td>{{ item.music_description }}</td>
+                <td>{{ item.Music_RATING }}</td>
+                <td><a href="{% url 'music_details' item.id %}"><i class="fa-solid fa-angles-right">{{ item.music_Composer }}</i></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

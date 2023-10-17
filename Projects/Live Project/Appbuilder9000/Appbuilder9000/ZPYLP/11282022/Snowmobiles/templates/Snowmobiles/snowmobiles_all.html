@@ -1,0 +1,36 @@
+{% extends "snowmobiles_base.html" %}
+
+{% block title %}Snowmobiles{% endblock %}
+{% block content %}
+
+<table class="table table-responsive" id="snowmobiles-table">
+    <tr id="headerRow">
+        <th>Manufacture Date</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Description</th>
+    </tr>
+    <!-- Loop through keys and values in dictionary passed from views. Display proper values in each cell-->
+    {% for snowmobile in snowmobiles %}
+    <tr>
+        <td class="center">{{ snowmobile.dateManufactured}}</td>
+        <td class="center">{{ snowmobile.make }}</td>
+        <td class="center">{{ snowmobile.model}}</td>
+        <td class="center">{{ snowmobile.description }}</td>
+        <td class="center"><a href="../{{ snowmobile.pk }}/details/">Details</a></td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+{# Messages Framework #}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <h2 class="tcenter">
+        {{ message }}
+    </h2>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

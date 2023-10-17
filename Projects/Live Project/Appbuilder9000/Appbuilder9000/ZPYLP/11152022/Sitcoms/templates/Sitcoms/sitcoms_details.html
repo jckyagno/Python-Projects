@@ -1,0 +1,21 @@
+{% extends "sitcoms_base.html" %}
+
+{% block title %}World of Sitcoms{% endblock %}
+
+{% block header %}Details!{% endblock %}
+
+{% block content %}
+<div class="admin_panel">
+    <div class="center">
+        <br>
+        <h3>{{ sitcom.title }} - {{ sitcom.network }}</h3>
+        <br>
+        <p>{{ sitcom.description }}</p>
+    </div>
+    <br>
+    <div class="frmBtn_container">
+        <button type="button" class="btn"><a href="{% url 'sitcoms_update' sitcom.id %}">Edit Info</a></button>
+    </div>
+    <br>
+</div>
+{% endblock %}

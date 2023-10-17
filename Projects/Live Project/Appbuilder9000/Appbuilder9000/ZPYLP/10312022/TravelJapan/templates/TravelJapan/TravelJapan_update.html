@@ -1,0 +1,16 @@
+{% extends "TravelJapan_base.html" %}
+
+{% block content %}
+<h1>UPDATE PLACE</h1>
+	<div class="addPlaceForm">
+		<form method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+
+		</form>
+			<button type="submit">SAVE</button>
+			<a href="{% url 'traveljapan_details' addEntry.id %}"><button class="backBtn" type="submit">BACK</button></a>
+			<a href="{% url 'traveljapan_delete' addEntry.id %}"><button class="deleteBtn" type="submit">DELETE</button></a>
+	</div>
+
+{% endblock %}

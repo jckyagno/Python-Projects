@@ -1,0 +1,83 @@
+.jumbotron  {
+    color: white;
+    background-color: midnightblue;
+    height: 50vh;
+}
+
+/* Headers - Styling */
+h2  {
+    text-align: center;
+    color: white;
+    background-color: midnightblue;
+    text-shadow: 1px 1px 3px lightgrey;
+}
+
+/* Add Book page - Container & Form styling */
+.container-add-book {
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ;
+    border: 1px solid black;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.form-add-book {
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Ratings page - Container & Table styling */
+.container-ratings {
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ;
+    border: 1px solid black;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.table-ratings  {
+    color: black;
+    font-size: 12px;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* Details page - Table styling */
+.table-details  {
+    color: black;
+    font-size: 12px;
+    width: 500px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

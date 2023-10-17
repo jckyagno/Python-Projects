@@ -1,0 +1,23 @@
+{% extends "ja3_base.html" %}
+
+{% block title %}
+    Jagged Alliance 3 Mercenary Roster
+{% endblock %}
+
+{% block header %}
+    Jagged Alliance 3<br>
+    Mercenary Roster
+{% endblock %}
+
+{% block content %}
+
+    <p>This is a manually-managed roster for your hired (fictional) mercenaries.</p>
+    <p>Please select whether you want to enroll a new mercenary, or see previously-enrolled mercenaries in the roster.</p>
+<!--Goes to ja3_createRecord.html-->
+    <a href="{% url 'ja3_createRecord' %}"><button type="button" class="btn">Enroll</button></a>
+<!--Goes to ja3_roster.html-->
+    <a href="{% url 'ja3_roster' %}"><button type="button" class="btn">Roster</button></a>
+<!--Placeholder to go to ja3_api.html-->
+    <a href="{% url 'ja3_api' %}"><button type="button" class="btn">API</button></a>
+
+{% endblock %}

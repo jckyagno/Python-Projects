@@ -1,0 +1,35 @@
+{% extends "Sportsapp_base.html" %}
+{% block title %}Scores{% endblock %}
+{% block content %}
+		<div id="scores-table">
+            <table >
+                <tr id="headerRow">
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Goals Scored</th>
+
+
+				</tr>
+				{% for score in scores %}
+				<tr>
+					<td class="center">{{ score.first_name }}</td>
+					<td class="center">{{ score.last_name }}</td>
+					<td class="left">{{ score.goals_scored }}</td>
+               <td><button type="button"><a href="{% url 'Sports_details' score.id %} ">
+                            details
+                        </a></button></td>
+				<td><form method="POST"><button type="submit"><a href="{% url 'Sports_delete' score.id %} ">
+                            delete
+                        </a></button></form></td>
+
+				<td><form method="POST"><button type="submit"><a href="{% url 'Sports_edit' score.id %} ">
+                            edit
+                        </a></button></form></td>
+
+
+				</tr>
+                {% endfor %}
+            </table>
+		</div>
+
+{% endblock %}

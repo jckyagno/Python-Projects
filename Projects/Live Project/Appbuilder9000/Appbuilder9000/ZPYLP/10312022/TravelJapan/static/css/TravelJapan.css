@@ -1,0 +1,174 @@
+body {
+    background: black;
+    color: bisque;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100%;
+}
+
+.navbar a {
+    display: inline;
+    text-decoration: none;
+    padding: 5px;
+    margin: 15px;
+    color: orange;
+    border: 1px solid orange;
+    font-size: 1.5vw;
+}
+.navbar>a:hover {
+    background: orange;
+    color: white;
+    border-radius: 3px;
+}
+
+.streetimg {
+    opacity: 0.8;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.main-header {
+    font-size: 5vw;
+    font-variant: small-caps;
+}
+
+.container {
+    margin: 20px 20px;
+}
+
+/* Create Place Form */
+.addPlaceForm {
+    padding: 10px 20px;
+    color: white;
+    text-align: left;
+    font-size: 28px;
+    font-family: 'Poppins', sans-serif;
+    border: 3px solid orange;
+    background: #3399ff;
+}
+
+input, textarea {
+    min-width: 100%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+select {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* All Buttons */
+button {
+    padding: 7px 12px;
+    font-size: 25px;
+    border:  #0040ff;
+    border-radius: 5px;
+    color: white;
+    background: #0040ff;
+    text-decoration: none;
+    font-family: font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #002080;
+    font-family: font-family: 'Poppins', sans-serif;
+}
+
+.backBtn {
+    background: darkgrey;
+    margin: 5px;
+    font-family: font-family: 'Poppins', sans-serif;
+}
+.backBtn:hover {
+    background: #606060;
+}
+
+.deleteBtn {
+    background: red;
+    float: right;
+    margin: 5px;
+    font-family: font-family: 'Poppins', sans-serif;
+}
+.deleteBtn:hover {
+    background: #900000;
+}
+
+/* Places Table */
+.placesTable {
+    border: 2px solid white;
+    font-size: 2vw;
+    text-align: left;
+    max-width: 100%;
+    padding: 0px 10px;
+    margin: 10px;
+    background: #0000CD;
+    font-family: font-family: 'Poppins', sans-serif;
+}
+
+.placesTableName {
+    color: orange;
+    font-variant: small-caps;
+    font-size: 3vw;
+    text-align: left;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.value {
+    text-align: right;
+    font-size: 1.5vw;
+}
+
+
+/* Places Details */
+#details {
+    border: 2px solid #0000CD;
+    border-radius: 10px;
+    width: 60%;
+    min-height: 40%;
+    left: 50%;
+    margin: auto;
+    padding: 20px;
+    font-size: 2vw;
+    background: #0000CD;
+}
+
+/* Beautiful Soup extraction */
+#BSlist {
+    text-align: left;
+    font-size: 2vw;
+    padding: 15px;
+}
+
+.BS{
+    background: #3399ff;
+    color: black;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+/* Footer */
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* API styling */
+.api {
+    background: #3399ff;
+    color: black;
+    font-size: 1.7vw;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    padding: 20px 0px;
+    border: 5px solid white;
+    border-radius: 5px;
+}

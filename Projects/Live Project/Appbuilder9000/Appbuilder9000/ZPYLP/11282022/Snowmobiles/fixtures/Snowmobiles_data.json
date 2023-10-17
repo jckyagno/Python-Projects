@@ -1,0 +1,103 @@
+[
+  {
+    "model": "Snowmobiles.snowmobile",
+    "pk": 1,
+    "fields": {
+      "make": "Yamaha",
+      "model": "Sidewinder L-TX GT",
+      "dateManufactured": "2022-12-02",
+      "description": "Great"
+    }
+  },
+  {
+    "model": "Snowmobiles.snowmobile",
+    "pk": 2,
+    "fields": {
+      "make": "Lynx",
+      "model": "Rave RE 850",
+      "dateManufactured": "2022-10-02",
+      "description": "Awesome"
+    }
+  },
+  {
+    "model": "Snowmobiles.snowmobile",
+    "pk": 3,
+    "fields": {
+      "make": "Arctic Cat",
+      "model": "ZR 900 Thundercat",
+      "dateManufactured": "2022-12-02",
+      "description": "Great"
+    }
+  },
+  {
+    "model": "Snowmobiles.snowmobile",
+    "pk": 4,
+    "fields": {
+      "make": "Ski-Doo",
+      "model": "Summit Edge 850 E-TEC 165",
+      "dateManufactured": "2022-10-02",
+      "description": "Awesome"
+    }
+  },
+  {
+    "model": "Snowmobiles.snowmobile",
+    "pk": 5,
+    "fields": {
+      "make": "Polaris",
+      "model": "650 Indy VR1 129",
+      "dateManufactured": "2022-10-02",
+      "description": "Awesome"
+    }
+  },
+  {
+    "model": "Snowmobiles.dealer",
+    "pk": 1,
+    "fields": {
+      "brand": "Polaris",
+      "store_name": "Mt. Hood Polaris",
+      "city": "Boring",
+      "state": "OR"
+    }
+  },
+  {
+    "model": "Snowmobiles.dealer",
+    "pk": 2,
+    "fields": {
+      "brand": "Yamaha",
+      "store_name": "Sportland Yamaha, Inc",
+      "city": "Cle Elum",
+      "state": "WA"
+    }
+  },
+  {
+    "model": "Snowmobiles.dealer",
+    "pk": 3,
+
+    "fields": {
+      "brand": "Lynx",
+      "store_name": "Central Powersports",
+      "city": "Ellensburg",
+      "state": "WA"
+    }
+  },
+  {
+    "model": "Snowmobiles.dealer",
+    "pk": 4,
+    "fields": {
+      "brand": "Arctic Cat",
+      "store_name": "Mt. Baker Moto Sports",
+      "city": "Bellingham",
+      "state": "WA"
+    }
+  },
+  {
+    "model": "Snowmobiles.dealer",
+    "pk": 5,
+    "fields": {
+      "brand": "Ski-Doo",
+      "store_name": "Clem's Enumclaw Powersports",
+      "city": "Enumclaw",
+      "state": "WA"
+    }
+  }
+]

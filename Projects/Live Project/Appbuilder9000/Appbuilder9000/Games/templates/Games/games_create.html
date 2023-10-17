@@ -1,0 +1,13 @@
+{% extends 'Games/games_base.html' %}
+{% block title %}Add New Game{% endblock %}
+{% block content %}
+	<h3>ADD NEW GAME</h3>
+	<div id="account-form">
+		<form method="POST"> <!-- Replace this with the Django Form -->
+			{% csrf_token %}
+			{{form.as_p}}
+			<button id="new-account-button" type="submit" name="Save_Account">Add new game</button>
+		</form>
+		<br>
+	</div>
+{% endblock %}

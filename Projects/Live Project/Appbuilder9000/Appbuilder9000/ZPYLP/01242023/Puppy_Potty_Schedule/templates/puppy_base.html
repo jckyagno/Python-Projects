@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+    <head>
+        <meta charset="UTF-8">
+        <link rel= "stylesheet" href="{% static '/css/puppy_layout.css' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <title>{% block title%}Puppy Schedule{% endblock %}</title>
+    </head>
+    <body>
+
+    <!--NAV BAR-->
+    <div>
+        <div class="navbar">
+            <a class="a-nav" href="{% url 'puppy_home' %}">Home</a>
+            <a class="a-nav" href="{% url 'puppy_add' %}">Add Potty Time</a>
+            <a class="a-nav" href="{% url 'puppy_all' %}">Past Potty Schedules</a>
+            <a class="a-nav" href="{% url 'puppy_bs' %}">BeautifulSoup</a>
+        </div>
+    </div>
+    <!--END NAV BAR-->
+
+
+        <div class="create-container">
+            {% block content %}{% endblock %}
+            <br><br>
+        </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <footer>
+            <h2><a href="https://github.com/Jalen-Allison" target="_blank">Github <i class="fa-brands fa-github"></i></a></h2>
+        </footer>
+        <!--End Footer-->
+    </div>
+
+    </body>
+
+</html>

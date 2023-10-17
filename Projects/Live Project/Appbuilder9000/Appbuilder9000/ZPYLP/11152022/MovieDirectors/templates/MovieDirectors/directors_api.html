@@ -1,0 +1,21 @@
+{% extends 'directors_base.html' %}
+
+{% block title %}API{% endblock %}
+
+{% block header %}This page is populated by data from an API{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <h2>Random <i>Bob's Burgers</i> Burger of the Day</h2>
+    <p>{{ name }}</p>
+    <p>From Season {{ season }} Episode {{ episode }}</p>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+{% include 'MovieDirectors/directors_footer.html' %}
+{% endblock %}

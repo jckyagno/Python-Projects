@@ -1,0 +1,116 @@
+body{
+background-image: url('/static/images/wine_glasses.jpg');
+margin: 0;
+font-family: 'sans-serif';
+}
+
+h1 {
+text-align: center;
+color: white;
+margin: 3% auto;
+text-shadow: 3px 3px 6px black;
+font-size: 29px;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #808080;
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+    float: left;
+}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 19px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+ul.topnav li a:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	transition: opacity 0.3s ease-in-out;
+    background-color: #C0C0C0;
+}
+
+.header-title {
+	padding: 2px 16px;
+	text-align: center;
+	background-color: #C0C0C0
+}
+
+.content-container-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+	position: relative;
+	width: 60vh;
+	height: 55vh;
+	border-radius: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15vh;
+	margin-bottom: 10em;
+	background-color: #4B0082;
+
+.content-container {
+    text-align: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+td:hover {
+    background-color: #e6e6ff;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #000099;
+}
+
+table tbody tr.active-row {
+    font-weight: bold;
+    color: #805500;
+}
+
+
+
+

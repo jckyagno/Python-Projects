@@ -1,0 +1,17 @@
+{% extends "fe_Base.html" %}
+
+
+{% block content %}
+
+<h2>Financial Evaluator</h2>
+<p>Please Select a Stock and Preferences</p>
+<div>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" <a href="{% url 'fe_Home' %}"</a>Submit</button>
+    </form>
+</div>
+<button><a href="{% url 'fe_Evaluation' %}">Clear</a></button>
+<button><a href="{% url 'fe_Read' %}">View Entries</a></button>
+{% endblock %}

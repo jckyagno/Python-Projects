@@ -1,0 +1,22 @@
+{% extends "anime_base.html" %}
+
+{% block title %}All The Anime{% endblock %}
+
+{% block header %}Welcome to Anime-maniac's!{% endblock %}
+
+{% block content %}
+
+<div class="admin_panel">
+    <div class="frmObject">
+        <p>A place to keep track for all your favorite anime, and discover new ones!</p>
+    </div>
+    <div class="formBtn_container">
+        <div class="formBtn_container">
+            <button type="submit" class="btn"><a href="{% url 'create_anime' %}">Add New Anime</a></button>
+            <button type="submit" class="btn">Watch Episodes</button>
+           <button type="submit" class="btn"><a href="{% url 'anime_archive' %}">View Archive</a></button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

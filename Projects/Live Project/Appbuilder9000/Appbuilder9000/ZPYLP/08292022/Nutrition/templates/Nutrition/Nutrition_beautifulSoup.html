@@ -1,0 +1,19 @@
+{% extends "Nutrition_base.html" %}
+
+{% block title %}More Recipes{% endblock %}
+
+{% block header %}Here are even more recipes!{% endblock %}
+
+{% block content %}
+<div>
+    <center>
+        <table id = "memory-table">
+            {% for x in moreRecipes %}
+            <tr>
+                <td><a class = "click" href = "{{ x.1 }}" target = "_blank">{{ x.0 }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</div>
+{% endblock %}

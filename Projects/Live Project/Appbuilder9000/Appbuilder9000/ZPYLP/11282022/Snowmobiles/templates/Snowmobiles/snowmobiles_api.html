@@ -1,0 +1,8 @@
+{% extends "snowmobiles_base.html" %}
+
+{% block title %}Snowmobiles Weather{% endblock %}
+{% block content %}
+<h1 style="text-align: center;">Snowmobile Weather (Nope!)</h1>
+<h2 style="text-align: center">Temperature in Portand, Oregon is {{ temperature }}</h2>
+<button><a href="{% url 'snowmobiles_save_api' temp_int %}">Save Current Weather</a></button>
+{% endblock %}

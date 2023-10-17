@@ -1,0 +1,32 @@
+{% extends "MTB_Destinations/mtb_dest_base.html" %}
+{% block title %}API{% endblock %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'MTB_Destinations/css/mtb_style.css' %}">
+
+<!--  These two lines highlight and screen read the active page in the navbar -->
+{% block apiactive %}active{% endblock %}
+{% block currentapi %}<span class="sr-only">(current)</span>{% endblock %}
+
+{% block content %}
+<div class="w-75 p-3 mx-auto">
+    <h1 class="display-4" style="margin-top:100px;">Your 48 hour forecast</h1>
+        {% for instance in weather %}
+            <div class="card">
+                <div class="card-header">
+                    {{ instance.timestamp_local }}
+                </div>
+                <div class="card-body">
+                    <h5>{{ instance.temp|floatformat:0 }}&#176;F and feels like
+                        {{ instance.app_temp|floatformat:0 }}&#176;F</h5>
+                    <p>{{ instance.pop }}% chance of rain
+                        <br>
+                        {{ instance.weather.description }}
+                    </p>
+                </div>
+            </div>
+        <br>
+        {% endfor %}
+</div>
+
+{% endblock %}

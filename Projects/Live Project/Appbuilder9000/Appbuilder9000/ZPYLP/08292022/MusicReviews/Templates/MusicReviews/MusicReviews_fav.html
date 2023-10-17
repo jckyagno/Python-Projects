@@ -1,0 +1,26 @@
+{% extends "MusicReviews/MusicReviews_base.html" %}
+
+{% load static %}
+
+{% block title %} Favorites {% endblock %}
+
+{% block content %}
+
+<div class="jumbotron w-25 mx-auto">
+    <div class="container">
+        <h2 class="text-center">Select Your Favorite Music!</h2>
+        <div class="dropdown text-center">
+            <form method="POST" action="{% url 'music_fav' %}">
+                {% csrf_token %}
+                <label class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">Choose Title:</label>
+                <select name="value" class="dropdown-menu">
+                    {% for title in music_titles %}
+                    <option class="dropdown-item" value="{{ title }}">{{ title }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" name="new_music" class="btn btn-primary btn-lg">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

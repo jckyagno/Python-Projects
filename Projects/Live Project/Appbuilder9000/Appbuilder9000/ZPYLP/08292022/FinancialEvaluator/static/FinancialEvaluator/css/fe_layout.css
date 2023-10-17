@@ -1,0 +1,95 @@
+.nav    {
+        color: #000000;
+        padding: 10px;
+        text-align: center;
+        font-size: larger;
+        font-weight: 500;
+        }
+
+body{
+    background: #ffffff;;
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Nanum Myeongjo', serif;
+    }
+
+input, button{
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
+    padding: 5px;
+    font-size: larger;
+    }
+
+nav {
+        color: #000000;
+        padding: 5px;
+        text-align: center;
+        font-size: larger;
+        font-weight: 500;
+    }
+
+textarea {
+        height: 220px;
+        width: 465px;
+        font-family: 'Hind Siliguri', sans-serif;
+        font-family: 'Nanum Myeongjo', serif;
+    }
+
+.content-container-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        position: relative;
+        width: 50vh;
+        height: 50vh;
+        border-radius: 2px;
+        border: solid 2em #0a151a;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15vh;
+        margin-bottom: 10em;
+        background-color: #beige;
+        padding: 3em 3em 3em 3em !important;
+
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+.content-container {
+        text-align: center;
+        align-items: center;
+        }
+
+.inputForm {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        }
+
+h1{
+        text-align: center;
+        color: blue;
+    }
+
+table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 1em;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    table thead tr {
+        background-color: #beige;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    th,
+    td {
+        padding: 12px 15px;
+    }

@@ -1,0 +1,9 @@
+{% extends "snow_report_base.html" %}
+
+{% block content %}
+<h1>Snow Report</h1>
+<p>This app allows you to save your favorite resorts, ticket prices, and snow conditions. It was created to demonstrate CRUD fundamentals.</p>
+<button type="submit"><a href="{% url 'snow_report_addResort' %}">Add Resort</a></button>
+<button type="submit"><a href="{% url 'snow_report_favorites' %}">Favorites</a></button>
+
+{% endblock %}

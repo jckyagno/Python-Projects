@@ -1,0 +1,24 @@
+{% extends "VideoGameReviews/VideoGameReviews_base.html" %}
+
+{% block title %}Video Game Reviews!{% endblock %}
+
+{% block content %}
+<h1>List of Best-Selling Video Games (Beautiful Soup)</h1>
+<p>Here is a list of the best-selling video games of all time.</p>
+<p>Note: All of this information is dynamically sourced from <a class="wiki-link my-link" href="https://www.wikipedia.org/">Wikipedia</a>.
+    <a class="wiki-link my-link" href="https://en.wikipedia.org/wiki/List_of_best-selling_video_games">Click here</a>
+    to view this list on the original site.</p>
+
+<br>
+
+<!-- Creating CSS class for styling -->
+<div class="no-link">
+    <!-- The safe filter causes the raw HTML from Beautiful Soup to not be escaped -->
+    {{ pretty_table | safe }}
+</div>
+
+<br>
+<br>
+<br>
+
+{% endblock %}

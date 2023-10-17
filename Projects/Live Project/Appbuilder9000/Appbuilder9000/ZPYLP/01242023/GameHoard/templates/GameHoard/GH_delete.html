@@ -1,0 +1,27 @@
+<!--BUT HOW DOES IT KNOW WHICH FORM/OBJECT TO CALL???-->
+<!--This form/page/content is accessed by clicking on an (anchor) element in another document (###)-->
+<!--The path 'shortcut' ('###') to here is defined in urls.py, which points the way to a function in views.py...-->
+<!--the views.py function ('###') passes in the primary key from the element that was initially clicked. -->
+
+<div class="modal" id="delete-item">
+    <div class="modal-container">
+        <div class="modal-title">
+            <h1>CONFIRM DELETE!</h1>
+        </div>
+        <div class="modal-text">
+            <p>Are you certain that you would like to delete?
+                <br><small>-This action cannot be undone-</small>
+            </p>
+        </div>
+        <div class="modal-form">
+            <form method="POST" action="">
+                {% csrf_token %}                <!-- MUST INCLUDE CSRF token -->
+                <div class="form-buttons modal-buttons">
+                    <!--The submit button MUST be INSIDE the form tag to work-->
+                    <button type="submit" class="deleteBtn">DELETE</button>
+                    <button type="button" onclick="closedeletemodal()">Cancel</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

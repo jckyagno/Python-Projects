@@ -1,0 +1,33 @@
+{% extends "ja3_base.html" %}
+
+{% block title %}
+    Mercenary Create Record
+{% endblock %}
+
+{% block header %}
+    Mercenary Create Record
+{% endblock %}
+
+{% block content %}
+    <p class="fade-in-image">Fill in the details for your mercenary.</p>
+
+
+
+<div class="admin_panel">
+    <form method="POST" action="{% url 'ja3_createRecord' %}">
+        <div class="frmObject_container fade-in-image">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_table }} <!--Used form.as_table because it looked better-->
+        </div>
+        <div class="frmBtn_container fade-in-image">
+            <input type="submit" class="btn" value="Create New Record" name="Save_Item">
+            <a href="{% url 'ja3_home' %}"><button type="button" class="btn" value="Cancel">Cancel</button></a>
+        </div>
+
+    </form>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" class="bgt-bg_img">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>{% block title %} Game Night Hero {% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/BoardGameTracker_layout.css' %}">
+	</head>
+
+	<body>
+
+		<div class = "bgt-page_container">
+			<div class="topnav">
+				<a href="{% url 'bgt_create' %}">Home</a>
+
+				<a href="{% url 'bgt_view' %}">View Games</a>
+				<a href="{% url 'bgt_bsoup_render' %}">Game Reviews by Beautiful Soup</a>
+				<a href="{% url 'bgt_api' %}">Latest Giveaways from GamerPower - GamerPower API</a>
+			</div>
+			<header class="bgt-header-title">
+				<h1>{% block header %}{% endblock %}</h1>
+			</header>
+
+			<div class="bgt-block-content">
+				{% block content %}Track your board games! Add the games you've played, or create a wishlist!{% endblock %}
+			</div>
+		</div>
+
+
+		<section id="bgt-footer">
+			<p>| William Bastian | 2022 |</p>
+		</section>
+		<script src="{% static '/js/BoardGameTracker.js' %}" defer></script>
+	</body>
+</html>
+

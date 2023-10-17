@@ -1,0 +1,11 @@
+{% extends "MovieReviews_base.html" %}
+
+{% block content %}
+<h1>Update Entry</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save-button">Save Changes</a></button>
+    </form>
+{% endblock %}
+

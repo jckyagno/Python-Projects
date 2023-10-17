@@ -1,0 +1,15 @@
+{% extends "MovieReviews_base.html" %}
+    {% block title %}
+        Add New Movie
+    {% endblock %}
+{% block content %}
+    <h1>Add New Movie</h1>
+    <p>(Rating 1-100)</p>
+    <div id="movie-form" class="form-control">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="Add_Movie">Add Movie</button>
+        </form>
+    </div>
+{% endblock %}

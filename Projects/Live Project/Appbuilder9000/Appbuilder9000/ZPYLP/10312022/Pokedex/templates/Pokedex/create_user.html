@@ -1,0 +1,17 @@
+{% extends 'Pokedex/Pokedex_base.html' %}
+	{% block title%}Create New Trainer{% endblock %}
+	{% block content %}
+
+
+	<h2>Welcome Trainer! Start your adventure by adding your Trainer name and the Pokémon you started your journey with!</h2>
+			<div class="add_new_trainer">
+
+				<form method="POST"> <!-- Replace this with the Django Form -->
+					{% csrf_token %}
+					{{ form.as_p }}
+					<button id="create_trainer_btn" type="submit" name="Save_Trainer">Start Tracking!</button>
+				</form>
+
+				<br>
+			</div>
+	{% endblock %}

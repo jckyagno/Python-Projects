@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "Camera_head.html" %}
+    <title>Camera Details</title>
+</head>
+<body>
+    <div class="page_container">
+        <!-- Adding a universal Navbar for each page that needs one -->
+        {% include "Cinematography/navbar.html" %}
+        <header>
+            <h1 align="center">{% block title %}{% endblock %}</h1>
+        </header>
+    </div>
+    <div class="details_container">
+        <table>
+            <tr>
+                <th scope="col" class="column">Camera Model:</th>
+                <th scope="col" class="column">Lens Focal Length:</th>
+                <th scope="col" class="column">Sensor Size:</th>
+            </tr>
+            <tr>
+                <td class="column">{{ theDeets.manufacturer }}</td>
+                <td class="column">{{ theDeets.lensFocal }}</td>
+                <td class="column">{{ theDeets.sensorSize }}</td>
+            </tr>
+            <tr>
+                <td class="column">Bot1</td>
+                <td class="column">Bot2</td>
+                <td class="column">Bot3</td>
+            </tr>
+            <tr>
+                <td><a href="{% url 'Camera_modify' theDeets.pk %}"><input type="button" value="Edit Camera"/></a></td>
+                <td><input type="button" onclick="location.href='../../Camera_database.html';" value="Back to List"/></td>
+                <td><input type="button" onclick="delConfirm()" value="Delete Camera"/></td>
+            </tr>
+        </table>
+    </div>
+<script>
+    function delConfirm() {
+        var deleted
+        if (confirm("Are you sure you want to delete this Camera?")) {
+            deleted == true
+            location.href = "{% url 'Camera_modify' theDeets.pk %}";
+        } else {
+            deleted == false
+        }
+        }
+</script>
+
+</body>
+<!-- <a href=> -->

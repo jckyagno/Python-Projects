@@ -1,0 +1,23 @@
+{% extends 'crochet_base.html' %}
+
+{% load static %}
+
+{% block title %}Crochet Project Planner{% endblock %}
+
+{% block header %}Crochet Project Planner{% endblock %}
+
+{% block content %}
+    <h2>The perfect journal for all of your upcoming crochet projects<br>
+    Here you can organize your ideas and get to crocheting right away!</h2>
+    <div class="row">
+            <div class="column">
+                <img alt="heart" src="{% static 'images/heart.jpg' %}">
+            </div>
+            <div class="column">
+                <img alt="shirt" src="{% static 'images/crochet_shirt.jpg' %}">
+            </div>
+            <div class="column">
+                <img alt="duck" src="{% static 'images/duck.jpg' %}">
+            </div>
+    </div>
+{% endblock %}

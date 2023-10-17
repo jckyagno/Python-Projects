@@ -1,0 +1,22 @@
+ {% extends "CarCollection_base.html" %}
+
+{% block content %}
+<h1>Inventory</h1>
+<table>
+    <tr>
+        <th>Title</a></th>
+        <th>Model Year</a></th>
+    </tr>
+    {% for e in entry %}
+    <tr>
+        <td>{{ e.vehicle_year }}</td>
+        <td>{{ e.vehicle_make }}</td>
+        <td>{{ e.vehicle_model }}</td>
+        <td>{{ e.vehicle_color }}</td>
+        <td><a href="{% url 'carcollection_details' e.id %}">Details</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<button><a href="{% url 'vehicle_create' %}">Add Entry</a></button>
+
+{% endblock %}

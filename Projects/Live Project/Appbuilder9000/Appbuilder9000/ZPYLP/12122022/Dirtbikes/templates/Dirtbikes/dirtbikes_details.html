@@ -1,0 +1,9 @@
+{% extends "dirtbikes_base.html" %}
+
+{% block content %}
+<h1>Details</h1>
+<h3>{{ entry.Year }} - {{ entry.Make }}</h3>
+<p>{{ entry.Model }} - {{ entry.Color}}</p>
+<button type="submit"><a href="{% url 'dirtbikes_read' %}">Back to List</a></button>
+<button><a href="{% url 'dirtbikes_update' entry.id %}">Update Dirtbike Info</a></button>
+{% endblock %}

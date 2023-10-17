@@ -1,0 +1,17 @@
+{% extends 'crochet_base.html' %}
+
+{% block title %}Crochet Project Planner{% endblock %}
+
+{% block header %}Crocheting is a Healthy Pastime{% endblock %}
+
+{% block content %}
+
+<div class="wrap_bs">
+
+    <p>This information was scraped from</p>
+    <a href="https://www.jaarn.co.za/5-facts-about-crocheting-you-didnt-know/" class="bs_link">"https://www.jaarn.co.za/5-facts-about-crocheting-you-didnt-know/"</a>
+
+    {{ paragraph1 | safe }}
+
+</div>
+{% endblock %}

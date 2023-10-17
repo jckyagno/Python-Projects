@@ -1,0 +1,37 @@
+{% extends "VideoGameReviews/VideoGameReviews_base.html" %}
+
+{% block title %}Video Game Reviews!{% endblock %}
+
+{% block content %}
+
+<h1>Search Results</h1>
+
+<!-- Form with search bar -->
+<!-- User input is stored in variable in view function -->
+<form action="{% url 'video_game_search' %}" method="GET">
+    <input name="search" type="search" placeholder="Type in search term...">
+    <button type="submit"> Search </button>
+</form>
+
+<table>
+    <tr>
+        <!-- Headings -->
+        <th>Game</th>
+        <th>Reviewer</th>
+    </tr>
+    <!-- Gets results of query -->
+    {% for result in all_search_results %}
+    <tr>
+        <td>{{ result.game_title }}</td>
+        <td>{{ result.reviewer_name }}</td>
+        <td><a href="{% url 'video_game_details' result.id %}"><button>View</button></a></td>
+        <td><a href="{% url 'video_game_edit' result.id %}"><button>Edit</button></a></td>
+    </tr>
+    <!-- Empty tag is for when no results are returned -->
+    {% empty %}
+    <tr>
+        <td>No results found.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

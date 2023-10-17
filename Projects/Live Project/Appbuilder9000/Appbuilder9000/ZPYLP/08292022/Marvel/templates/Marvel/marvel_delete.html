@@ -1,0 +1,13 @@
+{% extends "marvel_base.html" %}
+
+{% block title %}Delete Character{% endblock %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <h3>Delete from Roster: "{{ character.name }}"?</h3>
+    <br>
+    <button type="submit"><a>Delete</a></button>
+</form>
+<button type="submit"><a href="{% url 'marvel_update' character.id %}">Roster</a> </button>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'Games/games_base.html' %}
+{% block title %}Game Details{% endblock %}
+{% block content %}
+<h3>GAME DETAILS</h3>
+<div id="account-form">
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Release Date</th>
+                <th>Age Rating</th>
+            </tr>
+        </thead>
+        {% for game in games %}
+        <tr>
+            <td><a href="../{{ game.pk }}/games_info/">{{ game.title }}</a></td>
+            <td>{{ game.description }}</td>
+            <td>{{ game.release_date }}</td>
+            <td>{{ game.age_rating }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

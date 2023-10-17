@@ -1,0 +1,15 @@
+{% extends "SLCRestaurantGuide_base.html" %}
+
+{% block content %}
+<h1>Itinerary</h1>
+<h3>
+    {{ entry.restaurant_name }} | {{ entry.address }}<br><br>
+    Rating: {{ entry.restaurant_rating }}<br><br>
+    Chosen Dish: {{ entry.dish_of_choice }} <br><br>
+    Price of Dish: {{ entry.price_of_dish }} <br><br>
+    Chosen Beverage: {{ entry.beverages }}
+</h3>
+<p>{{ entry.body }}</p>
+<button></button><a href="{% url 'SLCRestaurantGuide_update' entry.id %}">Update</a>
+{{ entry.as_p }}
+{% endblock %}

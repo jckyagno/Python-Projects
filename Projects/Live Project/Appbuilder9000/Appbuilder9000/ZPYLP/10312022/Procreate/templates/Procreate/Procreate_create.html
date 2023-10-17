@@ -1,0 +1,11 @@
+{% extends "Procreate/Procreate_base.html" %}
+
+{% block content %}
+<h1>Create an artist to spotlight:</h1>
+    <form method="POST">
+        {%  csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Artist</button>
+    </form>
+<button><a href="{% url 'procreate_seeartist'%}">See Artist</a> </button>
+{% endblock %}

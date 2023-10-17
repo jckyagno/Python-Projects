@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+    <head>
+        <meta charset="UTF-8">
+        <title>{%block title%}Fitness Log{% endblock%}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin, latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href = "{%static '/css/fitness_log.css' %}">
+    </head>
+
+    <div class="topnav">
+        <a href="{% url 'fitness_home' %}">HOME</a>
+        <a href="{% url 'fitness_entry_create' %}">ENTRY</a>
+        <a href="{% url 'fitness_read' %}">READ</a>
+    </div>
+
+    <body id="body">
+        <div class ='page-container'>
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        {% include "footer.html" %}
+    </body>
+</html>

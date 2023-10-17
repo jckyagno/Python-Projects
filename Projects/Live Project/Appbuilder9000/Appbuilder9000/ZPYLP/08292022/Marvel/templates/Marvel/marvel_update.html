@@ -1,0 +1,14 @@
+{% extends "marvel_base.html" %}
+
+U{% block title %}Update Character{% endblock %}
+
+{% block content %}
+<h3>Update Character</h3>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"><a>Update</a></button>
+</form>
+<button type="submit"><a href="{% url 'marvel_delete' character.id %}">Delete</a></button>
+<button type="submit"><a href="{% url 'marvel_details' character.id %}">Return</a></button>
+{% endblock %}

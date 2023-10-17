@@ -1,0 +1,15 @@
+{% extends "TravelJapan_base.html" %}
+
+{% block content %}
+
+<!--displays form to add new places-->
+<h1>ADD NEW PLACE</h1>
+<div class="addPlaceForm">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">SUBMIT</button>
+    </form>
+</div>
+
+{% endblock %}

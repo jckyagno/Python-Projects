@@ -1,0 +1,14 @@
+{% extends "snow_report_base.html" %}
+
+{% block content %}
+<h1>Details</h1>
+
+
+
+<h3>{{ moment.temperature }} - {{ moment.date }}</h3>
+
+<button><a href="{% url 'snow_report_delete_api' moment.id %}">Delete Entry</a></button>
+
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "ChristmasList_base.html" %}
+
+{% block header %}Edit Gift{% endblock %}
+
+{% block content %}
+	<div class="admin_panel">
+		<br>
+		<form class="frmObject_container" method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button class="btn" type="submit">Save Changes</button>
+			<div class="frmBtn_container">
+
+			</div>
+		</form>
+		<div class="object_container">
+			<a href="{% url 'gift_delete' entry.id %}"><button class="btn">Delete</button></a>
+			<a href="{% url 'gift_list' %}"><button class="btn">Cancel</button></a>
+		</div>
+	</div>
+{% endblock %}

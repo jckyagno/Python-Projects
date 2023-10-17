@@ -1,0 +1,46 @@
+{% extends "marvel_base.html" %}
+
+{% block title %}Character Information{% endblock %}
+
+{% block content %}
+<h1>Character Info</h1>
+<h2>{{character.type }}</h2>
+<h3>{{ character.name }}</h3>
+<p>{{ character.description }}</p>
+<p>{{ character.image }}</p>
+<br>
+<button><a href="{% url 'marvel_update' character.id %}">Update Character Info</a></button>
+<button><a href="{% url 'marvel_roster' %}">View Roster</a></button>
+<h1>Comments</h1>
+
+
+<div class="comment_section">
+    {% if not character.comments.all %}
+        <h3>No Comments</h3>
+    {% else %}
+        <div class="comment_container">
+            {%for comment in character.comments.all %}
+            <h1>{{ comment.name }} ----------- {{ comment.created_on }} </h1>
+            <p>{{ comment.body }}</p>
+            <hr>
+            <button type="button"><a href="{% url 'delete_comment' comment.id %}">Delete</a></button>
+            {% endfor %}
+            <br>
+            {% endif %}
+            <br>
+                <button onclick="openForm()"class="btnA" ><a> Add Comment</a></button>
+            <div class="form-popup" id="myForm">
+                <form method="POST" class="form-container">
+                <h1> Comment</h1>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit"><a>Submit</a></button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+        </div>
+</div>
+
+
+{% endblock %}

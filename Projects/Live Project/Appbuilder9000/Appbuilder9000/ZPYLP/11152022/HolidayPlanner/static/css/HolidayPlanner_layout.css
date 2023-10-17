@@ -1,0 +1,199 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb( 0, 0, 0);
+}
+
+img {
+    max-width: 100%;
+}
+
+.nav-container {
+    height: 9vw;
+    width: 100%;
+    position: absolute;
+    top: 1%;
+    padding-top: 0.75vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.navbar {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5vw;
+    text-decoration: none;
+    text-align: center;
+}
+
+.a-read {
+    text-decoration: none;
+    color: black;
+}
+
+.a-nav {
+    text-decoration: none;
+    color: #87ceeb;
+    padding-left: 0.75vw;
+    padding-right: 0.75vw;
+}
+
+.a-nav:hover {
+    background-color: #87ceeb;
+    color: white;
+    transition: 0.9s;
+    padding: 0vw 1.5vw 0vw 1.5vw;
+}
+
+.main-header {
+    color: white;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size: 4vw;
+    font-weight: bold;
+    padding-top: 1vw;
+}
+
+.content-container {
+    font-size: 1.5vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: rgba( 255, 255, 255, 0.45);
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+}
+
+form {
+    font-size: 1.75vw;
+    text-align: left;
+    column-gap: 6vw;
+}
+
+.form-align {
+    padding: 5px;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 1vw;
+    color: white;
+    background-color: black;
+    padding: 0.5vw;
+    padding-bottom: 0.5vw;
+    cursor: pointer;
+    content-align: left;
+    text-transform: uppercase;
+}
+
+.btn-details {
+    text-align: center;
+    left: 50%;
+    padding-top: 1vw;
+    padding-bottom: 1.5vw;
+}
+
+.btn-create{
+    margin-left: 37.5%;
+}
+
+.btn-delete {
+    margin-left: 44.25%;
+}
+
+table{
+    padding: 1.5vw;
+    text-align: center;
+    column-width: 200px;
+}
+
+th {
+    font-size: 1.7vw;
+}
+
+th, td {
+    padding: 0.25vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-align: center;
+    line-height: 1.2;
+    column-width: 40vw;
+}
+
+.btn-details {
+    text-align: center;
+    left: 50%;
+}
+
+.messages-container {
+    padding-top: 1vw;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+.api-review {
+    text-transform: capitalize;
+    padding-bottom: 1.5vw;
+}
+
+.bs-values {
+    display: block;
+}
+
+form .create-form {
+    display: block;
+    content-align: left;
+    font-weight: bold;
+}
+
+#id_destination {
+    width: 256px;
+    height: 22px;
+}
+
+#id_activity {
+    width: 300px;
+    height: 28px;
+}
+
+#id_activity_date_and_time {
+    width: 144px;
+    height: 24px;
+}
+#id_activity_details {
+    width: 221px;
+    height: 70px;
+}
+#id_budget {
+    width: 202px;
+    height: 22px;
+}
+
+.bs-content {
+    padding-bottom: 2vw;
+}
+
+.content-home {
+    padding-top: 7vw;
+    height: 20vw;
+    width: 35vw;
+    text-align: center;
+
+}
+
+.h3-home {
+    font-family: 'oleo-script-bold', sans-serif;
+    font-size: 2vw;
+}

@@ -1,0 +1,169 @@
+html {
+    font-family: Garamond, serif;
+}
+
+:root {
+    --opaquewhite: rgba(255,255,255,.25);
+    --opaqueblack: rgba(0,0,0,.25);
+    --opaqueblackbg: rgba(0,0,0,.5);
+    --darkeropaqueblack: rgba(0,0,0,.75);
+    --opaquewhitebg: rgba(255,255,255,.75);
+    --gunmetalgray: rgba(129, 133, 137, .9);
+}
+
+
+body {
+    background: url(../images/RainyDay.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1
+}
+
+.navbar {
+    background-color: var(--opaquewhite);
+    box-shadow: -10px 0px 12px 4px var(--opaqueblack);
+}
+
+.svg path {
+    stroke: rgba(255,255,255,1);
+    stroke-opacity: .7
+}
+
+.svg path:hover {
+    stroke: rgba(0,0,0,1);
+    stroke-opacity: 1;
+}
+
+.navbar li {
+    border-radius: 0px;
+}
+
+.navbar a {
+    color: white;
+    border-radius: 0px;
+}
+
+.active, .navbar a:hover{
+    background-color: rgba(0,0,0,.5);
+}
+
+.controller {
+    color: white;
+}
+
+.wrapper {
+    background-color: var(--opaqueblackbg);
+    color: white;
+}
+
+.pagecontent {
+    background-color: var(--opaquewhitebg);
+}
+
+.cardrow1, .cardrow2 {
+
+}
+
+.cardrow1 {
+
+}
+
+.cardrow2 {
+
+}
+
+.card1, .card2, .card3, .card4 {
+    border: 1px solid var(--opaquewhite);
+    background-color: var(--gunmetalgray);
+
+}
+
+
+
+.con2 {
+    background-color: var(--opaqueblack);
+    box-shadow: 0px 0px 8px 4px var(--opaqueblack);
+    color: white;
+}
+
+.con3 {
+    background-color: var(--opaqueblack);
+    box-shadow: 0px 0px 8px 4px var(--opaqueblack);
+    color: white;
+}
+
+.formcontainer {
+    background-color: var(--darkeropaqueblack);
+    box-shadow: 0px 0px 6px 1px rgba(255,255,255,.5);
+}
+
+.contactform {
+
+}
+
+.btn {
+    border: none;
+    background-color: var(--opaquewhite);
+    color: white;
+}
+
+.contactform label {
+    color: white;
+}
+
+.formpopup:hover, .btn:hover {
+
+}
+
+.formpopup {
+    background-color: var(--opaquewhite);
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.inputbox {
+   background-color: var(--opaquewhite);
+   color: white;
+}
+
+.dbdisplay {
+    padding: 0px;
+
+}
+
+#dbdisplaycontainer {
+    background-color: var(--opaquewhite) !important;
+    padding: 15px;
+    margin: auto;
+}
+
+.tablestyle {
+    color: white;
+    box-shadow: 0px 0px 5px 1px var(--opaquewhite);
+}
+
+.tableheader {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-top: 1px solid var(--opaquewhite);
+    border-bottom: 1px solid var(--opaquewhite);
+    border-radius: 2px
+}
+
+.tabledata {
+    border-right: 1px solid var(--opaquewhite);
+}
+
+.tabledata2 {
+
+}
+
+.tabledata, .tabledata2 {
+    border-bottom: 1px solid var(--opaquewhite);
+    background-color: rgba(0,0,0,.5)
+}
+
+.footer {
+    background-color: black
+}

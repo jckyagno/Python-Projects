@@ -1,0 +1,24 @@
+Issues to fix:
+Fix release date issue - How to get javascript to format date correctly
+Duplicate entry issue - Don't allow same album twice without user approval
+How to pull older pitchfork reviews (number prefix in url) - see below
+Add statistics widget to homepage - meh
+Add artist logic
+add sort by artist, date, genre, title, score features
+add search
+Add tiered 'taste' levels
+Use Javascript for confirm delete instead of separate page
+Add tracklists to details page
+Add get random album/song features
+Handle for when invalid catalog number is entered
+
+
+AJAX/JAVASCRIPT - Use to submit form from homepage without refresh/ render view inside jquery modal 
+
+PITCHFORK - Use search term query to get review link: <a> class="review__link", need to pull href. solves
+    for older reviews.
+    Check that album name is in url
+    Match artist from review page for validation?
+
+
+

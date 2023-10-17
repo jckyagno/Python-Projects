@@ -1,0 +1,8 @@
+{% extends "CampingListTracker_base.html" %}
+
+{% block content %}
+<h1 class="api">API WEATHER</h1>
+<p>The Current Temperature in SLC: </p>
+<p>{{ current_temperature }}</p>
+<button class="submit"><a class="link" href="{% url 'cl_save_api' temp_int %}">Save Current Temperature </a></button>
+{% endblock %}

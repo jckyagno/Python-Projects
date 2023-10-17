@@ -1,0 +1,32 @@
+{% extends "BoardGameTracker/BoardGameTracker_base.html" %}
+
+
+{% block title %}Game Night Hero{% endblock %}
+{% block header %} Game Night Hero {% endblock %}
+
+{% block content %}
+<h2>Add a Game to Your Tracker</h2>
+    <div class="api_container">
+        <div class="view_table">
+            <form method="POST" action="{% url 'bgt_create' %}">
+                <div class="frmObject_container">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    {{ form.as_p }}
+                </div>
+                <div class="btn-container">
+                    <input type="submit" class="btn" value="Add Game to List" name="Save_Item">
+                    <a href="{% url 'bgt_home' %}"><button type="button" class="btn" value="Cancel">Cancel</button></a>
+                    <a href="{% url 'bgt_view' %}"><button type="button" class="btn" value="View">View My List</button></a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+

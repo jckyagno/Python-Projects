@@ -1,0 +1,39 @@
+{% extends "JobScraping_base.html" %}
+
+{% block title %}Saved Jobs{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block header %}History{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4">History</h1>
+    <table class="table table-dark table-striped sortable">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Company</th>
+                <th scope="col">Minimum Pay</th>
+                <th scope="col">Maximum Pay</th>
+                <th scope="col">Date Added</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in jobs %}
+                <tr>
+                    <td><a href="/JobScraping/{{ job.pk }}/details">{{ job.title }}</a></td>
+                    <td>{{ job.company }}</td>
+                    <td>{{ job.minimum_pay }}</td>
+                    <td>{{ job.maximum_pay }}</td>
+                    <td>{{ job.date_added }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% include "JobScraping_footer.html" %}
+{% endblock %}

@@ -1,0 +1,67 @@
+<!--GAME CARDS-->
+<div class="flex content-container" id="display-item">
+    {% for i in tableContents %}
+        <!--Create a link to the Update Game page, pass in the primary key: reference i (the object of the loop) and Name which is the primary key defined in models.py-->
+        <!--When you click the element, it will trigger an url.py 'shortcut': UpdateGame, and pass in the object's primary key-->
+        <a href="{% url 'UpdateGame' i.Name %}">        <!--Use an anchor tag to turn each element into a link via an url.py 'shortcut' and pass in each iteration's primary key (i.Name)-->
+            <div class="item-container">
+                <div class="item-title">
+                    <h4>GAME CARD</h4>
+                </div>
+                <div class="item-text">
+                    <h3>{{i.Name}}</h3>
+                    <p><small>- {{i.Platform}} - </small></p>
+                    <p>{{i.Rating}}</p>
+                    <p>{{i.Notes}}</p>
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+</div>
+<!--END GAME CARDS-->
+
+<br>
+
+<!--TABLE OF GAMES-->
+<table id="gameLibraryTable" class="gameLibraryTable" sytle="display:none">
+    <colgroup>
+        <col id="column1">
+        <col id="column2">
+        <col id="column3">
+        <col id="column4">
+        <col id="column5">
+        <col id="column6">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Game Name</th>
+            <th>Platform</th>
+            <th>Rating</th>
+            <th>Notes</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in tableContents %}
+        <tr>
+            <td>{{i.Name}}</td>       <!--key.whatToCall-->
+            <td>{{i.Platform}}</td>       <!--key.whatToCall-->
+            <td>{{i.Rating}}</td>       <!--key.whatToCall-->
+            <td>{{i.Notes}}</td>       <!--key.whatToCall-->
+            <td>
+                <div>
+                    <a href="{% url 'UpdateGame' i.Name %}"><button type="button">Edit</button></a>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5"><button type="button" onclick="showHideElement()">&nbsp;Hide List&nbsp;</button></td>
+        </tr>
+    </tfoot>
+</table>
+
+<!--END TABLE OF GAMES-->
+

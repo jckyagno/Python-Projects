@@ -1,0 +1,26 @@
+{% extends 'directors_base.html' %}
+
+{% block title %}Edit Director{% endblock %}
+
+{% block header %}Edit Entry{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <form method="POST">
+        <div class="form_object_container">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Changes</button>
+            <a href="{% url 'directors_details' director.id %}"><button type="submit">Cancel</button></a>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+{% include 'MovieDirectors/directors_footer.html' %}
+{% endblock %}

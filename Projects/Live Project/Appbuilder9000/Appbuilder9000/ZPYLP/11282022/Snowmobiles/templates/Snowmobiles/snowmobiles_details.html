@@ -1,0 +1,19 @@
+{% extends "snowmobiles_base.html" %}
+
+{% block title %}Snowmobiles{% endblock %}
+{% block content %}
+<div id="snowmobile-form" class="tcenter">
+
+    <h1 class="tcenter">Details:</h1>
+    <h3>Make: {{ item.make }}</h3>
+    <h3>Model: {{ item.model }}</h3>
+    <h3>Date Manufacutred: {{ item.dateManufactured }}</h3>
+    <h3>Description: {{ item.description }}</h3>
+
+    <div class="frmBtn_container">
+        <button class="btn"><a href="../edit/">Edit</a></button>
+        <button class="btn"><a href="{% url 'snowmobiles_all' %}">CANCEL</a></button>
+    </div>
+
+</div>
+{% endblock %}

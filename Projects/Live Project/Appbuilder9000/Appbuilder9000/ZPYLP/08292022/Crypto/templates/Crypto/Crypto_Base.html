@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'Crypto/css/Crypto.css' %}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="img">
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="{% url 'Crypto_Home' %}">Home</a></li>
+                <li><a href="{% url 'crypto_add_crypto' %}">Rate Coin</a></li>
+                <li><a href="{% url 'crypto_ratings' %}">Ratings</a></li>
+            </ul>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- content loaded from other pages -->
+        {% block content %}
+        {% endblock %}
+        <!-- end content -->
+
+        <!-- Footer -->
+        <footer class="block_footer">
+            <p id="footer-right">Terms|Privacy &nbsp;&nbsp;&copy;2022 - Crypto&reg;</p>
+        </footer>
+    </div>
+</body>
+</html>

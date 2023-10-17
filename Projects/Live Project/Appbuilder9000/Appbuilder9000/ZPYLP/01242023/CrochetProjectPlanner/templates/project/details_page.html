@@ -1,0 +1,47 @@
+{% extends 'crochet_base.html' %}
+
+{% block title %}Crochet Project Planner{% endblock %}
+
+{% block header %}Project Details{% endblock %}
+
+{% block content %}
+
+<div class="container_3">
+    <div class="table_2">
+        <table>
+            <tr>
+                <th>Project Name:</th>
+            </tr>
+            <tr>
+                <td>{{ project.project_name }}</td>
+            </tr>
+            <tr>
+                <th>Item Type:</th>
+            </tr>
+            <tr>
+                <td>{{ project.item_type }}</td>
+            </tr>
+            <tr>
+                <th>Yarn Weight:</th>
+            </tr>
+            <tr>
+                <td>{{ project.yarn_weight }}</td>
+            </tr>
+            <tr>
+                <th>Rolls of Yarn:</th>
+            </tr>
+            <tr>
+                <td>{{ project.number_of_rolls }}</td>
+            </tr>
+            <tr>
+                <th>Project Budget:</th>
+            </tr>
+            <tr>
+                <td>{{ project.budget }}</td>
+        </table>
+        <a href="{% url 'edit_project' project.id %}"><button class="btn_1">Edit Project</button></a>
+        <a href="{% url 'delete_project' project.id %}"><button class="btn_1">Delete Project</button></a>
+    </div>
+</div>
+
+{% endblock %}

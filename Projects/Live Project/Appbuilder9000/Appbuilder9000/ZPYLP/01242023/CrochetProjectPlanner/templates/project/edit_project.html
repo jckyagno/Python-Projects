@@ -1,0 +1,22 @@
+{% extends 'crochet_base.html' %}
+
+{% block title %}Crochet Project Planner{% endblock %}
+
+{% block header %}Edit Project:{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" action="" class="form_page">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn_1" value="Save Project" name="Save_Item">
+        <a href="{% url 'projects_page' %}"><button type="button" class="btn_1" value="Cancel_Edit">Cancel Edit</button></a>
+    </form>
+</div>
+
+
+
+
+
+
+{% endblock %}

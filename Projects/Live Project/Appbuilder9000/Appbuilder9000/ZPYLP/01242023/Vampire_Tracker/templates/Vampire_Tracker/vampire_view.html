@@ -1,0 +1,22 @@
+{% extends "vampire_base.html" %}
+
+{% block content %}
+
+<h1>View all Entries:</h1>
+
+<table>
+    <tr>
+        <th>Name:</th>
+        <th>Date Spotted:</th>
+        <th>Where Spotted:</th>
+    </tr>
+    {% for i in entry %}
+    <tr>
+        <td><a href="{% url 'vampire_details' i.id %}">{{ i.vampire_name }}</td>
+        <td>{{ i.date_spotted }}</td>
+        <td>{{ i.where_spotted }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

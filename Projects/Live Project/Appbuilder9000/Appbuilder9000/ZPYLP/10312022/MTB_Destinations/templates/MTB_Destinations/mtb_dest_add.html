@@ -1,0 +1,23 @@
+{% extends "MTB_Destinations/mtb_dest_base.html" %}
+{% block title %}Add New Trail{% endblock %}
+{% load crispy_forms_tags %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'MTB_Destinations/css/mtb_style.css' %}">
+
+<!--  These two lines highlight and screen read the active page in the navbar -->
+{% block addactive %}active{% endblock %}
+{% block currentadd %}<span class="sr-only">(current)</span>{% endblock %}
+
+{% block content %}
+<div class="col-sm-6 mx-auto" style="margin-top:100px;">
+    <h1 class="display-5">Where would you like to ride?</h1>
+    <p class="lead">Enter where you would like to ride below.</p>
+    <form method="post" action="#" style="margin-bottom:100px;">
+        {% csrf_token %}
+        <div>
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-warning">Create New</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

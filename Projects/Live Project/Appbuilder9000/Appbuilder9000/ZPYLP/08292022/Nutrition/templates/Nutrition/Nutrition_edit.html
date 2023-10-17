@@ -1,0 +1,28 @@
+{% extends "Nutrition_Base.html" %}
+
+{% block title %}Edit/Delete Account{% endblock %}
+
+{% block header %}{{ details.Username }}'s Account{% endblock %}
+
+{% block content %}
+
+<center>
+    <div class="admin_panel">
+        <form name="UserForm" method="POST" action="./">
+            <table>
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.as_table }}
+            </table>
+            <div class="frmBtn_container">
+                <input type="submit">
+            </div>
+        </form>
+        <div class="frmBtn_container">
+            <a href="{% url 'Nutrition_delete' item.id %}" class="btn">DELETE</a>
+            <a href="{% url 'Nutrition_display' %}" class="btn">Cancel</a>
+        </div>
+    </div>
+</center>
+
+{% endblock %}

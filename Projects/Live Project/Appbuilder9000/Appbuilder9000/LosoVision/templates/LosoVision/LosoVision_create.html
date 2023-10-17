@@ -1,0 +1,11 @@
+{% extends "LosoVision_base.html" %}
+
+{% block content %}
+<h1>Add Patient</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+<button><a href="{% url 'LosoVision_read' %}">View Patient</a></button>
+{% endblock %}

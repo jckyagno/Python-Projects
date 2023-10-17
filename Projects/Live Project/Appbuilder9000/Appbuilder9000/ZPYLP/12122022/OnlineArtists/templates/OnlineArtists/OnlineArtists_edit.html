@@ -1,0 +1,23 @@
+{% extends "OnlineArtists/OnlineArtists_base.html" %}
+
+{% block content %}
+<h1>Edit</h1>
+<p>Change Artist Or Delete</p>
+
+<div id="review-form">
+    <form method="POST">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" name="Save_Changes">Save</button>
+    </form>
+</div>
+
+<br>
+
+<button><a href="{% url 'onlineartists_delete' primary_key.id %}">Delete</a></button>
+
+
+
+{% endblock %}

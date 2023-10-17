@@ -1,0 +1,22 @@
+{% extends "sitcoms_base.html" %}
+
+{% block title %}World of Sitcoms{% endblock %}
+
+{% block header %}Add to the Archive!{% endblock %}
+
+{% block content %}
+
+<div class="admin_panel">
+    <form method="POST">
+        <div class="frmObject_container">
+            <br>
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Submit</button>
+            <br>
+            <br>
+        </div>
+    </form>
+</div>
+{% endblock %}

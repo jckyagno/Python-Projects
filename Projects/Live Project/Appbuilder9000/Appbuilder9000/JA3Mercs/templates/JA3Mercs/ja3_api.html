@@ -1,0 +1,22 @@
+{% extends "ja3_base.html" %}
+
+{% block title %}
+    API Call
+{% endblock %}
+
+{% block header %}
+    Jagged Alliance 3<br>
+    API
+{% endblock %}
+
+{% block content %}
+
+<button class="btn"><a href="https://api.github.com">API Link</a></button>
+
+    {% for data in content %}
+        <img src="{{ data.url }}">
+    {% endfor %}
+
+
+
+{% endblock %}

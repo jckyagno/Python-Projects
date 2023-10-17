@@ -1,0 +1,87 @@
+{% extends "GameHoard_base.html" %}
+
+{% block title %}Game Hoard{% endblock %}
+{% block content %}
+    <div>
+        <a href="#GH_index-banner"><button class="pageTop">🔝</button></a>
+    </div>
+    <div class="banner" id="GH_index-banner">
+        <div class="banner-container">
+            <h1><span>&nbsp; 🎲 Game Hoard 🎮 &nbsp;</span></h1>
+            <h3><span>&nbsp;&nbsp;Track the treasures in your Hoard so that you can share them with your fellow <s>dragons</s> friends.&nbsp;&nbsp;</span></h3>
+        </div>
+    </div>
+
+    <section id="gameLibrary" class="gameLibrary">
+        <div class="container">
+            <div class="title bannerDrop">
+                <h1 class>&nbsp;&nbsp;Game 📚 Library</h1>
+                <button type="button" onclick="openaddGame()" >+Add Game</button>
+                <button type="button" id="showHideElement" onclick="showHideElement()">Show List</button>
+            </div>
+
+            <!--Make sure file paths include any subdirectories in the templates file. The templates are declared in settings.py TEMPLATES = [ 'DIRS': [os.path.join(BASE_DIR, 'templates')],-->
+            <div class="contents">
+                {% include "GameHoard/GH_read.html" %}  <!--Page to READ the DB and display details-->
+            </div>
+        </div>
+
+        <!--CREATE RECORD/ADD ITEM TO DB-->
+        {% include "GameHoard/GH_create.html" %}
+
+    </section>
+
+    <hr>
+    <div id="wishlist">
+        <h1 class="title">Wish 🦗 List</h1>
+        {% include "GameHoard/GH_read_wishlist.html" %}
+    </div>
+    <hr>
+
+    <section id="resources">
+        <h1>Gaming Resources</h1>
+        <div class="vid-container flex">
+            <br>
+            <div class="card">
+                <!--Copy iframe code from YouTube, delete "...width="560" height="315"..."-->
+                <iframe src="https://www.youtube.com/embed/q6W68XrmYTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3 class="card-title">Board Game Reviews by Dice Tower</h3>
+                    <p class="card-text">This channel has been around for a long time and is a great resource for game reviews and light tutorials.</p>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/Mc2A6qmvWj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3 class="card-title">Skyrim V Anniversary Edition</h3>
+                    <p class="card-text">You need to play this.</p>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/-SaEWCyN2JI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3 class="card-title">Best Games of 2021</h3>
+                    <p class="card-text">These are some of the best that 2021 had to offer.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="reviews">
+        <div class="title">
+            <h1>Board Game Reviews from <a href="https://www.boardgamequest.com/category/game-reviews/">boardgamequest.com</a></h1>
+            <p><small>See my <a href="{% url 'BeautifulSoup' %}">Beautiful Soup</a> page for source info</small></p>
+        </div>
+
+        {% include "GameHoard/GH_bsoup.html" %}
+    </section>
+
+    <hr>
+
+    <section id="videoGames">
+        <div class="title">
+            <h1>Video Games from <a href="https://store.steampowered.com/">Steam</a></h1>
+            <p><small>See the <a href="{% url 'API' %}">API template</a> for info about the API source.</small></p>
+        </div>
+        <div>
+            {% include "GameHoard/GH_api.html" %}
+        </div>
+    </section>
+
+{% endblock %}

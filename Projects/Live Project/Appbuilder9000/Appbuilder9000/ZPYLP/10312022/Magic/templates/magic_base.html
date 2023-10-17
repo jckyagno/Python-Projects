@@ -1,0 +1,19 @@
+{% load static %}
+
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+		<title>{% block title%}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/magic.css' %}">
+
+    </head>
+    <body>
+            {% include "Magic/magic_navbar.html" %}
+            <header>
+                <h1>{% block header %}{% endblock %}</h1>
+		    </header>
+            {% block content %}{% endblock %}
+            {% include "Magic/magic_footer.html" %}
+        <script src="{% static '/js/magic.js' %}" type="text/javascript"></script>
+    </body>
+</html>

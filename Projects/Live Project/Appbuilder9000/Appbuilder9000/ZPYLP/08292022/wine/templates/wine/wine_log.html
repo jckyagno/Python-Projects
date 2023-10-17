@@ -1,0 +1,20 @@
+{% extends "wine_base.html" %}
+
+{% block content %}
+<h2>Wine Log</h2>
+<table>
+    <tr>
+        <th>Type</th>
+        <th>Varietal</th>
+    </tr>
+    {% for e in entry %}
+    <tr>
+        <td><a href="{% url 'wine_details' e.id %}">{{ e.type }}</a></td>
+        <td>{{ e.varietal }}</td>
+        <td>{{ e.region }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<button><a href="{% url 'wine_create' %}">Add Wine</a></button>
+
+{% endblock %}

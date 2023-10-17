@@ -1,0 +1,33 @@
+{% extends "BoardGameTracker/BoardGameTracker_base.html" %}
+
+
+{% block title %}Game Night Hero{% endblock %}
+{% block header %} Game Night Hero {% endblock %}
+
+{% block content %}
+<h2>Keep the Game Going with Giveaways on GamerPower!</h2>
+<div class="api_container">
+
+
+        <table class="api_view_table">
+            {% for title, gamerpower_url, image_url in api_list %}
+                <tr>
+
+                    <td><a href ="{{ gamerpower_url}}"><img src="{{ image_url }}"></a></td>
+                    <td><a href="{{ gamerpower_url }}">{{ title }}</a></td>
+
+                </tr>
+
+                <tr>
+                    <td></td>
+
+                </tr>
+            {% endfor %}
+            </table>
+
+</div>
+<a href="https://www.gamerpower.com/giveaways?sort_by=date">Latest game giveaways on GamerPower</a>
+<p>Powered by GamerPower API</p>
+
+
+{% endblock %}

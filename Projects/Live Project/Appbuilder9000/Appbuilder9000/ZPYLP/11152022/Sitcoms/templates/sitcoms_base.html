@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title%}Sitcoms{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/sitcoms_layout.css' %}">
+    </head>
+    <body>
+        <!--NAV BAR-->
+        <div>
+            {% include "Sitcoms/sitcoms_navbar.html" %}
+        <!--END NAV BAR-->
+        <!--HEADER-->
+            <div>
+                <header>
+                    <h1>{% block header %}{% endblock %}</h1>
+                </header>
+            </div>
+        <!--END HEADER-->
+            {% block content %}{% endblock %}
+        </div>
+        <!--FOOTER-->
+        {% include "Sitcoms/sitcoms_footer.html" %}
+        <!--END FOOTER-->
+    </body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include "Portfolio_head.html" %}
+    <meta charset="UTF-8">
+    <title>Shiv Patel</title>
+</head>
+
+<body>
+        {% include "Portfolio/navbar.html" %}
+
+        <div class="container anim">
+            <div class="con2 aboutmecontent">
+                <div class="aboutmesection">
+                    <h1 class="aboutheader">The Falcon 9 Rocket</h1>
+                    <p>Data scraped from <a href="https://en.wikipedia.org/wiki/Falcon_9">Wikipedia</a> with Beautiful Soup!</p>
+                    <p> {{ para }}</p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        {% include "Portfolio/contactform.html" %}
+
+
+</body>
+
+{% include "Portfolio/footer.html" %}
+
+</html>

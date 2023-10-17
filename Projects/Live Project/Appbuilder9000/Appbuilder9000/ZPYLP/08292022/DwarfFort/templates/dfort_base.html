@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image.png" href="{% static 'images/df_favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/dfort_layout.css' %}">
+    <script src="{% static 'js/dfort_script.js' %}" defer></script>
+    <script src="{% static 'js/dfort_news.js' %}" defer></script>
+    <script src="{% static 'js/dfort_visualizer.js' %}" defer></script>
+    <title>{% block title%}Dwarf Fort{% endblock%}</title>
+</head>
+
+    <!-- Nav Bar -->
+    <div class="edge-top">
+        <nav>
+            <a href="{% url 'dfort_home' %}" class="nav-button">Home</a>
+            <a href="{% url 'dfort_about' %}" class="nav-button">About</a>
+            <a href="{% url 'dfort_create' %}" class="nav-button">Create</a>
+            <a href="{% url 'dfort_news' %}" class="nav-button">News</a>
+            <a href="{% url 'dfort_api' %}" class="nav-button">API</a>
+        </nav>
+    </div>
+
+<body>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+<footer>
+    Site Created by Wesley Morford  2022
+</footer>
+<div class="edge-bottom"></div>
+
+
+</html>

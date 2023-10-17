@@ -1,0 +1,54 @@
+{% extends "magic_base.html" %}
+
+{% block title %}Magic: The Gathering Deck Lists{% endblock %}
+
+{% block header %} {{ deck.commander }} {% endblock %}
+
+{% block content %}
+    <table>
+        <div class="center">
+            <tr>
+                <th colspan="2">{{ deck.title }}</th>
+            </tr>
+            <tr>
+                <td rowspan="2"><img src="{{deck.image}}" alt="Commander Image"></td>
+                <td>DESCRIPTION<br>{{ deck.description }}</td>
+            </tr>
+            <tr>
+                <td>KEY PIECES<br>{{ deck.key_pieces|escape|linebreaks }}</td>
+            </tr>
+        </div>
+    </table>
+
+    <div class="commentSection">
+
+        {% if not deck.comments.all %}
+            <h3>No Comments Yet..</h3>
+        {% else %}
+            <div class="commentContainer">
+                <h2>Comments...</h2>
+                {% for comment in deck.comments.all %}
+                    <h4>{{ deck.id }} {{comment.id}} {{ comment.name }} - {{comment.date_added}}</h4>
+                    <p>{{ comment.body }}</p>
+                    <hr>
+                    <button class="btnView"><a href="{% url 'delete_c' comment.id %}">Delete</a></button>
+                {% endfor %}
+            </div>
+        {% endif %}
+         <br>
+        <button class="btnView" type="button" onclick="openForm()">Add Comment</button>
+        <button class="btnView"><a href="{% url 'magic_edit' deck.id %}">Update Deck Details</a></button>
+    </div>
+
+    <div id="overlay">
+        <div id="myForm">
+            <form method="POST" class="myForm">
+                <h1>Add a Comment</h1>
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class= 'btnSub' type="submit">Submit</button>
+                <button type="button" class="btnView" onclick="closeForm()">Close</button>
+            </form>
+         </div>
+    </div>
+{% endblock %}

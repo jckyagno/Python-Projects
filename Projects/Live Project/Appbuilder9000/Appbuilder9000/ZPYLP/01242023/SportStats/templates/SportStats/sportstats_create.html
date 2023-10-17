@@ -1,0 +1,16 @@
+{% extends "sportstats_base.html" %}
+
+{% block content %}
+<h1>Add A Player</h1>
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="text-bg-danger p-3">
+        <form method="POST">
+            <div class="mb-3">
+                {% csrf_token %}
+                {{form.as_p}}
+            </div>
+            <button type="submit" value="save">Add</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

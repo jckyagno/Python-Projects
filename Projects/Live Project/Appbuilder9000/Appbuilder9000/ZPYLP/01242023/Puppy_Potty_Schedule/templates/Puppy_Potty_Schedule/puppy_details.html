@@ -1,0 +1,39 @@
+{% extends "puppy_base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block title %} Details Page{% endblock %}
+
+{% block content %}
+
+<h1>Details Page</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Potty Day</th>
+                <th>Potty Time</th>
+                <th>Potty Type</th>
+                <th>Potty Color</th>
+                <th>Potty Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ details.potty_day }}</td>
+                <td>{{ details.potty_time }}</td>
+                <td>{{ details.potty_type }}</td>
+                <td>{{ details.potty_color }}</td>
+                <td>{{ details.potty_description }}</td>
+                <td><a href="{% url 'puppy_delete' details.id %}"><i class="fa-solid fa-trash-can">Delete</i></a></td>
+                <td><a href="{% url 'puppy_update' details.id %}"><i class="fa-solid fa-trash-can">Update</i></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
+
+
+
+

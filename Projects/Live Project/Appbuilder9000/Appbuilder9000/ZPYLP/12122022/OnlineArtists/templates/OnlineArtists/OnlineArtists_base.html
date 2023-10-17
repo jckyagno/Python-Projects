@@ -1,0 +1,30 @@
+{% load static %}
+ <!DOCTYPE html>
+    <html lang="en">
+        <head>
+
+            <title>{% block title%}{% endblock %}</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel= "stylesheet" href="{% static '/css/OnlineArtists_css.css' %}">
+            <link href="//fonts.googleapis.com/css?family=Silkscreen" rel="stylesheet" type="text/css">
+
+
+        </head>
+        <body>
+         <ul class="c">
+             <a href="{% url 'onlineartists_home' %}">Home</a>
+             <a href="{% url 'onlineartists_add' %}">Add to Spotlight</a>
+             <a href="{% url 'onlineartists_all' %}">View Spotlight</a>
+             <a href="{% url 'onlineartists_api' %}">API</a>
+         </ul>
+
+            {% block content %}
+         <h1 class="a">Online Artists</h1>
+         <h2 class="b">Explore our lists</h2>
+         <div class="test">
+
+         </div>
+
+            {% endblock %}
+        </body>
+    </html>

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html class="bg_img" lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{% static '/css/DateBook.css' %}">
+		<title>{% block title %}Dating App{% endblock %}</title>
+	</head>
+
+	<body>
+
+	<!-- Top Nav Bar -->
+
+	<div class="TopNav">
+  		<a href="{% url 'datebook_home' %}" style="color:white">Home</a>
+		<a href="{% url 'datebook_entry' %}" style="color:white">Entry</a>
+		<a href="{% url 'datebook_all' %}" style="color:white">Everyone</a>
+
+		<h1><center>Welcome to The Perfect Dating App!</center></h1>
+
+
+	</div>
+	<div>
+		{% block content %} {% endblock %}
+	</div>
+	</body>
+</html>

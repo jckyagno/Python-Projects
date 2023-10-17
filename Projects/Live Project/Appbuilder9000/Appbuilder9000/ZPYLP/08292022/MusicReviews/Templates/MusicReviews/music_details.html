@@ -1,0 +1,40 @@
+{% extends "MusicReviews/MusicReviews_Base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block title %} Details Page{% endblock %}
+
+
+{% block content %}
+<h1 class="fancy">Details</h1>
+    <table class="music-tables">
+        <thead>
+            <tr>
+                <th>Genre</th>
+                <th>Title</th>
+                <th>Composer</th>
+                <th>Description</th>
+                <th>Rating</th>
+                <th>Delete</th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ details.music_genre }}</td>
+                <td>{{ details.music_title }}</td>
+                <td>{{ details.music_Composer }}</td>
+                <td>{{ details.music_description }}</td>
+                <td>{{ details.Music_RATING }}</td>
+                <td><a href="{% url 'music_delete' details.id %}"><i class="fa-solid fa-trash-can">Delete</i></a></td>
+                <td><a href="{% url 'music_update' details.id %}">Edit</a></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+{% endblock%}

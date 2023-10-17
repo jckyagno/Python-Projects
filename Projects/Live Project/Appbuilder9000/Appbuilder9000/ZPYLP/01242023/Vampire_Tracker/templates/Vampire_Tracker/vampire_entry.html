@@ -1,0 +1,11 @@
+{% extends "vampire_base.html" %}
+
+{% block content %}
+<h1>Report a Sighting</h1>
+    <form action = "{% url 'vampire_entry' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+<button><a href="{% url 'vampire_view' %}">View Sightings</a></button>
+{% endblock %}

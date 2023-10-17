@@ -1,0 +1,11 @@
+{% extends 'Sportsapp_home.html' %}
+    {% block title %} Update Scores {% endblock %}
+    {% block content %}
+            <div class="scores update form">
+                <form method="POST">
+                    {% csrf_token}
+                    {{form.as_p}}
+                    <button id="update scores-button" type="submit" name="Save scores">Update Scores</button>
+                </form>
+            </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "BookRatings/BookRatings_Base.html" %}
+
+{% load static %}
+
+{% block title %}Book Ratings: Rated Books{% endblock %}
+
+
+
+{% block content %}
+<h2>Rated Books</h2>
+<table class="table-ratings">
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in rated_books %}
+        <tr>
+            <td>{{ item.book_author }}</td>
+            <td><a href="{% url 'BookRatings_Details' item.id %}">{{ item.book_title }}</a></td>
+            <td>{{ item.book_rating }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

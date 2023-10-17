@@ -1,0 +1,36 @@
+{% extends 'crochet_base.html' %}
+
+{% load static %}
+
+{% block title %}Crochet Project Planner{% endblock %}
+
+{% block header %}All Projects:{% endblock %}
+
+{% block content %}
+<div class="container_2">
+    <table class="table_1">
+        <tr>
+            <th>Project Name</th>
+        </tr>
+        {% for project in query_results %}
+        <tr>
+            <td><a href="{% url 'details_page' project.id %}">
+                {{ project.project_name }}
+            </a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table class="table_1">
+        <tr>
+            <th>Item Type</th>
+        </tr>
+        {% for project in query_results %}
+        <tr>
+            <td>{{ project.item_type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock%}

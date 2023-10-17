@@ -1,0 +1,31 @@
+{% extends "JobScraping_base.html" %}
+
+
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4">Welcome to the Job Scraper!</h1>
+    <p class="lead">The place to find, store, and review jobs!</p>
+    <br>
+    <br>
+    <div class="content">
+        <p class="intro-text">Here you can write down info for interesting jobs that you've come across. Save the data so that you can come back
+         later and compare to new postings that come up! Notice trends and keep a solid history of which companies are
+         frequently hiring!</p>
+        <br>
+        <p class="intro-text">But should you start looking through jobs today? If it's a nice day, maybe you should just go out and enjoy the
+        weather. If it's not so great out you might as well stay inside and search for some jobs!</p>
+        <br>
+        <p>Let's look at the forecast!</p>
+        <p>{{ data.2 }}</p>
+        <p>{{ data.0 }} the forcast calls for {{ data.1 }}.</p>
+        <br>
+        <br>
+        <p>Now all you have to do is choose!</p>
+        <a href="{% url 'searchAPI' %}"><button type="button" class="btn btn-dark">Search For Jobs</button></a>
+        <a href="{% url 'JobScraping_input' %}"><button type="button" class="btn btn-dark">Record Jobs</button></a>
+        <a href="{% url 'JobScraping_history' %}"><button type="button" class="btn btn-dark">Review your Jobs</button></a>
+    </div>
+</div>
+    {% include "JobScraping_footer.html" %}
+{% endblock %}

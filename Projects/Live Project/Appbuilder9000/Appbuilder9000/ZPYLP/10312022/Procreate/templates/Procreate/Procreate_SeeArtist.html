@@ -1,0 +1,20 @@
+{% extends "Procreate/Procreate_base.html" %}
+
+{% block content %}
+<h1>See Artist:</h1>
+<table>
+    <tr>
+        <th>Artist Name</th>
+        <th>Title</th>
+    </tr>
+    {% for p in procreate %}
+    <tr>
+        <td><a href="{% url 'procreate_details' p.id %}">{{ p.artist_name }}</a> </td>
+    </tr>
+{% endfor %}
+</table>
+
+
+
+<button><a href="{% url 'procreate_create' %}">Add Artist</a></button>
+{%  endblock %}

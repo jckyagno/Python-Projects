@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en" class="bg_img">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<script src="{% static '/js/rowing_js.js' %}"></script>
+		<link rel= "stylesheet" href="{% static '/css/rowing_layout.css' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>{% block title%}Rowing{% endblock %}</title>
+	</head>
+
+		<!---Navigation Bar-->
+		<div class="Navigation_bar">
+			<a href="{% url 'rowing_home' %}">Home</a>
+			<a href="{% url 'rowing_create' %}">Join</a>
+            <a href="{% url 'rowing_read' %}">Crew</a>
+			<a href="{%url 'rowing_bs' %}">Beautiful Soup</a>
+			<a href="{% url 'rowing_api' %}">API</a>
+			<a href="{% url 'rowing_save_api' 1000 %}">Saved API</a>
+		</div>
+		<!--End of Navigation Bar-->
+
+		<!-----Page container------>
+	<body>
+    	<div class="content-container-container">
+        	<div class="content-container">
+        	{% block content %}
+        	{% endblock %}
+			</div>
+    	</div>
+		<!---- End of page container---->
+
+		<div class="rower_animation"></div>
+
+
+
+		<!-----Footer------>
+		<footer id="footer">
+			<p> S.Linsdall | 2022 | &copy;</p>
+		</footer>
+    	<!---End of footer---->
+	</body>
+</html>

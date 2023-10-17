@@ -1,0 +1,37 @@
+{% extends "BettingLinesBase.html" %}
+
+{% block title %}Sports book Tracker{% endblock %}
+
+{% block content %}
+<p>Manage and search through your sports book here</p>
+
+<!-- Form with search bar -->
+<!-- User input is stored in variable in view function -->
+<form action="{% url 'BettingLines_View' %}" method="GET">
+    <input name="search" type="search" placeholder="search">
+    <button type="submit">Submit</button>
+</form>
+
+<table>
+    <tr>
+        <!-- Headings -->
+        <th>Game</th>
+        <th>Wager</th>
+    </tr>
+    <!-- Gets every database entry -->
+    {% for bet in bets %}
+    <tr>
+        <td>{{ bet.HomeTeam }}</td>
+        <td>{{ bet.Wager }}</td>
+        <td><a href="{% url 'BettingLines_Details' bet.id %}"><button>View</button></a></td>
+        <td><a href="{% url 'BettingLines_Edit' bet.id %}"><button>Edit</button></a></td>
+    </tr>
+
+    {% empty %}
+    <tr>
+        <td>No results found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

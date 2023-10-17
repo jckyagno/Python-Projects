@@ -1,0 +1,12 @@
+{% extends "LosoVision_base.html" %}
+
+{% block content %}
+
+<h1>Loso Vision</h1>
+
+<h3>We believe your success starts with your vision</h3>
+
+<button type="submit"><a href="{% url 'LosoVision_create' %}">Create</a></button>
+<button type="submit"><a href="{% url 'LosoVision_read' %}">View Patient</a></button>
+
+{% endblock %}

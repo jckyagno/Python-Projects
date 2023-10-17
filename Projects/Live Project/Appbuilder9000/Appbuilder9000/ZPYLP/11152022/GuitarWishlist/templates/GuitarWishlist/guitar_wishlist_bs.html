@@ -1,0 +1,30 @@
+{% extends 'GuitarWishlist/guitar_wishlist_base.html' %}
+{% load static %}
+
+{% block title %}
+<title> Top Rated Guitars</title>
+{% endblock %}
+
+{% block content %}
+<h1>Top Rated Electric Models From <a href="https://www.musiciansfriend.com/solid-body-electric-guitars" target="_blank"> Musician's Friend</a></h1>
+<h2 class="h2_bs_page">Brand/Model and Price:</h2>
+<p class="bs_page_p">{{ desc }} || PRICE: $2799.00  <button class="bs_page_button"><a target="_blank" href="https://www.musiciansfriend.com/guitars/gibson-les-paul-standard-50s-electric-guitar/l54575000003000">Link</a></button><br>
+    {{ desca }} || PRICE: $1099.00 <button class="bs_page_button"><a target="_blank" href="https://www.musiciansfriend.com/guitars/esp-ltd-deluxe-ec-1000-electric-guitar/516629000001000">Link</a></button><br>
+    {{ descb }} || PRICE: $1699.00 <button class="bs_page_button"><a target="_blank" href="https://www.musiciansfriend.com/guitars/fender-american-professional-ii-telecaster-rosewood-fingerboard-electric-guitar">Link</a></button><br>
+    {{ descc }} || PRICE: $1799.00 <button class="bs_page_button"><a target="_blank" href="https://www.musiciansfriend.com/guitars/gibson-sg-standard-electric-guitar">Link</a></button><br>
+    {{ descd }} || PRICE: $2799.00 <button class="bs_page_button"><a target="_blank" href="https://www.musiciansfriend.com/guitars/prs-dw-ce24-24-floyd-electric-guitar">Link</a></button>
+
+
+
+</p>
+<br>
+<br>
+<br>
+<br>
+
+
+<p class="bs_end_message">Data parsed from: <a target="_blank" href="https://www.musiciansfriend.com/solid-body-electric-guitars">https://www.musiciansfriend.com/solid-body-electric-guitars</a></p>
+
+
+
+{% endblock %}

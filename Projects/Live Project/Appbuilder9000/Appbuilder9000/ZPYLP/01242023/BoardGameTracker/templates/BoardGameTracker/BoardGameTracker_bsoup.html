@@ -1,0 +1,31 @@
+{% extends "BoardGameTracker/BoardGameTracker_base.html" %}
+
+
+{% block title %}Game Night Hero{% endblock %}
+{% block header %} Game Night Hero {% endblock %}
+
+{% block content %}
+<h2>Game Reviews: Brought to you by Board Game Quest</h2>
+
+<div class="container">
+
+    <div class = "bsoup-container">
+        <table class="view_table">
+                <tr>
+                    <th></th>
+                </tr>
+                {% for i in reviewList %}
+                <tr>
+                    <td><img src ="{{ i.rimage }}"><br><a href="{{ i.href }}">{{ i.title }}</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+    </div>
+    <a href="https://www.boardgamequest.com/category/game-reviews/">Latest game reviews by Board Game Quest</a>
+    <p>Powered by BeautifulSoup</p>
+</div>
+
+
+
+
+{% endblock %}

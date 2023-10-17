@@ -1,0 +1,14 @@
+{% extends "Sneakers/Sneakers_base.html" %}
+{% block title %}Add New Sneaker{% endblock %}
+{% block content %}
+	<h3 class="sneaker-header">ADD NEW SNEAKER</h3>
+	<div id="sneaker-form">
+		<form method="POST">
+			{% csrf_token %}
+			{{form.as_p}} <!-- form inside a p tag -->
+
+			<button  id="new-sneaker-button" type="submit" name="Save_sneaker">Add Sneaker</button>
+		</form>
+		<br>
+	</div>
+{% endblock %}

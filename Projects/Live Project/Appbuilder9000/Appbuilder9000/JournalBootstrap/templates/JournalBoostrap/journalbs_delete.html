@@ -1,0 +1,13 @@
+{% extends "journalbs_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Delete</h1>
+<form method="POST" class="text-center">
+        {% csrf_token %}
+        <h3>Permanently delete entry: "{{ entry.title }}"?</h3>
+        <br>
+        <button class="btn btn-danger" type="submit">Delete</button>
+        <button class="btn btn-secondary"><a href="{% url 'journal_update' entry.id %}">Return</a></button>
+    </form>
+{% endblock %}

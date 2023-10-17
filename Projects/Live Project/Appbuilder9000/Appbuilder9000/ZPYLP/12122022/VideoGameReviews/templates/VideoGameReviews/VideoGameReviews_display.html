@@ -1,0 +1,38 @@
+{% extends "VideoGameReviews/VideoGameReviews_base.html" %}
+
+{% block title %}Video Game Reviews!{% endblock %}
+
+{% block content %}
+<h1>All Reviews</h1>
+<p>Below you will find a list of all previous reviews. Click on one to view it!</p>
+
+<!-- Form with search bar -->
+<!-- User input is stored in variable in view function -->
+<form action="{% url 'video_game_search' %}" method="GET">
+    <input name="search" type="search" placeholder="Type in a search term...">
+    <button type="submit"> Search </button>
+</form>
+
+<table>
+    <tr>
+        <!-- Headings -->
+        <th>Game</th>
+        <th>Reviewer</th>
+    </tr>
+    <!-- Gets every database entry -->
+    {% for Review in reviews %}
+    <tr>
+        <td>{{ Review.game_title }}</td>
+        <td>{{ Review.reviewer_name }}</td>
+        <td><a href="{% url 'video_game_details' Review.id %}"><button>View</button></a></td>
+        <td><a href="{% url 'video_game_edit' Review.id %}"><button>Edit</button></a></td>
+    </tr>
+    <!-- Empty tag is for when no results are returned -->
+    {% empty %}
+    <tr>
+        <td>No results found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

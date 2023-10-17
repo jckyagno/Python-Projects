@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Snowmobiles{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/css/snowmobiles_layout.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="{% url 'snowmobiles_home' %}">Home</a>
+    <a href="{% url 'snowmobiles_add' %}">Add Snowmobile</a>
+    <a href="{% url 'snowmobiles_all' %}">Snowmobiles</a>
+    <a href="{% url 'snowmobiles_api' %}">Weather</a>
+    <a href="{% url 'snowmobiles_bs' %}">BeautifulSoup</a>
+    <a href="{% url 'snowmobiles_save_api' 1000 %}">Saved Weather API</a>
+    <div class="dropdown">
+        <button class="dropbtn">Class Based Views
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="{% url 'snowmobile-places' %}">Search Snowmobiles and Dealers</a>
+            <a href="{% url 'snowmobile-list' %}">Snowmobiles/Dealers List</a>
+            <a href="{% url 'snowmobile-create' %}">Snowmobile Create</a>
+            <a href="{% url 'dealer-create' %}">Dealer Create</a>
+        </div>
+    </div>
+</div>
+<h1 style="text-align: center; background: white;">Snowmobiles</h1>
+<div class="form-s-container">
+    {% block content %}{% endblock %}
+</div>
+<div class="footer">
+    <p>Author: Frank Inberg</p>
+</div>
+</body>
+</html>

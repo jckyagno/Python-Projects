@@ -1,0 +1,27 @@
+{% extends "OnlineArtists/OnlineArtists_base.html" %}
+{% block title %}
+ALL ARTISTS
+ {% endblock %}
+
+{% block content %}
+<h3>Our Promoted Artists</h3>
+   <table>
+     <tr>
+       <th>Artists Name</th>
+       <th>Artists Genre</th>
+       <th>Artists Socials</th>
+     </tr>
+
+     <tr>
+        {%for onlineartist in onlineartists %}
+       <td> {{ onlineartist.artist_name }} </td>
+       <td> {{ onlineartist.artist_genre }} </td>
+       <td>{{ onlineartist.artist_link }} </td>
+         <td><a href="{% url 'onlineartists_details' onlineartist.id %}">Details</a> </td>
+         <td><a href="{% url 'onlineartists_edit' onlineartist.id %}">Edit</a> </td>
+     </tr>
+       {% endfor %}
+
+  </table>
+ {% endblock %}
+

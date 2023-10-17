@@ -1,0 +1,23 @@
+{% extends "HolidayPlanner_base.html" %}
+{% load static %}
+{% block title %}Holiday Planner API{% endblock %}
+{% block header %}Booking.com API{% endblock %}
+{% block content %}
+<h1>Local Stay for near Wembley, London</h1>
+<strong>{{ hotelname }} - {{ address }}
+    <br>
+{{ review_title }}</strong>
+<br>
+<br>
+<div class="api-review">
+    Pros - {{ prosreview }}
+    <br>
+    Cons - {{ consreview }}
+    <br>
+    Average score: {{ averagescore }}/10
+    <br>
+    Minimum Price/Day: ${{ minprice }}
+    <br>
+    <br>
+</div>
+{% endblock %}

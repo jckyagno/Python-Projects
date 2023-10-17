@@ -1,0 +1,16 @@
+{% extends "HolidayPlanner_base.html" %}
+{% load static %}
+{% block title %}Holiday Planner Delete{% endblock %}
+{% block header %}Delete Entry{% endblock %}
+{% block content %}
+<form class="form-align" method="POST">
+    {% csrf_token %}
+    <h2>Are you sure you want to permanently delete:</h2>
+        <h3>{{ entry.destination }} - {{ entry.activity }} ({{ entry.activity_details }})</h3>
+    <button type="submit" class="btn btn-delete">Delete</button>
+</form>
+<div class="btn-details">
+    <a href="{% url 'HolidayPlanner_update' entry.id %}"><button class="btn">Cancel</button></a>
+</div>
+<br>
+{% endblock %}

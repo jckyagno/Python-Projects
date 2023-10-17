@@ -1,0 +1,12 @@
+{% extends "TravelJapan_base.html" %}
+{% block content %}
+<h1>DETAILS</h1>
+<div id="details">
+    <h2 class="placesTableName" style="text-align: center;">{{ addEntry.name_of_Place }} || {{ addEntry.activity_Type }}</h2>
+    <h3>Location: {{ addEntry.city }}, {{ addEntry.island }}</h3>
+        <p>Description: {{ addEntry.description }}</p>
+        <p class="value">Added on {{ addEntry.addDate }}</p>
+</div>
+<br>
+<a href="{% url 'traveljapan_update' addEntry.id %}"><button>UPDATE</button></a>
+{% endblock %}

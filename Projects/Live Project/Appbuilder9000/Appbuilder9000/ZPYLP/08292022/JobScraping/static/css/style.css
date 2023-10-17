@@ -1,0 +1,99 @@
+/*============
+  Page title
+--------------*/
+
+h1 {
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+    padding-top: 15px;
+}
+
+/*================
+  End Page title
+-----------------*/
+
+
+
+/*================
+       Tables
+-----------------*/
+
+.central table {
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.job-title {
+    width: 25%;
+}
+
+.job-company {
+    width: 15%;
+}
+
+.job-else {
+    width: 10%;
+}
+
+.search-footer {
+    color: white;
+}
+/*================
+    End Tables
+-----------------*/
+
+.invisible {
+    display: none;
+}
+
+html, body { height: 100% }
+body > footer {
+    position: sticky;
+    top: 100vh;
+    text-align: center;
+    margin-top: -25px;
+    color: white;
+}
+
+.container {
+    background-color: rgb(82, 87, 81);
+    color: white;
+    height: 100vh;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.stretch {
+    background-color: rgb(82, 87, 81);
+    color: white;
+    height: auto;
+    text-align: center;
+    margin: 0 25% 0 25%;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, .25);
+    margin: 0 15% 50px 15%;
+    padding: 30px;
+    border-radius: 10%;
+}
+
+th {
+    text-align: center;
+}
+
+.central {
+    display: flex;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-check {
+    text-align: left;
+}

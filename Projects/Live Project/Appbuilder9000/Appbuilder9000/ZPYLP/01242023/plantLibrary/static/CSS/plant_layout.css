@@ -1,0 +1,102 @@
+/* main body */
+body {
+    background-image: url("../images/homeimage.jpg");
+    background-size: cover;
+    color:white;
+
+}
+/* text color */
+main {
+    color: white;
+}
+/* plant home title */
+header {
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+}
+
+/* navigation bar */
+li {
+    float: right;
+    padding: 0px;
+    background-color: darkslategrey;
+    border-right: 3px solid #0b2e13;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #0b2e13;
+    text-decoration: none;
+    color: white;
+    padding: 5px 5px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li:last-child {
+    border-left: none;
+}
+
+
+#plant_bar {
+    display: block;
+    padding: 14px 16px;
+    background-color: darkslategrey;
+    text-align: center;
+    color: white;
+    font-family: Rockwell;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    list-style-type: none;
+    margin: 0;
+    overflow: auto;
+    background-color: darkslategrey;
+    font-size: 30px;
+}
+/* end navigation bar */
+
+#plant_container {
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-color: #0b2e13;
+    border-radius: 3px;
+}
+
+h2, h4 {
+    color: white;
+    background-color: darkslategrey;
+    text-align: center;
+    
+}
+
+#plant_form {
+    margin: auto;
+    background-color: darkslategrey;
+    color: white;
+    width: 50%;
+    text-align: center;
+}
+
+#plant_form option {
+    width: 800px;
+}
+
+#return_details {
+    margin: auto;
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+{% extends "HolidayPlanner_base.html" %}
+{% load static %}
+{% block title %}Holiday Planner Create Entry{% endblock %}
+{% block header %}Create Entry{% endblock %}
+{% block content %}
+<form method="POST" class="form-align">
+    {% csrf_token %}
+    <div class="create-form">
+        {{ form.as_p }}
+    </div>
+    <button class="btn btn-create" type="submit">Add Entry</button>
+    <br>
+</form>
+<div class="btn-details">
+    <a href="{% url 'HolidayPlanner_list' %}"><button class="btn">View Entries</button></a>
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    {% for msg in messages %}
+        swal('{{ msg }}');
+    {% endfor %}
+</script>
+{% endblock %}

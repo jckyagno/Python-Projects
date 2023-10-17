@@ -1,0 +1,24 @@
+{% extends "Nutrition_base.html" %}
+
+{% block title %}Recipes{% endblock %}
+
+{% block header %}Click Below to See Healthy Recipes!{% endblock %}
+
+{% block content %}
+    <center>
+        <div class="scrollable">
+            <table id = "memory-table">
+                {% for x in recipes %}
+                <tr>
+                    <td><a class = "click" href="https://tasty.co/recipe/{{ x.0 }}" target = "_blank">{{ x.1 }}</a></td>
+                </tr>
+                {% endfor %}
+                {% for x in moreRecipes %}
+                <tr>
+                    <td><a class = "click" href = "{{ x.1 }}" target = "_blank">{{ x.0 }}</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </center>
+{% endblock %}

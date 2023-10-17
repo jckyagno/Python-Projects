@@ -1,0 +1,33 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include "Portfolio_head.html" %}
+    <meta charset="UTF-8">
+    <title>Shiv Patel</title>
+</head>
+<body>
+    {% include "Portfolio/navbar.html" %}
+    <div class="container anim">
+        <div class="con3 aboutmecontent">
+            <table class="tablestyle">
+                <thead >
+                    <tr class="tablerow">
+                        <th class="tableheader">Name:</th>
+                        <th class="tableheader">Topic:</th>
+                        <th class="tableheader">Message:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ContactForm in inquries %}
+                    <tr class="tablerow">
+                        <td class="tabledata"><a href="{% url 'inquiry_display' ContactForm.id %}">{{ ContactForm.Name }}</a></td>
+                        <td class="tabledata">{{ ContactForm.Topic }}</td>
+                        <td class="tabledata2">{{ ContactForm.Message }}</td>
+                    </tr>
+                    {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

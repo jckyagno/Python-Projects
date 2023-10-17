@@ -1,0 +1,29 @@
+{% extends "sitcoms_base.html" %}
+
+{% block title %}World of Sitcoms{% endblock %}
+
+{% block header %}Archive{% endblock %}
+
+{% block content %}
+
+<div class="admin_panel">
+    <br>
+    <table class="center">
+        <tr>
+            <th>Sitcom</th>
+            <th>Network</th>
+        </tr>
+        {% for s in sitcom %}
+        <tr>
+            <td><a href="{% url 'sitcoms_details' s.id %}">{{ s.title }}</a></td>
+            <td>{{ s.network }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <div class="frmBtn_container">
+        <button type="button" class="btn" ><a href="{% url 'sitcoms_create' %}">Add Sitcom</a></button>
+    </div>
+    <br>
+</div>
+{% endblock %}

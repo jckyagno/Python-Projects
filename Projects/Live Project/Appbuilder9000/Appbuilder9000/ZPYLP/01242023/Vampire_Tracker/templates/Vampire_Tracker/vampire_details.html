@@ -1,0 +1,10 @@
+{% extends "vampire_base.html" %}
+
+{% block content %}
+<h1>Full Evidence</h1>
+<h3>{{ entry.vampire_name }}</h3>
+<h3>{{ entry.date_spotted }}</h3>
+<h3>{{ entry.where_spotted }}</h3>
+<p>{{ entry.evidence }}</p>
+<button><a href="{% url 'vampire_edit' entry.id %}">Edit</a></button>
+{% endblock %}

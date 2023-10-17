@@ -1,0 +1,24 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include "Portfolio_head.html" %}
+    <meta charset="UTF-8">
+    <title>Shiv Patel</title>
+</head>
+<body>
+        {% include "Portfolio/navbar.html" %}
+        {% block content %}
+        <div class="container anim">
+            <div class="con2">
+                <form method="POST">
+                    {% csrf_token %}
+                    <h3>Deleting items is permanent. Are you sure you want to proceed?</h3>
+                    <button type="submit" class="btn">Delete</button>
+                    <button type="button" class="btn" onclick="location.href='{% url 'Portfolio_data' %}';">Back</button>
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+
+</body>
+</html>

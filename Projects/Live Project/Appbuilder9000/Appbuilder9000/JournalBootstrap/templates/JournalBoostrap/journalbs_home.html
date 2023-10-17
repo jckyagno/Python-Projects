@@ -1,0 +1,9 @@
+{% extends "journalbs_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>My Journal</h1>
+<p>This app manages journal entries. It was created to demonstrate CRUD fundamentals.</p>
+<button class="btn btn-primary mb-3"><a href="{% url 'journalbs_create' %}">Create</a></button>
+<button class="btn btn-secondary"><a href="{% url 'journalbs_read' %}">Read</a></button>
+{% endblock %}

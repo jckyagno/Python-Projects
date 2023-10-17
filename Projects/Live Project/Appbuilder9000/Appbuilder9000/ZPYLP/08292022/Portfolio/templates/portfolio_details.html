@@ -1,0 +1,29 @@
+{% include "Portfolio/contactform.html" %}
+
+{% load static %}
+<html lang="en">
+<head>
+    {% include "Portfolio_head.html" %}
+    <meta charset="UTF-8">
+    <title>Shiv Patel</title>
+</head>
+<body>
+        {% include "Portfolio/navbar.html" %}
+
+        <div class="container anim">
+                <div id="contact" style="display:flex; justify-content: center;">
+                    <div id="formcontainer" style=" border: 4px solid var(--menusvg); position: fixed;">
+                        <form method="POST" class="contactform">
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+                            {{ form }}
+                            <button type="submit" class="btn">Update</button>
+                            <button type="button" class="btn" onclick="location.href='./portfolio_delete'" >Delete</button>
+                            <button type="button" class="btn" onclick="location.href='{% url 'Portfolio_data' %}';">View Previous Inquiries</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+
+</body>
+</html>

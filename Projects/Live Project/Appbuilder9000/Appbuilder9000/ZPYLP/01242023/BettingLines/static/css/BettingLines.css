@@ -1,0 +1,116 @@
+
+
+header-title {
+	padding: 2px 16px;
+	text-align: center;
+}
+
+.Navigation_bar a {
+    display: inline-block;
+    font-family: impact, fantasy;
+    background-color: White;
+    font-color: Gold;
+    color: Black;
+    text-decoration: none;
+    text-align: right;
+    padding: 15px 15px;
+    transition: 0.6s;
+    font-size: 19px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+/*Navbar hover element*/
+.Navigation_bar a:hover {
+    box-shadow: 0 7px 15px rgba(0,0,0,0.7);
+	transition: opacity 0.3s ease-in-out;
+    background-color: White;
+}
+
+/*Adding github logo and aligning with navbar*/
+.menu-item{
+    display: inline-block;
+    padding: 0 15px;
+    vertical-align: middle;
+}
+.menu-item img{
+    padding: 3px 0 0 0;
+}
+
+title {
+    font: Gold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font: gold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bet_table {
+    text-align: center;
+    align-items: center;
+    border: 1px solid;
+}
+
+
+p {
+    font: gold;
+    margin: 0 auto;
+    text-align: center;
+    font-size:  20px;
+}
+
+form {
+    font: gold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font: gold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+/*Background image */
+.BettingLines_img {
+
+    background-image: url('/static/images/Field.jpg');
+    background-size: 50% 50%;
+    background-attachment:fixed;
+    background-position: center;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* End Background image */
+
+#BettingForm {
+    color: gold;
+    position: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*Footer*/
+footer{
+    text-align: center;
+    color: Black;
+    font-family: impact, fantasy;
+    background-color: White;
+    position: fixed;
+    bottom: 0;
+    padding: 0px 5px 5px 5px;
+    width: 100%;
+}
+
+

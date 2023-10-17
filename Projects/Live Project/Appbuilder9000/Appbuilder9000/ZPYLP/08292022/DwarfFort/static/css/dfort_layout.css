@@ -1,0 +1,336 @@
+
+
+
+body{
+    background: black;
+    font-family: monospace, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.hover-text:hover {
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+h6{
+    display: none;
+}
+
+
+/* Pushes footer to bottom of the page */
+footer{
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    z-index: 2;
+    color: black;
+    font-weight: 700;
+}
+
+input{
+    font-family: monospace, sans-serif;
+}
+
+/* =============== NavBar =============== */
+
+nav{
+    z-index: 3;
+}
+
+.nav-button {
+    font-family: monospace, sans-serif;
+    font-size: 20px;
+    border: ridge 5px #069696;
+    margin: 10px;
+    padding: 5px;
+    z-index: 3;
+    background-color: #36d0d9;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+}
+
+.nav-button:hover {
+
+    border: ridge 5px white;
+    color: white;
+}
+
+/* =============== Buttons/Links =============== */
+
+button{
+    color: black;
+    background-color: #36bbc2;
+    border: ridge 5px #069696;
+    font-family: monospace, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    color: white;
+    border: ridge 5px white;
+    text-decoration: none;
+}
+
+/* Links */
+
+a:visited {
+  color: #1f4ecf;
+}
+
+/* Link Animation */
+
+@keyframes grow {
+    0% {font-size: 100%;}
+    50% {font-size: 102%;}
+    100% {font-size: 105%;}
+}
+
+p a:hover {
+  font-size: larger;
+  animation-name: grow;
+  animation-duration: .1s;
+}
+
+button a{
+    text-decoration: none;
+}
+
+button a:visited{
+    color: black;
+}
+
+button a:hover{
+    color: white;
+}
+
+td a:visited{
+    color: red;
+}
+
+
+/* =============== Tables =============== */
+table{
+    display: inline-block;
+    color: cyan;
+    margin: 5px;
+    text-align: center;
+}
+
+table a{
+    text-decoration: none;
+}
+
+th{
+    font-size: 25px;
+    text-decoration: underline;
+    text-shadow: 1px 1px black;
+    padding: 10px;
+}
+
+td{
+    color: #e344e0;
+    font-size: 18px;
+    text-shadow: 1px 1px black;
+    padding: 10px;
+}
+
+.name{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* =============== Edges and separators =============== */
+
+.edge-top{
+    position: fixed;
+    top: 0;
+    background-color: #34e5eb;
+    padding: 15px;
+    width: 100%;
+    border-bottom: ridge 5px #069696;
+}
+
+.edge-bottom{
+    position: fixed;
+    bottom: 0;
+    background-color: #34e5eb;
+    padding: 15px;
+    width: 100%;
+    border-top: ridge 5px #069696;
+    z-index: 1;
+}
+
+.divider{
+    color: white;
+}
+
+/* =============== Delete Modal =============== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 40%;
+    right: 50%;
+}
+
+.modal-content {
+    background-color: #34e5eb;
+    padding: 20px;
+    font-family: monospace, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    border: ridge 5px #069696;
+    color: black;
+}
+
+.close {
+    float: left;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.close:hover {
+  color: white;
+  border: double 1px white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* =============== API =============== */
+.api {
+    text-align: left;
+    border: ridge 5px #069696;
+    border-radius: 5px;
+    background-color: #43bac4;
+    padding: 7px;
+    margin: 10px;
+    color: #092d2e;
+    font-weight: 600;
+}
+
+/* Text coloring */
+.api-name {
+    color: red;
+    font-weight: 700;
+}
+
+.result-num {
+    color: white;
+    font-weight: 700;
+}
+
+.api-type {
+    color: darkmagenta;
+}
+
+.health {
+    color: #f5cf16;
+}
+
+
+/* =============== Beautiful Soup: News Page ===============*/
+
+#latest-news {
+    display: inline-block;
+}
+
+#mid-news {
+    display: none;
+}
+
+#last-news {
+    display: none;
+}
+
+/* =============== Details Visualizer =============== */
+.b-body{
+    white-space: pre;
+    font-size: 40px;
+    color: white;
+}
+
+.beware{
+    font-size: 50px;
+    color: red;
+}
+
+.b-description{
+    color: cyan;
+}
+
+p.b-intense{
+    color: red;
+    font-weight: 700;
+}
+
+/* =============== Boxes =============== */
+.list-container{
+    display: inline-block;
+    border: ridge 5px #069696;
+    border-radius: 5px;
+    background-color: #43bac4;
+    padding: 10px;
+    color: #075463;
+    font-weight: 600;
+}
+
+.detail-container {
+    color: cyan;
+}
+
+.form-container{
+    display: inline-block;
+    border: ridge 5px #069696;
+    border-radius: 5px;
+    background-color: #43bac4;
+    padding: 10px;
+}
+
+.news-container{
+    display: inline-block;
+    border: ridge 5px #069696;
+    border-radius: 5px;
+    background-color: #43bac4;
+    padding: 10px;
+    color: #092d2e;
+    font-weight: 600;
+    text-align: left;
+}
+
+.container{
+    width: 50%;
+    height: 25%;
+    display: inline-block;
+}
+
+.search-container{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.inner-search{
+    display: inline-block;
+    border-top: ridge 5px #069696;
+    border-left: ridge 5px #069696;
+    border-radius: 5px;
+    background-color: #34e5eb;
+    padding: 4px;
+}
+
+/* =============== Paginator =============== */
+.page{
+    font-size: 20px;
+}
+
+form{
+    text-align: left;
+}

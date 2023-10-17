@@ -1,0 +1,17 @@
+{% extends 'Pokedex/Pokedex_base.html' %}
+	{% block title%}Add Another Pokemon!{% endblock %}
+	{% block content %}
+
+
+	<h2>Welcome back! What else have you caught today?</h2>
+			<div class="add_new_pkmn">
+
+				<form method="POST"> <!-- Replace this with the Django Form -->
+					{% csrf_token %}
+					{{ form.as_p }}
+					<button id="add_pkmn_btn" type="submit" name="Save_Pokemon">I caught a...!.</button>
+				</form>
+
+				<br>
+			</div>
+	{% endblock %}

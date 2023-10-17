@@ -1,0 +1,59 @@
+{% extends "dfort_base.html" %}
+
+{% block content %}
+
+<p class="b-body" style="color: #069696">
+___________________________
+ \  / \  / \   / \  / \  /
+ \/   \/   \_/   \/   \/
+</p>
+
+    <!-- App Description -->
+    <h1 class="beware">Track Forgotten Beasts</h1>
+
+    <div class="search-container">
+        <div class="inner-search">
+            {% csrf_token %}
+            <select id="select_menu" onChange="top.location.href=this.options[this.selectedIndex].value;">
+                <option value="">Choose a Beast</option>
+                {% for b in beast %}
+                    <option value="../DwarfFort/{{ b.pk }}/details/">{{ b.name }}, the {{b.title}}</option>
+                {% endfor %}
+            </select>
+
+            <form action="{% url 'dfort_search' %}" method="POST" style="display: inline;">
+                {% csrf_token %}
+                <input type="search" name="usr_query" placeholder="Search by Name">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+
+    <a href="{% url 'dfort_create' %}"><button>Create New Beast</button></a>
+    <a href="{% url 'dfort_display' %}"><button>View All</button></a>
+
+    <p>===================================================</p>
+    <p>
+        Forgotten Beasts are randomly generated creatures from the game<br>
+        <a href="http://www.bay12games.com/dwarves/">Dwarf Fortress.</a>
+        The beasts can range from a metal skinned Tortoise to a<br>
+        Bird made of steam that spits acid webs.
+    </p>
+
+
+    <p>
+        Here you will be able to chronicle beasts encountered within the game<br>
+        or generate a custom one. Feel free to browse the <a href="{% url 'dfort_news' %}">news</a> section for game updates <br>
+        or browse the <a href="{% url 'dfort_api' %}">Open5E</a> Monster API.
+    </p>
+    <p>===================================================</p>
+
+
+<p class="b-body" style="color: #069696">
+/\   /\   /\   /\   /\
+/  \ /  \ /  \ /  \ /  \
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+</p>
+    <br>
+
+{% endblock %}

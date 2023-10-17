@@ -1,0 +1,1 @@
+Please see the wiki for more information: [Link](https://github.com/Tech-Academy-Live-Project/Appbuilder9000/wiki)

@@ -1,0 +1,139 @@
+.page_container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+}
+
+header {
+    color: white;
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style-type: none;
+    background-color: rgba(150, 150, 150, 0.5);
+    z-index: 9;
+}
+
+.navbar li {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navbar li:hover {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar li a {
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.navbar li a:hover {
+    padding: 15px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.form_container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    background-color: #37559680;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+.form_container form {
+    color: white;
+}
+
+.list_container {
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.list_container li {
+    list-style-type: none;
+}
+
+.details_container table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details_container input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.API_container h2 {
+    text-align: center;
+    color: white;
+}
+
+.column {
+    text-align: center;
+    width: 150px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid black;
+}
+
+/* Video size = 1920x1080.  Using vw and vh to allow proper scaling of the video */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* This keeps the video from preventing other element from being clicked on */
+}
+
+.video-container > video {
+  display: block;
+  position: fixed;
+  /* Using left and top in concurrence with negative transforms keeps
+     the video in a centered position regardless of viewport size */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* This ensures the aspect ratio will be maintain while resizing based on viewport size.
+Keeping height and width at 100% keeps either the top and bottom or left and right constrained to the viewport.
+This means that if height is at 100%, width will scale to a minimum of 100%, and vise versa.
+It ensures neither height or width will ever be less than 100%. */
+@media screen and (max-aspect-ratio: 1920/1080) {
+  .video-container > video {
+    height: 100%;
+  }
+}
+
+@media screen and (min-aspect-ratio: 1920/1080) {
+  .video-container > video {
+    width: 100%;
+  }
+}

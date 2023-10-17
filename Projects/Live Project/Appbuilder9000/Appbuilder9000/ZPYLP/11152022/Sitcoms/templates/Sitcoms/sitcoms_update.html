@@ -1,0 +1,20 @@
+{% extends "sitcoms_base.html" %}
+
+{% block title %}World of Sitcoms{% endblock %}
+
+{% block header %}Edit this Sitcom!{% endblock %}
+
+{% block content %}
+<div class="admin_panel">
+    <form method="POST">
+        <div class="formObject_container">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Changes</button>
+            <button type="submit"><a href="{% url 'sitcoms_delete' sitcom.id %}">Delete</a></button>
+            <button type="submit"><a href="{% url 'sitcoms_details' sitcom.id %}">Return</a></button>
+        </div>
+    </form>
+
+</div>
+{% endblock %}

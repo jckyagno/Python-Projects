@@ -1,0 +1,37 @@
+.bg_img {
+    background-color: lightblue;
+    background-image: url("/static/images/dating_bench.jpg");
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.TopNav {
+    color: white
+}
+
+h1 {
+    color: white
+}
+
+p {
+    color: white
+}
+
+h3 {
+    color: white
+}
+
+h2 {
+    color: white
+}
+
+th {
+    color: white
+}
+

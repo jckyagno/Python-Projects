@@ -1,0 +1,18 @@
+{% extends "MTB_Destinations/mtb_dest_base.html" %}
+{% block title %}Loam Away From Home{% endblock %}
+
+
+{% block content %}
+<!-- Jumbotron -->
+      <div class="jumbotron jumbotron-fluid">
+          <div class="jumbotext">
+              <div class="container">
+                    <h1 class="display-4">Your trail system has been deleted</h1>
+                    <p class="lead">Continue tracking below.</p>
+                    <hr class="my-4">
+                  <a class="btn btn-warning btn-lg" href="{% url 'mtb_dest_list' %}" role="button">My List</a>
+              </div>
+          </div>
+      </div>
+      <!-- /Jumbotron -->
+{% endblock %}

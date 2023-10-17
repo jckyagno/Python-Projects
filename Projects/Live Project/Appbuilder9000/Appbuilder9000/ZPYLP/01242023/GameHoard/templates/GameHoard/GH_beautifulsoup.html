@@ -1,0 +1,36 @@
+{% extends "GameHoard_base.html" %}
+
+{% block title %}Game Hoard{% endblock %}
+{% block content %}
+
+<div class="banner" id="GH_beautifulsoup-banner">
+    <div class="banner-container">
+        <h1><span>&nbsp; BeautifulSoup &nbsp;</span></h1>
+        <h3><span>&nbsp;&nbsp;Web Scraping&nbsp;</span></h3>
+    </div>
+</div>
+
+<section id="soup">
+    <div  class="bannerDrop">
+        <h1>Source Credit</h1>
+        <p>Visit <a href="https://www.boardgamequest.com/category/game-reviews/">boardgamequest.com</a> to see more articles like this!</p>
+    </div>
+
+    <hr>
+
+    <div class="title">
+        <h1>Articles and Blogs</h1>
+    </div>
+
+    {% include "GameHoard/GH_bsoup.html" %}
+
+    <hr>
+
+    <div class="title">
+        <h1>Content to Scrape</h1>
+    </div>
+    <div id="soupSourceCode">
+        <p>{{ soupChildren }}</p>
+    </div>
+</section>
+{% endblock %}

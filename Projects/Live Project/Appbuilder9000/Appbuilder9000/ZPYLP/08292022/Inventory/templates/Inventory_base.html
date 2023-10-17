@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static '/css/Inventory_layout.css' %}">
+    <title>{% block title %}Chemical Inventory{% endblock %}</title>
+</head>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <a class="active" href="{% url 'inventory_home' %}">Home</a>
+            <a href="{% url 'inventory_create' %}">Add Material</a>
+            <a href="{% url 'inventory_read' %}">View Full Inventory</a>
+            <input type="text" placeholder="Search for a chemical">
+        </div>
+        <!-- End Navbar -->
+<body id="body">
+            <!-- content loaded from other pages -->
+            <div class="content-container-container">
+                <div class="content-container">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+            <!-- end content -->
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>2022 - Chemical Inventory</p>
+            </footer>
+            <!-- end footer -->
+</body>
+</html>

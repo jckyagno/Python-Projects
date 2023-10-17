@@ -1,0 +1,19 @@
+{% extends "dfort_base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+
+<h1>Chronicle a New Beast</h1>
+    <div class="form-container">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_table }}
+            <button type="submit">CREATE BEAST</button>
+        </form>
+    </div>
+{% endblock %}

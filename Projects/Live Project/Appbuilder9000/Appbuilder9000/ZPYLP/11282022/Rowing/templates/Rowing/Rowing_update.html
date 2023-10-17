@@ -1,0 +1,14 @@
+{% extends "Rowing_base.html" %}
+
+{% block content %}
+<h1>Update</h1>
+    <div id="rowing_update">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" value="submit" onclick="myFunction();"/>Save Changes</button>
+        </form>
+    </div>
+    <button type="submit"><a href="{% url 'rowing_delete' entry.id %}">Delete</a></button>
+<button type="submit"><a href="{% url 'rowing_details' entry.id %}">Return</a></button>
+{% endblock %}

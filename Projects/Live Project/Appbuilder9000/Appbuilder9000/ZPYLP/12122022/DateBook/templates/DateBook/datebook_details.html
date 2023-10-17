@@ -1,0 +1,10 @@
+{% extends "datebook_base.html" %}
+
+{% block content %}
+<h1>Your Dates</h1>
+<h3>{{ entry.fname }} {{ entry.lname}} - {{ entry.date }} - {{ entry.description }}</h3>
+
+<button type="submit"><a href="{% url 'datebook_entry' %}">Add a Date</a></button>
+<button type="submit"><a href="{% url 'datebook_delete' entry.id %}">Delete</a></button>
+<button type="submit"><a href="{% url 'datebook_update' entry.id %}">Update</a></button>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "Nutrition_Base.html" %}
+
+{% block title %}Your Acount {% endblock %}
+
+{% block header %} View Your Nutrition Information {% endblock %}
+
+{% block content %}
+
+<h3>{{ details.Username }}'s account</h3>
+<center>
+    <div id="User-account">
+        <table class = "table table-responsive" id = "memory-table">
+            <tr id="headerRow">
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>BMI</th>
+                <th>Body Fat Percentage</th>
+                <th>Phase</th>
+                <th>Recommended Maximum Calories</th>
+                <th>Recommended Minimum Protein</th>
+            </tr>
+            <tr>
+                <td class="center">{{ details.Age }}</td>
+                <td class="center">{{ details.Gender }}</td>
+                <td class="center">{{ details.Height }}in.</td>
+                <td class="center">{{ details.Weight }}lbs.</td>
+                <td class="center">{{ details.BMI }}</td>
+                <td class="center">{{ details.FatPercent }}%</td>
+                <td class="center">{{ details.Phase }}</td>
+                <td class="center">{{ details.Calories }}</td>
+                <td class="center">{{ details.Protein }}g</td>
+            </tr>
+        </table>
+    </div>
+</center>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "wine_base.html" %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+        <button><a href="{% url 'wine_log' %}">View Entries</a></button>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "snowmobiles_base.html" %}
+{% block title %}
+Snowmobile Dealer Details
+{% endblock %}
+{% block content %}
+
+<div id="snowmobile-form" class="tcenter">
+
+    <h1 class="tcenter">Details:</h1>
+    <h3>Brand: {{ object.brand }}</h3>
+    <h3>Store Name: {{ object.store_name }}</h3>
+    <h3>City: {{ object.city }}</h3>
+    <h3>State: {{ object.state }}</h3>
+
+    <div class="frmBtn_container">
+
+        <button class="btn"><a href="{% url 'snowmobile-list' %}">Cancel</a></button>
+    </div>
+
+</div>
+{% endblock %}

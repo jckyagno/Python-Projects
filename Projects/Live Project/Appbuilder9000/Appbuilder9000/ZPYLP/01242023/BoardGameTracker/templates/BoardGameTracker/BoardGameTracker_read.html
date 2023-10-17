@@ -1,0 +1,37 @@
+{% extends "BoardGameTracker/BoardGameTracker_base.html" %}
+
+
+{% block title %}Game Night Hero{% endblock %}
+{% block header %} Game Night Hero {% endblock %}
+
+{% block content %}
+<h2>Your Tracked Games</h2>
+<div class="container">
+    <div class="api_container">
+        <table class="view_table">
+            <tr>
+                <th></th>
+                <th>Game Name</th>
+                <th>Played:</th>
+                <th></th>
+            </tr>
+            {% for boardgame in boardgames %}
+            <tr>
+                <td><a href="{% url 'bgt_edit' boardgame.id %}">Edit Details</a></td>
+                <td>{{ boardgame.Game_Name }}</td>
+                <td>{{ boardgame.Have_We_Played }}</td>
+                <td><a href="{% url 'bgt_details' boardgame.id %}">More Game Details</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="btn-container">
+            <a href="{% url 'bgt_create' %}"><button type="button" class="btn" value="Add">Add Another Game</button></a>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

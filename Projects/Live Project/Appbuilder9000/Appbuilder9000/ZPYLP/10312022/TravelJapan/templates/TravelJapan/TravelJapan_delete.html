@@ -1,0 +1,14 @@
+{% extends "TravelJapan_base.html" %}
+
+{% block content %}
+<h1>DELETE</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Are you sure you want to delete "{{ addEntry.name_of_Place }}"?</h2>
+        <br><br>
+
+    </form>
+<br><br>
+<button type="submit" class="deleteBtn">DELETE</button>
+<a href="{% url 'traveljapan_update' addEntry.id %}"><button class="backBtn" style="float: right;" type="submit">BACK</button></a>
+{% endblock %}

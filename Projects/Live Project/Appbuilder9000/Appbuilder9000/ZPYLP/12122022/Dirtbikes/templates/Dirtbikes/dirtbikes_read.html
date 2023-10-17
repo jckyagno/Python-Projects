@@ -1,0 +1,23 @@
+ {% extends "dirtbikes_base.html" %}
+
+{% block content %}
+<h1>List of Dirtbikes:</h1>
+<table>
+    <tr>
+        <th>Year</a></th>
+        <th>Make</th></a></th>
+        <th>Model</th></a></th>
+        <th>Color</th></a></th>
+    </tr>
+    {% for e in entry %}
+    <tr>
+        <td><a href="{% url 'dirtbikes_details' e.id %}">{{e.Year}}</a></td>
+        <td><a href="{% url 'dirtbikes_details' e.id %}">{{e.Make}}</a></td>
+        <td><a href="{% url 'dirtbikes_details' e.id %}">{{e.Model}}</a></td>
+        <td><a href="{% url 'dirtbikes_details' e.id %}">{{e.Color}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<button><a href="{% url 'dirtbikes_create' %}">Add Dirtbike</a></button>
+
+{% endblock %}

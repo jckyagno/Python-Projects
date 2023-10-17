@@ -1,0 +1,25 @@
+{% extends "snowmobiles_base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Snowmobiles List</h1>
+    <ul class="myUL">
+        {% for snowmobile in object_list %}
+        <li>{{ snowmobile.dateManufactured }} - {{ snowmobile.make }} - {{ snowmobile.model }} - {{ snowmobile.description }} -
+            <a href="{% url 'snowmobile-detail' snowmobile.id %}">Details</a></li>
+        {% empty %}
+        <li>No Snowmobile yet.</li>
+        {% endfor %}
+    </ul>
+    <h1>Snowmobile Dealer List</h1>
+    <ul class="myUL">
+        {% for store in stores %}
+        <li>
+            {{ store.brand }} - {{ store.store_name }} - {{ store.city }} - {{ store.state }} -
+            <a href="{% url 'dealer-detail' store.id %}">Details</a></li>
+        {% empty %}
+        <li>No Dealers yet.</li>
+        {% endfor %}
+
+    </ul>
+</div>
+{% endblock %}

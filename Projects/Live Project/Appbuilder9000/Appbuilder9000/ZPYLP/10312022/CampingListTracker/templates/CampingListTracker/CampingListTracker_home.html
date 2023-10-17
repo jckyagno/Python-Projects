@@ -1,0 +1,10 @@
+{% extends "CampingListTracker_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<h1 class="home">GET READY FOR YOUR ADVENTURE!</h1>
+<p>This app allows you to create and tracks a camping list, so you never forget an essential item or task again!</p>
+<button class="submit" type="submit"><a class="link" href="{% url 'cl_create' %}">Create</a></button>
+<button class="submit" type="submit"><a class="link" href="{% url 'cl_list' %}">List</a></button>
+{% endblock %}

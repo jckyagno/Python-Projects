@@ -1,0 +1,33 @@
+{% extends 'Pokedex/Pokedex_base.html' %}
+{% load static %}
+{% block title%}Details!{% endblock %}
+{% block content %}
+
+	<h2>Let's check out some stats!</h2> <!--Try to use -->
+			<div class="details">
+				<table> <!-- Replace this with the Django Form -->
+					<tr>
+                        <th>Trainer name</th>
+						<th>Pokemon</th>
+                        <th>Nickname</th>
+						<th>Level</th>
+						<th>Nature</th>
+						<th>Game</th>
+					</tr>
+					<tr>
+						<td>{{ selected_pokemon.trainer_name }} </td>
+                        <td>{{ selected_pokemon.pokemon_name }}</td>
+						<td>{{ selected_pokemon.nickname }}</td>
+						<td>{{ selected_pokemon.level }}</td>
+						<td>{{ selected_pokemon.nature }}</td>
+						<td>{{ selected_pokemon.game }}</td>
+
+					</tr>
+
+
+				</table>
+
+
+{{ pokemon_name }}
+
+{% endblock %}

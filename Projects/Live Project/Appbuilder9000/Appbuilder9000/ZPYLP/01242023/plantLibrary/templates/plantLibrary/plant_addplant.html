@@ -1,0 +1,47 @@
+{% extends 'plant_base.html' %}
+
+{% block content %}
+    <h2> Add a plant to your library! </h2>
+
+    <form id="plant_form" method="POST" action="{% url 'plant_addplant' %}">
+    {% csrf_token %}
+        <!--plant name-->
+      <div class="form-group">
+        <label for="plant_name">Plant Name: </label>
+        <input type="text" class="form-control" placeholder="Plant Name" name="plant_name" value = {{ plant_name }}>
+      </div>
+
+        <!--sunlight-->
+      <div class="form-group">
+        <label for="sunlight_needs">Sunlight Needs: </label>
+        <select class="form-control" name="sunlight_needs" value = {{ sunlight_needs }}>
+          <option>Low</option>
+          <option>Low/Moderate</option>
+          <option>Moderate</option>
+          <option>Moderate/High</option>
+          <option>High</option>
+        </select>
+      </div>
+
+        <!--water-->
+      <div class="form-group">
+        <label for="water_needs">Water Needs: </label>
+        <select class="form-control" name="water_needs" value = {{ water_needs }}>
+          <option>Low</option>
+          <option>Low/Moderate</option>
+          <option>Moderate</option>
+          <option>Moderate/High</option>
+          <option>High</option>
+        </select>
+      </div>
+
+        <!--location-->
+      <div class="form-group">
+        <label for="location">Location: </label>
+        <input type="text" class="form-control" placeholder="Indoor or Outdoor?" name = "location" value = {{ location }}>
+      </div>
+
+        <!--submit button-->
+    <button type="submit" class="btn btn-secondary">Add Plant</button>
+</form>
+{% endblock %}

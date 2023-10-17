@@ -1,0 +1,36 @@
+* {
+    overflow-x: hidden;
+}
+
+body {
+    background: black;
+    color: bisque;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Float the list items side by side */
+ul.navbar li {
+    float: left;
+}
+/*Styles links inside the list items */
+ul.navbar li a {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+}
+.restimg {
+    opacity: 0.6;
+    width: 100vw;
+}

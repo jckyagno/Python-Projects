@@ -1,0 +1,22 @@
+{% extends "ChristmasList_base.html" %}
+
+{% block header %}Beautiful Soup!{% endblock %}
+
+{% block content %}
+    <div class="admin_panel">
+        <br>
+        <h3 class="poem">Below is a Christmas poem scraped from this website</h3>
+
+        <p class="poem"><a target="_blank" href="https://www.countryliving.com/life/kids-pets/g29539102/christmas-poems-for-kids/">https://www.countryliving.com/life/kids-pets/g29539102/christmas-poems-for-kids/</a></p>
+
+        <br>
+        <br>
+        {% for item in text %}
+        <p class="poem"> {{ item }} </p>
+        {% endfor %}
+        <br>
+        <br>
+    </div>
+
+
+{% endblock %}

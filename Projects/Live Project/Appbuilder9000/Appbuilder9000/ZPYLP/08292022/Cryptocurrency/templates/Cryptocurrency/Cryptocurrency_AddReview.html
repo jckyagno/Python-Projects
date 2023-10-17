@@ -1,0 +1,21 @@
+{% extends "Cryptocurrency_base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block title %} Add a Crypto{% endblock %}
+
+
+{% block content %}
+<h1 class="fancy">Review a Cryptocurrency</h1>
+<div class="add-crypto-container">
+    <form method="POST" class="add-crypto-form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        <button class="btn btn-success" type="submit" name="Save_Review">Submit Review</button>
+    </form>
+</div>
+
+{% endblock %}

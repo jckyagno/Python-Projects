@@ -1,0 +1,283 @@
+html{
+    background-image: url("../images/marvelcharacters.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+body{
+    margin: 0;
+    font-family: 'Fakt Soft Pro', sans-serif;
+    max-height:100%;
+}
+
+
+h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+    font-weight: bold;
+    margin-top: 5px;
+
+}
+
+h4 {
+    text-align:center;
+    color: White;
+    font-weight:bold;
+    background:black;
+    font-size:xxx-large;
+}
+
+h2 {
+    color: Blue;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+    font-weight:bold;
+    font-size:xxx-large;
+    background:white;
+
+
+}
+
+h3 {
+    text-align:center;
+	color: white;
+	font-size:xxx-large;
+	background:red;
+	font-weight:bold;
+
+}
+.navbar {
+  background-color: White;
+  overflow: hidden;
+  margin: none;
+  display: flex;
+  justify-content: center;
+  position:fixed;
+  top:0;
+  width:100%
+}
+
+.navbar a {
+  float: left;
+  color: Red;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+.navbar a:hover {
+  color: blue;
+}
+
+.navbar ul{
+	border:none;
+	background:none;
+	overflow:hidden;
+	padding:none;
+}
+
+.navbar li{
+	background:none;
+	border:none;
+	padding:none;
+}
+
+ul {
+    color:white;
+    text-align: center;
+    list-style-type: decimal;
+    margin: 0;
+    overflow: hidden;
+}
+#block-footer {
+    clear: both;
+    display: flex;
+    width: 100%;
+	-moz-box-sizing: border-box;
+    margin: 0 auto;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+}
+#block-footer a, #block-footer p {
+    flex: 1;
+    color: white;
+    padding: 3px 15px;
+	font-size: 14px;
+    line-height: 10px;
+    background:black;
+}
+#footer-left {
+    width: 40%;
+    text-align: right;
+}
+#block-footer{
+	float:left;
+	clear:both;
+	width:100%;
+}
+#block-footer a {
+	color: white;
+	text-decoration: none;
+	outline: medium none;
+}
+#block-footer a:hover {
+    color: blue;
+}
+
+button {
+    width: 150px; /* button size */
+    color: black;
+    padding: 10px 0px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+	background:white;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1% 1% 1% 45%;
+}
+button:hover {
+    background-color: black;
+    color: blue;
+    border: 2px solid #b3b3b3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	transition: opacity 0.3s ease-in-out;
+}
+
+p {
+	text-align:center;
+	color: white;
+	font-size:large;
+	background:blue;
+}
+
+a {
+    color:Red;
+}
+
+a:hover{
+    color:white;
+}
+
+table {
+	background:black;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:30px;
+	border: 5px solid silver;
+}
+
+th,
+tr,
+td {
+	color:white;
+	text-align:center;
+	padding:30;
+}
+
+.container {
+	border:2px solid black;
+	background:blue;
+	margin:300;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+li {
+	background-color:black;
+	border:2px solid red;
+	padding:10px
+
+}
+
+/* AFFECTS COMMENT SECTION */
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid white;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: black;
+}
+
+/* Full-width input fields */
+.form-container input[type=text]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    color:white;
+    background: grey;
+}
+
+/* When the inputs is being used*/
+.form-container input[type=text]:focus{
+    background-color: red;
+    color:white;
+    outline: none;
+}
+
+/* Style for the submit button */
+.form-container .btn {
+    color: white;
+    cursor: pointer;
+    margin-bottom:10px;
+    opacity: 0.8
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+
+.comment_section{
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%;
+    z-index: 1;
+
+}
+
+.comment_container{
+	margin:0;
+	display:block;
+}
+
+.comment_section h1{
+	color:black;
+	background:red;
+	border:2px solid black;
+}
+
+.comment_section p{
+	background:white;
+	color:black;
+	border:2px solid black;
+
+.btnA {
+    top: 750;
+    position:absolute;
+}
+
+/*END COMMENT SECTION */

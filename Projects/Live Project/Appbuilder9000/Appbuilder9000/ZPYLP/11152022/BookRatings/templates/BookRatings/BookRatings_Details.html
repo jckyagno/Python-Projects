@@ -1,0 +1,29 @@
+{% extends "BookRatings/BookRatings_Base.html" %}
+
+{% load static %}
+
+{% block title %}Book Ratings: Details{% endblock %}
+
+
+
+{% block content %}
+<h2>Details</h2>
+<table class="table-details">
+    <thead>
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Rating</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ details_books.book_author }}</td>
+            <td>{{ details_books.book_title }}</td>
+            <td>{{ details_books.book_rating }}</td>
+            <td>{{ details_books.book_genre }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

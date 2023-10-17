@@ -1,0 +1,21 @@
+{% extends "BucketList_Base.html" %}
+
+{% block title %} Bucket List {% endblock %}
+
+{% block header %} HELLOO {% endblock %}
+
+{% block content %}
+
+<div class="form_header">
+    <h1>Create a new Bucket List item: </h1>
+    <div id="bucketlist_form">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <button id="addbtn" type="submit" name="save_item">Add</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

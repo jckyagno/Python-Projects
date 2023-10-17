@@ -1,0 +1,33 @@
+{% extends "dfort_base.html" %}
+
+{% block content %}
+<h1>Forgotten Beasts</h1>
+<div>You searched for: {{ name }} </div>
+<table class="list-container" id="displayTable">
+    <tr>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Species</th>
+        <th>Skin</th>
+    </tr>
+    {% for b in beast %}
+    <tr class="listitem-container">
+        <td class="name"><a href="../{{ b.pk }}/details/">{{b.name}}</a></td>
+        <td>{{b.title}}</td>
+        <td>{{b.species|upper}}</td>
+        <td>{{b.skin|upper}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<div>
+    <form action="{% url 'dfort_search' %}" method="POST" class="form-container">
+        {% csrf_token %}
+        <input type="search" name="usr_query" placeholder="Search by Name">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+{% endblock %}

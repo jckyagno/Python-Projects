@@ -1,0 +1,76 @@
+{% extends 'deadByDaylight_base.html' %}
+{% load static %}
+
+{% block title %}{{ survivor.full_Name }}{% endblock %}
+
+{% block content %}
+<div class="left_details">
+<div class="fixer top_page"><h3>Name:</h3><p> {{ killer.full_Name }}</p></div>
+<div class="fixer"><h3>Release Date:</h3><p> {{ killer.release_Date }}</p></div>
+<div class="fixer"><h3>Movement Speed:</h3><p> {{ killer.movement_Speed }} m/s</p></div>
+<div class="fixer"><h3>Terror Radius:</h3><p> {{ killer.terror_Radius_Size }} meters</p></div>
+<div class="fixer"><h3>Lore:</h3></div>
+<div class="details_lore_container">
+    <p class="lore-text">{{ killer.lore | safe }}</p>
+</div>
+<div class="fixer"><h3>Perks:</h3></div>
+<div class="details_perk_container">
+    <div class="details_row_one">
+        <div class="details_perk">
+            <img src="{{ killerPerk.image_Of_Perk_One }}" alt="Perk One Image">
+            <p class="perk-text">{{ killerPerk.perk_One }}</p>
+        </div>
+        <div class="perk-description-container">
+            <div class="perk-description">
+                <p class="description-text">{{ killerPerk.perk_One_Description | safe }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="details_row_one">
+        <div class="details_perk">
+            <img src="{{ killerPerk.image_Of_Perk_Two }}" alt="Perk Two Image">
+            <p class="perk-text">{{ killerPerk.perk_Two }}</p>
+        </div>
+        <div class="perk-description-container">
+            <div class="perk-description">
+                <p class="description-text">{{ killerPerk.perk_Two_Description | safe }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="details_row_one">
+        <div class="details_perk">
+            <img src="{{ killerPerk.image_Of_Perk_Three }}" alt="Perk Three Image">
+            <p class="perk-text">{{ killerPerk.perk_Three }}</p>
+        </div>
+        <div class="perk-description-container">
+            <div class="perk-description">
+                <p class="description-text">{{ killerPerk.perk_Three_Description | safe }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIX ME I'M BROKEN -->
+    <div id="confirmDelete" class="modal">
+        <span class="close1" onclick="closeDelete()">&times;</span>
+        <div class="modal-content">
+        <form method="POST" action="{% url 'deadByDaylight_kdelete' %}">
+            {% csrf_token %}
+            <input type="hidden" name="killer_id" value="{{ killer.id }}">
+            <h2 class="fixer2">Confirm Delete:</h2>
+            <p>Are you sure you would like to delete "{{killer.full_Name}}" from the database?</p>
+
+            <button type="submit" class="btn3">Yes, delete it!</button>
+            <button class="btn2" type="button" onclick="closeDelete()">Cancel</button>
+        </form>
+            </div>
+<!-- FIX ME I'M BROKEN -->
+    </div>
+    <button id="back-survivor-button" onclick="location.href='../../killers/'">Back</button>
+    <button id="edit-survivor-button" onclick="location.href='../kedit/'">Edit</button>
+    <button id="delete-survivor-button" onclick="openDelete()">Delete</button>
+</div>
+<div class="full_survivor">
+    <img src="{{ killer.image_Of_Killer }}" alt="Survivor Image">
+</div>
+
+{% endblock %}

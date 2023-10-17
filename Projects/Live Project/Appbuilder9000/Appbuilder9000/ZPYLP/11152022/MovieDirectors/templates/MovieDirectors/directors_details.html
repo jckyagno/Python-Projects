@@ -1,0 +1,53 @@
+{% extends 'directors_base.html' %}
+
+{% block title %}Movie Directors{% endblock %}
+
+{% block header %}Director Details{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="table_container">
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{ director.name }}</td>
+            </tr>
+            <tr>
+                <th>Number of Movies Directed</th>
+                <td>{{ director.numberOfMovies }}</td>
+            </tr>
+            <tr>
+                <th>Release Year of First Movie</th>
+                <td>{{ director.yearOfFirstMovie }}</td>
+            </tr>
+            <tr>
+                <th>Primary Genre</th>
+                <td>{{ director.primaryGenre }}</td>
+            </tr>
+            <tr>
+                <th>Deceased?</th>
+                <td>{{ director.deceased }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="button_container">
+        <a href="{% url 'directors_edit' director.id %}"><button>Edit</button></a>
+        <button id="modalButton">Delete</button>
+    </div>
+    <div class="modal" id="myModal">
+        <div class="modalContent">
+            <p>Are you sure you want to delete this entry?</p>
+            <a href="{% url 'directors_delete' director.id %}"><button class="confirm_delete">Yes, delete it</button></a>
+            <button id="cancelButton">No, don't delete it</button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+{% include 'MovieDirectors/directors_footer.html' %}
+{% endblock %}

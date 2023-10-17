@@ -1,0 +1,60 @@
+{% extends 'deadByDaylight_base.html' %}
+{% load static %}
+
+{% block title %}{{ survivor.full_Name }}{% endblock %}
+
+{% block content %}
+<div class="fix" oninput="PreviewCard2()">
+	<div id="killer-form">
+    <form method="POST" onkeydown="return event.key != 'Enter';">
+        {% csrf_token %}
+        <div class="center_form">
+            <div class="Column_One">
+                {{ survform.non_field_errors }}
+                {{ survform.as_p }}
+            </div>
+            <div class="Column_Two">
+                {{ perkform.non_field_errors }}
+                {{ perkform.as_p }}
+				<button id="back-edit-button" onclick="location.href='../{{ i.id }}/survdetails/'">Back</button>
+				<button id="edit-survivor-button" type="submit">Save Changes</button>
+			</div>
+			<div class="Column_Three">
+				<div class="square-container">
+					<img src="" class="profile_image" id="profile">
+					<div class="text-container">
+						<p id="Full_Name_Test"></p>
+					</div>
+					<div class="perk-container">
+						<div class="perk">
+							<img src="" class="perk_image" id="Perk1">
+							<br>
+							<p id="Perk_One_Test"></p>
+						</div>
+						<div class="perk">
+							<img src="" class="perk_image" id="Perk2">
+							<br>
+							<p id="Perk_Two_Test"></p>
+						</div>
+						<div class="perk">
+							<img src="" class="perk_image" id="Perk3">
+							<br>
+							<p id="Perk_Three_Test"></p>
+						</div>
+					</div>
+				</div>
+				<div class="full_body">
+					<img src="" id="Body_Image">
+				</div>
+			</div>
+
+		</div>
+
+
+    </form>
+	</div>
+</div>
+
+<script src="{% static 'js/deadByDaylight_testing.js' %}"></script>
+
+{% endblock %}

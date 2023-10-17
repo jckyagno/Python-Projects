@@ -1,0 +1,45 @@
+{% extends 'GuitarWishlist/guitar_wishlist_base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Create A New Wishlist</title>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<h1>Create A New Wishlist:</h1>
+
+
+
+
+
+    <form class="create_form" method="POST">
+        {% csrf_token %}
+        <label for="list_name">List Name:</label><br>
+        <input type="text" id="list_name" name="list_name"><br>
+
+        <label for="brand">Brand:</label><br>
+        <input type="text" id="brand" name="brand"><br>
+
+        <label for="strings">Amount Of Strings:</label><br>
+        <input type="number" id="strings" name="strings"><br>
+
+        <label for="acoustic">Acoustic or Electric?</label><br>
+        <input type="text" id="acoustic" name="acoustic"><br>
+
+        <label for="frets">Amount Of Frets:</label><br>
+        <input type="number" id="frets" name="frets"><br>
+
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price"><br>
+
+        <!--by putting this button inside form tags it will submit all inputs at once-->
+        <button class="submit_button" type="submit">Submit</button>
+    </form>
+
+{% endblock %}
+
+

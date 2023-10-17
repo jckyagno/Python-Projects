@@ -1,0 +1,21 @@
+{% extends "texmex_base.html" %}
+
+{% block title %}Tex-Mex{% endblock %}
+
+{% block header %}Favorite Recipes on allrecipes.com:{% endblock %}
+
+{% block content %}
+		<div>>
+			<center>
+				<table>
+					{% for x in menu %}
+					<tr>
+						<td><a href="{{x.1}}" target="_blank">{{x.0}}</a></td>
+					</tr>
+					{% endfor %}
+
+				</table>
+			</center>
+        </div>
+
+{% endblock %}

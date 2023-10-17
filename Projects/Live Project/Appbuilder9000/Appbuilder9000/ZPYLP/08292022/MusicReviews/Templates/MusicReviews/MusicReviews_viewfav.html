@@ -1,0 +1,29 @@
+#{% extends "MusicReviews/MusicReviews_base.html" %}
+
+{% load static %}
+
+{% block title %} Favorites {% endblock %}
+
+{% block content %}
+
+<h1 class="fancy">Favorite API Music</h1>
+    <table class="music-tables">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Composer</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for music in added_favorites%}
+            <tr>
+                <td>{{ music.Title }}</td>
+                <td>{{ music.Composer }}</td>
+                <td>{{ music.Rating }}</td>
+            </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

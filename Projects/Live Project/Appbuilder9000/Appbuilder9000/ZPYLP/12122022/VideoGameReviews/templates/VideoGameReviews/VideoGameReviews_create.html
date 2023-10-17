@@ -1,0 +1,18 @@
+{% extends "VideoGameReviews/VideoGameReviews_base.html" %}
+
+{% block title %}Create New Review{% endblock %}
+
+{% block content %}
+<h1>Create New Review</h1>
+<p>Fill out the form below with your review! Add a score from 1 to 10 and share your thoughts!</p>
+
+<div id="review-form">
+    <form method="POST">
+        <!-- csrf_token required for django forms -->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- Button to submit review form -->
+        <button id="create-review-button" type="submit" name="Create_Review">Create Review</button>
+    </form>
+</div>
+{% endblock %}

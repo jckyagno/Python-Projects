@@ -1,0 +1,74 @@
+{% extends 'deadByDaylight_base.html' %}
+{% load static %}
+
+{% block title %}{{ survivor.full_Name }}{% endblock %}
+
+{% block content %}
+<div class="left_details">
+<div class="fixer top_page"><h3>Name:</h3><p> {{ survivor.full_Name }}</p></div>
+<div class="fixer"><h3>Release Date:</h3><p> {{ survivor.release_Date }}</p></div>
+<div class="fixer"><h3>Lore:</h3></div>
+<div class="details_lore_container">
+    <p class="lore-text">{{ survivor.lore | safe }}</p>
+</div>
+<div class="fixer"><h3>Perks:</h3></div>
+<div class="details_perk_container">
+    <div class="details_row_one">
+        <div class="details_perk">
+            <img src="{{ survivorPerk.image_Of_Perk_One }}" alt="Perk One Image">
+            <p class="perk-text">{{ survivorPerk.perk_One }}</p>
+        </div>
+        <div class="perk-description-container">
+            <div class="perk-description">
+                <p class="description-text">{{ survivorPerk.perk_One_Description | safe }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="details_row_one">
+        <div class="details_perk">
+            <img src="{{ survivorPerk.image_Of_Perk_Two }}" alt="Perk Two Image">
+            <p class="perk-text">{{ survivorPerk.perk_Two }}</p>
+        </div>
+        <div class="perk-description-container">
+            <div class="perk-description">
+                <p class="description-text">{{ survivorPerk.perk_Two_Description | safe }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="details_row_one">
+        <div class="details_perk">
+            <img src="{{ survivorPerk.image_Of_Perk_Three }}" alt="Perk Three Image">
+            <p class="perk-text">{{ survivorPerk.perk_Three }}</p>
+        </div>
+        <div class="perk-description-container">
+            <div class="perk-description">
+                <p class="description-text">{{ survivorPerk.perk_Three_Description | safe }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIX ME I'M BROKEN -->
+    <div id="confirmDelete" class="modal">
+        <span class="close1" onclick="closeDelete()">&times;</span>
+        <div class="modal-content">
+        <form method="POST" action="{% url 'deadByDaylight_delete' %}">
+            {% csrf_token %}
+            <input type="hidden" name="survivor_id" value="{{ survivor.id }}">
+            <h2 class="fixer2">Confirm Delete:</h2>
+            <p>Are you sure you would like to delete "{{survivor.full_Name}}" from the database?</p>
+
+            <button type="submit" class="btn3">Yes, delete it!</button>
+            <button class="btn2" type="button" onclick="closeDelete()">Cancel</button>
+        </form>
+            </div>
+<!-- FIX ME I'M BROKEN -->
+    </div>
+    <button id="back-survivor-button" onclick="location.href='../../survivor/'">Back</button>
+    <button id="edit-survivor-button" onclick="location.href='../edit/'">Edit</button>
+    <button id="delete-survivor-button" onclick="openDelete()">Delete</button>
+</div>
+<div class="full_survivor">
+    <img src="{{ survivor.image_Of_Survivor }}" alt="Survivor Image">
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "ChristmasList_base.html" %}
+
+{% block header %}Christmas Joke{% endblock %}
+{% block content %}
+    <div class="admin_panel">
+        <div>
+            <br>
+            <br>
+            <h1 class="joke">{{ parse1 }}</h1>
+            <br>
+            <br>
+            <br>
+            <h1 class="joke">{{ parse2 }}</h1>
+            <br>
+            <br>
+            <div class="object_container">
+                <a href="{% url 'saved_api' parse1 parse2 %}"><button class="btn">Save</button></a>
+                <button class="btn" onClick="window.location.reload();">New Joke</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

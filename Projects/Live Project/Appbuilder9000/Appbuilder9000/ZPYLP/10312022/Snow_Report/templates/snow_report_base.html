@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<link rel= "stylesheet" href="{% static '/css/snow_report_layout.css' %}">
+		<title>{% block title %}Snow Report{% endblock %}</title>
+	</head>
+
+
+	<div class="topnav">
+  		<a href="{% url 'snow_report_home' %}">Home</a>
+		<a href="{% url 'snow_report_addResort' %}">Add Resort</a>
+		<a href="{% url 'snow_report_favorites' %}">Favorites</a>
+		<a href="{% url 'snow_report_api' %}">Local Weather</a>
+		<a href="{% url 'snow_report_save_api' 1000 %}">Saved Weather</a>
+		<a href="{% url 'snow_report_bs' %}">Beautiful Soup</a>
+
+	</div>
+	<!--Body-->
+	<body id="body">
+		<div class="content-container-container">
+			<div class="content-container">
+			{% block content %}
+			{% endblock %}
+			</div>
+		</div>
+	</body>
+
+	<!--Footer section-->
+        <footer>
+			<p>&copy Snow Report by Tyler Hunter Hatch &nbsp; |&nbsp; 2022</p>
+        </footer>
+
+
+</html>

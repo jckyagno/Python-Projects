@@ -1,0 +1,68 @@
+{% extends "snowmobiles_base.html" %}
+{% load class_name %}
+{% block content %}
+
+<div class='row title-row my-5'>
+    <div class='col-12 py-0'>
+        <h3 class='my-0 py-0 tcenter'>{{ count }} results for <b>{{ query }}</b></h3>
+    </div>
+</div>
+
+
+{% for object in object_list %}
+{% with object|class_name as klass %}
+{% if klass == 'Snowmobile' %}
+<div class='row'>
+    <div class='col-12 tcenter'>
+        Snowmobile: DateMfg: {{ object.dateManufactured }} - Make: {{ object.make }} - Model: {{ object.model }} -
+        Description: {{ object.description }} -
+        <a href="{% url 'snowmobile-detail' object.id %}">Details</a>
+
+    </div>
+</div>
+<br>
+<br>
+
+{% elif klass == 'Dealer' %}
+<div class='row'>
+    <div class='col-12 tcenter'>
+        Dealer: Brand: {{ object.brand }} - Store: {{ object.store_name }} - City: {{ object.city }} - State: {{
+        object.state }} -
+        <a href="{% url 'dealer-detail' object.id %}">Details</a>
+    </div>
+</div>
+
+<br>
+<br>
+
+{% else %}
+<div class='row'>
+    <div class='col-12 col-lg-8 offset-lg-4'>
+        <a href='{{ object.get_absolute_url }}'>{{ object }} | {{ object|class_name }}</a>
+    </div>
+</div>
+{% endif %}
+
+{% endwith %}
+
+{% empty %}
+<div class='row tcenter'>
+    <div class='col-12 col-md-6 mx-auto my-5 py-5'>
+        <h3>Try Again:</h3>
+        <form action="{% url 'search-results' %}" method="get">
+            <label for="items">Choice:</label>
+            <select name="items" id="items">
+                <option value="both">Search Snowmobiles and Dealers:</option>
+                <option value="snowmobile">Search Snowmobiles:</option>
+                <option value="dealer">Search Dealers:</option>
+            </select>
+            <input name="q" type="text" placeholder="Search...">
+            <br>
+            <br>
+            <button><a href="{% url 'snowmobile-list'%}">See list</a></button>
+        </form>
+
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

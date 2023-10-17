@@ -1,0 +1,16 @@
+{% extends "Nutrition_Base.html" %}
+
+{% block title %} Nutrition Calculator! {% endblock %}
+
+{% block header %} This is your Nutrition Calculator! {%  endblock %}
+
+{% block content %}
+    <p></p>
+    <p>The Nutrition Calculator will help you come up with a thorough diet and exercise plan!</p>
+    <br>
+    <p>Start by making an account:</p>
+    <p><a href = "{% url 'Nutrition_create' %}"><button class = "btn">Create Account</button></a></p>
+    <br>
+    <p>Or login if you already have an account:</p>
+    <p><a href = "{% url 'Nutrition_display' %}"><button class = "btn">Login</button></a></p>
+{% endblock %}

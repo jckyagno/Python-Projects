@@ -1,0 +1,15 @@
+{% extends "snowmobiles_base.html" %}
+{% block title %}
+Snowmobile Searh Results
+{% endblock %}
+{% block content %}
+<h1>Search Results</h1>
+<ul>
+    {% for snowmobile in object_list %}
+    <li>
+        {{ snowmobile.make }} - {{ snowmobile.model }} - {{ snowmobile.dateManufactured }} - {{ snowmobile.description
+        }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

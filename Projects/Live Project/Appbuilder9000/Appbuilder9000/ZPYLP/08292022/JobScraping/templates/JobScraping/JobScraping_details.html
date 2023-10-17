@@ -1,0 +1,44 @@
+{% extends "JobScraping_base.html" %}
+
+{% block title %}Details{% endblock %}
+
+{% block header %}Job Details{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4">Details</h1>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Company</th>
+                <th scope="col">Stack</th>
+                <th scope="col">Startup</th>
+                <th scope="col">Location</th>
+                <th scope="col">Experience<br>Required</th>
+                <th scope="col">Minimum Pay</th>
+                <th scope="col">Maximum Pay</th>
+                <th scope="col">Date Added</th>
+                <th scope="col">source link</th>
+
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>{{ job.title }}</td>
+                    <td>{{ job.company }}</td>
+                    <td>{{ job.stack }}</td>
+                    <td>{{ job.startup }}</td>
+                    <td>{{ job.location }}</td>
+                    <td>{{ job.exp_required }}</td>
+                    <td>{{ job.minimum_pay }}</td>
+                    <td>{{ job.maximum_pay }}</td>
+                    <td>{{ job.date_added }}</td>
+                    <td><a href="{{ job.job_url }}">link</a></td>
+                </tr>
+        </tbody>
+    </table>
+    <a href="/JobScraping/{{ job.pk }}/editJob"><button class="btn btn-dark">Edit/Delete</button></a>
+</div>
+{% include "JobScraping_footer.html" %}
+{% endblock %}

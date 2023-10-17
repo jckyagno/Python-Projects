@@ -1,0 +1,20 @@
+{% extends 'crochet_base.html' %}
+
+{% block title %}Crochet Project Planner{% endblock %}
+
+{% block header %}Delete Project:{% endblock %}
+
+{% block content %}
+
+<div class="container_4">
+    <form method="POST">
+        <h4>Are you sure you want to delete {{ project.project_name }}?</h4>
+
+        {% csrf_token %}
+
+        <button type="submit" class="btn_1">Yes, Delete!</button>
+
+        <a href="{% url 'projects_page' %}"><button type="button" class="btn_1" value="Cancel_Delete">Cancel Delete</button></a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'NBA/NBA_base.html' %}
+{% block content %}
+
+    <title style="font-family: Blippo, fantasy;">Details page!</title>
+  </head>
+  <body>
+    <h1 class="text-center" style="text-align: center;">Detail page</h1>
+
+    <div class="container">
+        <h2 style="text-align: left;">NAME: {{player.name}}</h2>
+        <h2 style="text-align: left">Age: {{player.age}}</h2>
+        <h2 style="text-align: left">All-Stars: {{player.allstars}}</h2>
+        <h2 style="text-align: left">Team: {{player.team}}</h2>
+    </div>
+  </body>
+</html>
+{% endblock %}

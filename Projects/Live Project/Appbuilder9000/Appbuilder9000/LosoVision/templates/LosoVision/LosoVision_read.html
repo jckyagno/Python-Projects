@@ -1,0 +1,21 @@
+{% extends "LosoVision_base.html" %}
+
+{% block content %}
+<h1>Patient Info</h1>
+<table>
+    <tr>
+        <th>Patient</a></th>
+        <th>Date Of Birth</a></th>
+        <th>Reading Rx</a></th>
+    </tr>
+    {% for e in entry %}
+    <tr>
+        <td>{{ e.firstName }} {{ e.lastName}}</a></td>
+        <td>{{ e.dateOfBirth }}</td>
+        <td>{{ e.readingRx }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<button><a href="{% url 'LosoVision_create' %}">Add Entry</a></button>
+
+{% endblock %}

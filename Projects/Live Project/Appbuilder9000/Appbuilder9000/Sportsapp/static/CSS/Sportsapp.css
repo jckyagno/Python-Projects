@@ -1,0 +1,106 @@
+
+#home-navbar{
+    text-color: blue;
+    font-size: 20px;
+	display: block;
+	text-align: center;
+}
+.container-sm{
+   margin-left: 41%;
+   margin-right: 41%;
+   display: block;
+   margin-top: 30px;
+}
+#scores-table{
+    background-color:#f7decd;
+	padding: 20px;
+	border: 2px solid gray;
+	border-collapse: collapse;
+	border-radius: 8px;
+	table-layout: auto;
+	width: 250%;
+	margin-right: -80%;
+	margin-left: -80%;
+}
+.league-table{
+    background-color:#f7decd;
+	padding: 10px;
+	border: 2px solid gray;
+	border-collapse: collapse;
+	border-radius: 12px;
+	table-layout: auto;
+	width: 400%;
+	margin-right: -150%;
+	margin-left: -150%;
+}
+
+.table-light{
+    border-radius:12px;
+    background-color: #f7decd;
+    padding: 12px;
+    text-align: center;
+}
+
+.text-container{
+    text-align: center;
+	width: 50%;
+	bottom: 20px;
+}
+
+h3{
+    color: blue;
+	font-size: 20px;
+	text-align: center;
+}
+h4{
+   color: blue;
+   font-size: 20px;
+}
+h5{
+   color: blue;
+   font-size: 20px;
+   text-align: center }
+
+body{
+	font-family: Lucida Sans Unicode;
+	text-align: center;
+	background: url('../../static/images/Soccerball.png' );
+	background-repeat: no-repeat;
+	background-size: 120px;
+	background-color: lightblue;
+
+}
+
+th{
+    border: 2px solid black;
+}
+
+tr td{
+	height: 25px;
+	border: 2px solid black;
+	word-wrap: normal;
+	vertical-align: top;
+	width: auto;
+}
+
+#headerRow {
+	color: darkslateblue;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+	width: 15%;
+}
+
+.left{
+	padding-left: 10px;
+	width: 30%;
+	word-wrap: normal;
+}
+
+.right {
+	padding-right: 5px;
+	width: 20%;
+	text-align: right;
+}

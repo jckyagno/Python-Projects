@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="en">
+<head>
+    {% include "Portfolio_head.html" %}
+    <meta charset="UTF-8">
+    <title>Shiv Patel</title>
+</head>
+<body>
+        {% include "Portfolio/navbar.html" %}
+        {% block content %}
+        <div class="container anim">
+            <div class="con2">
+                <div id="contact" style="display:flex; justify-content: center;">
+                    <div id="dbdisplaycontainer" style=" border: 4px solid var(--menusvg); position: fixed; background-color: black;">
+                            <p class="dbdisplay">Name: {{ inquries.Name }}</p>
+                            <p class="dbdisplay">Topic: {{ inquries.Topic }}</p>
+                            <p class="dbdisplay">Email: {{ inquries.Email }}</p>
+                            <p class="dbdisplay">Message: {{ inquries.Message }}</p>
+                            <button type="submit" class="btn" onclick="location.href='./portfolio_details';">Update</button>
+                            <button type="button" class="btn" onclick="location.href='{% url 'Portfolio_data' %}';">Back</button>
+                            {{ inquries.as_p }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "Camera_head.html" %}
+    <title>Modify Cameras</title>
+</head>
+<body>
+    <div class="page_container">
+        <!-- Adding a universal Navbar for each page that needs one -->
+        {% include "Cinematography/navbar.html" %}
+        <header>
+            <h1 align="center">{% block title %}{% endblock %}</h1>
+        </header>
+    </div>
+    <div class="form_container">
+        <form method="post" action="./">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Confirm</button>
+            <input type="button" onclick="location.href='../../Camera_database.html';" value="Cancel" style="float: right;"/>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,34 @@
+{% extends "Veggie_base.html" %}
+
+{% block title %}BeautifulSoup{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <br>
+    <div class="text-center bg-light">
+        <h3>Beautiful Soup</h3>
+    </div>
+    <br>
+    <div class="text-center bg-light">
+        <h4>Scraped from <a target="_blank" href="https://simple-veganista.com/">"https://simple-veganista.com/":</a></h4>
+    </div>
+    <br>
+    <div class="text-center bg-light">
+        <h2>Here is the website's introduction:</h2>
+    </div>
+    <br>
+    <div class="text-center bg-light">
+        <p><strong>{{ info|default:"nothing" }}</strong></p>
+    </div>
+    <br>
+
+
+
+</div>
+
+{% endblock %}
+
+
+
+

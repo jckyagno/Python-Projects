@@ -1,0 +1,13 @@
+{% extends "Travelguide_base.html" %}
+
+{% block title %}Travel_guide{% endblock %}
+
+{% block header %}Welcome to the travel life!{% endblock %}
+
+{% block content %}
+
+<h1> Travel guide</h1>
+<p>This app manages of all the Destinations you ever wanted to visit</p>
+<button type="submit"><a href="{% url 'Travel_create' %}">Create</a></button>
+<button type="submit"><a href="{% url 'Travel_read' %}">Read</a></button>
+{% endblock %}

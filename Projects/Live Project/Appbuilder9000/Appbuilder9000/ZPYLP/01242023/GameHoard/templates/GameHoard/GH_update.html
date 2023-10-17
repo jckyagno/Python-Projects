@@ -1,0 +1,36 @@
+{% extends "GameHoard_base.html" %}
+{% block title %}Edit Your Hoard{% endblock %}
+{% block content %}
+<!--BUT HOW DOES IT KNOW WHICH FORM/OBJECT TO CALL???-->
+<!--This form/page/content is accessed by clicking on an (anchor) element in another document (GH_read.html)-->
+<!--The 'UpdateGame' is a 'shortcut' defined in urls.py, which points the way to a function in views.py...-->
+<!--the views.py function (in this case named 'updateGameDB') passes in the primary key from the element that was initially clicked. -->
+<div class="update-item">
+    <div class="update-container">
+        <div class="update-text">
+            <h1>Update Details</h1>
+        </div>
+        <div class="updateForm">
+            <form method="POST">    <!-- The action directs to a new folder: go back one directory then into 'details' -->
+                {% csrf_token %}        <!-- MUST INCLUDE CSRF token -->
+                {{ form.non_field_errors }}
+                {{ form.as_p }}     <!-- This is a feature that allows information to be displayed as a table -->
+                <div class="form-buttons">
+                    <!--A submit button MUST be inside the form tag to work-->
+                    <button class="submitBtn" type="submit">Update</button>   <!-- 'Trigger' the action method of the form-->
+
+                    <!--Button to call a form and (within GH_delete.html) pass in the primary key-->
+                    <button class="deleteBtn" type=button onclick="opendeletemodal()">DELETE</button>
+
+                    <!-- Go to the url.py form and follow the 'admin_console' method there -->
+                    <a href="{% url 'GameHoard' %}"><button type="button">Cancel</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    {% include "GameHoard/GH_delete.html" %}
+</div>
+{% endblock %}

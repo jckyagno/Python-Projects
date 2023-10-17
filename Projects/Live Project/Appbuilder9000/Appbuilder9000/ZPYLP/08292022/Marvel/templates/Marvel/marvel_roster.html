@@ -1,0 +1,29 @@
+{% extends "marvel_base.html" %}
+
+{% block title %}Roster{% endblock %}
+
+{% block content %}
+<h1>Characters<br><br>
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Search for characters.."></h1>
+
+<br>
+
+
+
+<table id="myTable">
+    <button onclick="sortTable(0)"><a>Sort Alphabetically (Asc/Desc)</a></button>
+    <tr>
+        <th colspan="1">Character</th>
+        <th colspan="2"> Description</th>
+    </tr>
+    {% for c in character %}
+    <tr>
+        <td ><a href="{% url 'marvel_details' c.id %}">{{ c.name }}</a><td>
+        <td>{{ c.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<button><a href="{% url 'marvel_create' %}">Add Character</a></button>
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'VinylCollection/base.html' %}
+
+{% block title %}Your Taste{% endblock %}
+
+{% block header %}Your Taste In Music{% endblock %}
+
+{% block content %}
+
+<ul class="scores-wrap">
+    {% for release in releases %}
+        <li class="score-container">
+            <img src="{{ release.cover_image }}" class="score-image">
+            <span>{{ release.title }}</span><br>
+            <label>Pitchfork Score: </label><span>{{ release.pf_rating }}</span>
+        </li>
+    {% endfor %}
+</ul>
+
+<h1>AVERAGE SCORE: {{ average_score }}</h1>
+
+{% endblock %}

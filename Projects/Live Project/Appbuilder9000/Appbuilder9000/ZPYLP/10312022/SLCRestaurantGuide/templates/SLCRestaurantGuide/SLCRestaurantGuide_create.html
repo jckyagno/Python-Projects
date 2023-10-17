@@ -1,0 +1,12 @@
+{% extends "SLCRestaurantGuide_base.html" %}
+
+{% block content %}
+<h1>Create Itinerary</h1>
+<div id="itinerary">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

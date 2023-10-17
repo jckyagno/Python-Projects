@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/SLCStyles.css' %}">
+    </head>
+    <body>
+        <div class="pg_container">
+            <!--Navbar-->
+            {% include 'SLCRestaurantGuide/SLCRestaurantGuide_navbar.html' %}
+            <header class="header=title">
+                <h1>{% block header %}{% endblock %}</h1>
+            </header>
+            <!--Content-->
+            <h1 class="header1">SLC Restaurant Guide</h1>
+            <div class="container">
+            {% block content %}{% endblock %}
+            </div>
+
+        <!--Footer-->
+        {% include 'SLCRestaurantGuide/SLCRestaurantGuide_footer.html' %}
+        </div>
+    </body>
+</html>

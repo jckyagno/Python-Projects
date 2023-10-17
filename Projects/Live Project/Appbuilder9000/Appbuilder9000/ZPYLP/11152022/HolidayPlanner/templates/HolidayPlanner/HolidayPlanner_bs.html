@@ -1,0 +1,20 @@
+{% extends "HolidayPlanner_base.html" %}
+{% load static %}
+{% block title %}Holiday Planner Beautiful Soup{% endblock %}
+{% block header %}Beautiful Soup{% endblock %}
+{% block content %}
+<div class="bs-content">
+    <h2>Top 15 places to visit in the world:</h2>
+    <div>
+        {% for values in placelist %}
+            <div class="bs-values">{{ values }}</div>
+        {% endfor %}
+    </div>
+    <br>
+    <br>
+    <strong>This list/recommendation was retrieved from:
+        <br>
+        <a href="https://www.farandwide.com/s/best-places-visit-world-0697723328374f59">
+            World’s 30 Best Travel Destinations</a> by Sarah Kuta</strong>
+</div>
+{% endblock %}

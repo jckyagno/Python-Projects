@@ -1,0 +1,22 @@
+{% extends "marvel_base.html" %}
+
+{% block title %}Saved API{% endblock %}
+
+{% block content %}
+<button type="submit"><a href="{% url 'marvel_api' %}">New Quote!</a></button>
+<h1>Quotes</h1>
+<table>
+    <tr>
+        <th colspan="1"> Quote</th>
+    </tr>
+    {% for q in quote %}
+    <tr>
+        <td>{{ q.quote }}</td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+
+
+    {% endblock %}

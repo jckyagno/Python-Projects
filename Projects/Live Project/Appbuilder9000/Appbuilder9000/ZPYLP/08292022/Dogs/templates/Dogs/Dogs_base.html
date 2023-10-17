@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'Dogs/css/Dogs.css' %}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="img">
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="{% url 'Dogs_home' %}">Home</a></li>
+                <li><a href="{% url 'create' %}">Add Dog</a></li>
+                <li><a href="{% url 'lists' %}">Dogs</a></li>
+            </ul>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- content loaded from other pages -->
+        {% block content %}
+        {% endblock %}
+        <!-- end content -->
+
+        <!-- Footer -->
+        <footer class="block_footer">
+            <p id="footer-right">Terms|Privacy &nbsp;&nbsp;&copy;2022 - Doggo's&reg;</p>
+        </footer>
+    </div>
+</body>
+</html>
